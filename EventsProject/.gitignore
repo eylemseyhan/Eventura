@@ -1,0 +1,8 @@
+# Visual Studio geçici dosyalarý
+.vs/
+obj/
+bin/
+*.vsidx
+*.suo
+*.user
+*.cache
