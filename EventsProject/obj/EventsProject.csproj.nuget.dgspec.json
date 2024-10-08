@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EventsProject\\EventsProject.csproj": {}
+    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj": {}
   },
   "projects": {
-    "D:\\EventsProject\\EventsProject.csproj": {
+    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EventsProject\\EventsProject.csproj",
+        "projectUniqueName": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj",
         "projectName": "EventsProject",
-        "projectPath": "D:\\EventsProject\\EventsProject.csproj",
-        "packagesPath": "C:\\Users\\eylem\\.nuget\\packages\\",
-        "outputPath": "D:\\EventsProject\\obj\\",
+        "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj",
+        "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
+        "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\eylem\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
