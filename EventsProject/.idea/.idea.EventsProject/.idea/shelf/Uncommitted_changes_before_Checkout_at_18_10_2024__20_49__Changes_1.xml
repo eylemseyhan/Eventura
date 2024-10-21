@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_18_10_2024,_20_49_[Changes]1" date="1729273775927" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.EventsProject/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_10_2024,_20_49_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 18.10.2024, 20:49 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/net8.0/EventsProject.assets.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/net8.0/EventsProject.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.EventsProject/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_10_2024,_20_49_[Changes]1/EventsProject.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.EventsProject/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_10_2024,_20_49_[Changes]1/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/net8.0/EventsProject.AssemblyInfoInputs.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/net8.0/EventsProject.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.EventsProject/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_10_2024,_20_49_[Changes]1/EventsProject.AssemblyInfoInputs.cache" />
+  </binary>
+</changelist>
