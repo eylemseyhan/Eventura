@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "oLtaJVwG+/o=",
   "success": true,
   "projectFilePath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj",
-=======
-  "dgSpecHash": "vnonTHS2840=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\EventsProject.csproj",
->>>>>>> origin/ipek
   "expectedPackageFiles": [],
   "logs": []
 }
