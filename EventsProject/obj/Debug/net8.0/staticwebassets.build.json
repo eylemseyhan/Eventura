@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "33IRkXDU2aDkqcgGLO8BRabytvvOc+lcYEwiflFAleM=",
+  "Hash": "M9hbwmxoXvScK4QaMA13+WsmMdj9mxFPrdBUeKLXPSg=",
   "Source": "EventsProject",
   "BasePath": "_content/EventsProject",
   "Mode": "Default",
@@ -2029,6 +2029,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/dorne-master/img/core-img/map.png"
+    },
+    {
+      "Identity": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/wwwroot/dorne-master/img/core-img/signup.png",
+      "SourceId": "EventsProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/wwwroot/",
+      "BasePath": "_content/EventsProject",
+      "RelativePath": "dorne-master/img/core-img/signup.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/dorne-master/img/core-img/signup.png"
     },
     {
       "Identity": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/wwwroot/dorne-master/index.html",

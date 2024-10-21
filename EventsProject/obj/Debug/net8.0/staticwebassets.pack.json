@@ -421,6 +421,10 @@
       "PackagePath": "staticwebassets/dorne-master/img/core-img/map.png"
     },
     {
+      "Id": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/wwwroot/dorne-master/img/core-img/signup.png",
+      "PackagePath": "staticwebassets/dorne-master/img/core-img/signup.png"
+    },
+    {
       "Id": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/wwwroot/dorne-master/index.html",
       "PackagePath": "staticwebassets/dorne-master/index.html"
     },
