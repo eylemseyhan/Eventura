@@ -14,3 +14,5 @@ C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\obj\Debug\net8.0\DataAccess
 C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
 C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
 C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
+C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.runtimeconfig.json
+C:\Users\ipekn\Desktop\Eventsproject\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
