@@ -107,14 +107,16 @@
         .features-slides {
             position: relative;
         }
+
         .single-features-area {
             text-align: center;
             margin-right: 15px; /* Her öğe arasında boşluk */
         }
-        .single-features-area img {
-            width: 100%; /* Resmin tam genişlikte olmasını sağlar */
-            border-radius: 10px; /* Kenarları yuvarlatır */
-        }
+
+            .single-features-area img {
+                width: 100%; /* Resmin tam genişlikte olmasını sağlar */
+                border-radius: 10px; /* Kenarları yuvarlatır */
+            }
     </style>
 </section>
 
@@ -122,7 +124,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.features-slides').owlCarousel({
             loop: true,
             margin: 10,
