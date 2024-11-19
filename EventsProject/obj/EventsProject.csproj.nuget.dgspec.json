@@ -49,12 +49,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -117,12 +111,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -181,12 +169,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -253,10 +235,6 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
-            },
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
