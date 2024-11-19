@@ -14,6 +14,7 @@ namespace EntityLayer.Concrete
         public int EventId { get; set; }     // Birincil anahtar
         public int CategoryId { get; set; }  // Kategori ID'si
         public int ArtistId { get; set; }    // Sanatçı ID'si
+        public int CityId { get; set; }      // Şehir ID'si
         public string Title { get; set; }    // Etkinlik adı
         public string Description { get; set; } // Etkinlik açıklaması
         public DateTime EventDate { get; set; } // Etkinlik tarihi
@@ -21,6 +22,7 @@ namespace EntityLayer.Concrete
         public string ImageUrl { get; set; } // Etkinlik görsel URL'si
 
         // İlişkiler
+        public virtual City City { get; set; }  // Şehir ile ilişki
         public virtual Category Category { get; set; }
         public virtual Artist Artist { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }

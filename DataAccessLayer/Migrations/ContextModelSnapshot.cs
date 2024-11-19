@@ -175,6 +175,23 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CityId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("CityId");
+
+                    b.ToTable("Cities");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
                 {
                     b.Property<int>("EventId")
@@ -187,6 +204,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("CategoryId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CityId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
@@ -213,6 +233,8 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("ArtistId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("CityId");
 
                     b.ToTable("Events");
                 });
@@ -417,9 +439,17 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EntityLayer.Concrete.City", "City")
+                        .WithMany("Events")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Artist");
 
                     b.Navigation("Category");
+
+                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -520,6 +550,11 @@ namespace DataAccessLayer.Migrations
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
+                {
+                    b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
                 {
                     b.Navigation("Events");
                 });
