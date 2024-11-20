@@ -16,3 +16,5 @@ C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\obj\Debug\net8.0\BusinessLaye
 C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
+C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\bin\Debug\net8.0\BusinessLayer.runtimeconfig.json
+C:\Users\ipekn\Desktop\Eventsproject\BusinessLayer\obj\Debug\net8.0\BusinessLayer.genruntimeconfig.cache
