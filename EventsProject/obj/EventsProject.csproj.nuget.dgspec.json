@@ -13,8 +13,17 @@
         "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
         "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
+=======
+          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,8 +52,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -52,10 +62,6 @@
 <<<<<<< HEAD
 =======
           "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -94,7 +100,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+>>>>>>> ipek
         }
       }
     },
@@ -107,8 +117,17 @@
         "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
         "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
+=======
+          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -134,8 +153,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -146,10 +166,6 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
-            },
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -189,7 +205,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+>>>>>>> ipek
         }
       }
     },
@@ -202,8 +222,17 @@
         "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
         "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
+=======
+          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -225,8 +254,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -237,10 +267,6 @@
             "Microsoft.AspNet.Identity.EntityFramework": {
               "target": "Package",
               "version": "[2.2.4, )"
-            },
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -284,7 +310,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+>>>>>>> ipek
         }
       }
     },
@@ -297,8 +327,17 @@
         "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
         "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
+=======
+          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -324,8 +363,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -345,10 +385,13 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+<<<<<<< HEAD
             "Microsoft.CodeAnalysis.Analyzers": {
               "target": "Package",
               "version": "[3.3.3, )"
             },
+>>>>>>> ipek
+=======
 >>>>>>> ipek
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -372,11 +415,11 @@
             },
             "Npgsql": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.5, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.10, )"
             },
             "bootstrap": {
               "target": "Package",
@@ -406,7 +449,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+>>>>>>> ipek
         }
       }
     }

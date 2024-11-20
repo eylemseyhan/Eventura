@@ -4,6 +4,7 @@
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+<<<<<<< HEAD
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/ebrarsedagunduz/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/ebrarsedagunduz/.nuget/packages/</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
@@ -11,6 +12,16 @@
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/Users/ebrarsedagunduz/.nuget/packages/" />
+=======
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\ipekn\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.12.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\ipekn\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+>>>>>>> ipek
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Content Include="$(NuGetPackageRoot)bootstrap/5.3.3/contentFiles/any/any/wwwroot/css/bootstrap-grid.css" Condition="Exists('$(NuGetPackageRoot)bootstrap/5.3.3/contentFiles/any/any/wwwroot/css/bootstrap-grid.css')">
@@ -367,8 +378,13 @@
     </Content>
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+<<<<<<< HEAD
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.10/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.10/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design/8.0.10/build/net8.0/Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design/8.0.10/build/net8.0/Microsoft.EntityFrameworkCore.Design.props')" />
+=======
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.10\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.10\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\8.0.10\build\net8.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\8.0.10\build\net8.0\Microsoft.EntityFrameworkCore.Design.props')" />
+>>>>>>> ipek
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
 <<<<<<< HEAD
