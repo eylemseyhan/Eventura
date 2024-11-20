@@ -1,4 +1,7 @@
-﻿<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+﻿@using EntityLayer.Concrete
+@model List<Event>
+
+<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -11,130 +14,40 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-1.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-lg-6 event-item" style="display: none;">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                        <div class="feature-events-thumb">
+                            <img src="@item.ImageUrl" alt="">
+                            <div class="date-map-area d-flex">
+                                <a href="#">@item.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</a>
+                                <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="feature-events-content">
+                            <h5>@item.Title</h5>
+                            <h6>@item.Location</h6>
+                            <p>@item.Description</p>
+                        </div>
+                        <div class="feature-events-details-btn">
+                            <a href="#">+</a>
                         </div>
                     </div>
-                    <div class="feature-events-content">
-                        <h5>Jazz Concert</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-2.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>DeeJay in the house</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.4s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-3.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Theatre Night outside</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.5s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-4.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Wine tasting</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.6s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-5.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>New Moon Party</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.7s">
-                    <div class="feature-events-thumb">
-                        <img src="~/dorne-master/img/bg-img/event-6.jpg" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Happy hour at pub</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-
-            </div>
+            }
         </div>
         <div class="row">
             <div class="col-12 text-center">
                 <div class="more-events">
-                    <a href="#" class="more-events-btn">Tümünü Görer</a>
+                    <a href="#" class="more-events-btn">Tümünü Göster</a>
                 </div>
             </div>
         </div>
 
+          
+          
+      
     </div>
 </section>
 <style>
@@ -146,40 +59,65 @@
         display: inline-block;
         padding: 10px 20px;
         font-size: 18px;
-        color: white; /* Yazı rengi beyaz */
-        background: none; /* Arka planı kaldır */
-        border: none; /* Kenarları kaldır */
-        cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
-        position: relative; /* Pozisyon ayarı yap */
+        color: white;
+        background: none; 
+        border: none; 
+        cursor: pointer; 
+        position: relative; 
         transition: color 0.3s;
     }
 
         .more-events-btn::after {
-            content: "▼"; /* Ok simgesi */
+            content: "▼"; 
             position: absolute;
             left: 50%;
-            transform: translateX(-50%); /* Ortala */
-            top: 100%; /* Yazının altına yerleştir */
-            opacity: 0; /* Başlangıçta görünmez */
-            transition: opacity 0.3s; /* Geçiş efekti */
+            transform: translateX(-50%); 
+            top: 100%;
+            opacity: 0; 
+            transition: opacity 0.3s; 
         }
 
         .more-events-btn:hover {
-            color: #007bff; /* Üzerine gelince renk değişimi */
+            color: #007bff; 
         }
 
             .more-events-btn:hover::after {
-                opacity: 1; /* Hover sırasında görünür hale getir */
+                opacity: 1;
             }
 
             .more-events-btn:hover::before {
-                content: ""; /* Alt çizgi ekle */
+                content: "";
                 display: block;
                 width: 100%;
-                height: 2px; /* Çizgi kalınlığı */
-                background-color: white; /* Çizgi rengi */
+                height: 2px;
+                background-color: white; 
                 position: absolute;
-                bottom: 0; /* Çizgiyi yazının altına yerleştir */
+                bottom: 0;
                 left: 0;
             }
 </style>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+       
+        const eventItems = document.querySelectorAll('.event-item');
+        const showMoreButton = document.querySelector('.more-events-btn');
+        const itemsToShow = 6;
+
+       
+        eventItems.forEach((item, index) => {
+            if (index < itemsToShow) {
+                item.style.display = 'block';
+            }
+        });
+
+       
+        showMoreButton.addEventListener('click', function (e) {
+            e.preventDefault(); 
+            eventItems.forEach(item => {
+                item.style.display = 'block'; 
+            });
+            showMoreButton.parentElement.style.display = 'none'; 
+        });
+    });
+
+</script>
