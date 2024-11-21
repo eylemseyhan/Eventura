@@ -34,7 +34,7 @@
 
     @await Component.InvokeAsync("_UILayoutAllEventsComponent")
 
-    @await Component.InvokeAsync("_UILayoutUpComingEventsComponent")
+    @await Component.InvokeAsync("_UILayoutUpcomingEventsComponent", new { page = 1 })
     
     
     @await Component.InvokeAsync("_UILayoutPopulerEventsComponent")

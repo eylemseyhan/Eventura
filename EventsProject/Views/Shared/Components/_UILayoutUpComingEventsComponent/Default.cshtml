@@ -1,4 +1,6 @@
-﻿<section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/bg-img/hero-2.jpg);">
+﻿@model IEnumerable<EntityLayer.Concrete.Event>
+
+<section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -12,123 +14,48 @@
 
         <div id="upcomingEventsCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-4">
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s" style="margin-right: 5px;">
-                                <!-- Sağ kaydırma için margin ekledim -->
-                                <img src="~/dorne-master/img/bg-img/editor-1.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Tiyatro</a>
-                                        <a href="#">12 Ocak</a>
+                @for (int i = 0; i < Model.Count(); i += 4)
+                {
+                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                        <div class="row justify-content-center">
+                            <!-- 1. satır: 2 etkinlik -->
+                            <div class="col-12 col-sm-6 col-md-6 mb-4 text-center">
+                                @for (int j = i; j < i + 2 && j < Model.Count(); j++)
+                                {
+                                    var eventItem = Model.ElementAt(j);
+                                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
+                                        <img src="@eventItem.ImageUrl" alt="Etkinlik Resmi">
+                                        <div class="editors-pick-info">
+                                            <div class="places-total-destinations d-flex">
+                                                <a href="#">@eventItem.Title</a>
+                                                <a href="#">@eventItem.EventDate.ToString("dd MMMM yyyy")</a>
+                                            </div>
+                                           
+                                        </div>
                                     </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
+                                }
                             </div>
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s" style="margin-left: 5px;">
-                                <!-- Sağ kaydırma için margin ekledim -->
-                                <img src="~/dorne-master/img/bg-img/editor-2.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Festival</a>
-                                        <a href="#">13 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
-                                <img src="~/dorne-master/img/bg-img/editor-1.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Tiyatro</a>
-                                        <a href="#">12 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                                <img src="~/dorne-master/img/bg-img/editor-2.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Festival</a>
-                                        <a href="#">13 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-4">
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s" style="margin-right: 5px;">
-                                <!-- Sağ kaydırma için margin ekledim -->
-                                <img src="~/dorne-master/img/bg-img/editor-1.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Tiyatro</a>
-                                        <a href="#">12 Ocak</a>
+                            <!-- 2. satır: 2 etkinlik -->
+                            <div class="col-12 col-sm-6 col-md-6 mb-4 text-center">
+                                @for (int j = i + 2; j < i + 4 && j < Model.Count(); j++)
+                                {
+                                    var eventItem = Model.ElementAt(j);
+                                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
+                                        <img src="@eventItem.ImageUrl" alt="Etkinlik Resmi">
+                                        <div class="editors-pick-info">
+                                            <div class="places-total-destinations d-flex">
+                                                <a href="#">@eventItem.Title</a>
+                                                <a href="#">@eventItem.EventDate.ToString("dd MMMM yyyy")</a>
+                                            </div>
+                                           
+                                        </div>
                                     </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s" style="margin-left: 5px;">
-                                <!-- Sağ kaydırma için margin ekledim -->
-                                <img src="~/dorne-master/img/bg-img/editor-2.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Festival</a>
-                                        <a href="#">13 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
-                                <img src="~/dorne-master/img/bg-img/editor-1.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Tiyatro</a>
-                                        <a href="#">12 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                                <img src="~/dorne-master/img/bg-img/editor-2.jpg" alt="">
-                                <div class="editors-pick-info">
-                                    <div class="places-total-destinations d-flex">
-                                        <a href="#">Festival</a>
-                                        <a href="#">13 Ocak</a>
-                                    </div>
-                                    <div class="add-more">
-                                        <a href="#">+</a>
-                                    </div>
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
 
             <a class="carousel-control-prev" href="#upcomingEventsCarousel" role="button" data-slide="prev" style="margin-left: -50px; z-index: 10;">
@@ -145,14 +72,14 @@
 
 <style>
     .single-editors-pick-area {
-        width: 400px;
+        width: 500px;
         height: 300px;
         padding: 10px;
         overflow: hidden;
     }
 
         .single-editors-pick-area img {
-            width: 350px;
+            width: 500px;
             height: 300px;
             object-fit: cover;
         }
@@ -170,9 +97,7 @@
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-
     }
-
 
     /* Okları resimlerin dışında konumlandır */
     .carousel-control-prev,
