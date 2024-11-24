@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Visual Studio geÃ§ici dosyalarÄ±
 =======
-# Visual Studio geçici dosyalarý
+# Visual Studio geï¿½ici dosyalarï¿½
 >>>>>>> 6993823aa7d4561dfb925d33013cbdfdd0c21ec0
 .vs/
 obj/
@@ -10,3 +10,6 @@ bin/
 *.suo
 *.user
 *.cache
+*.dll
+*.pdb
+*.json
