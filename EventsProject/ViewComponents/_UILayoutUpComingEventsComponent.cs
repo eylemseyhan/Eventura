@@ -1,12 +1,19 @@
 ﻿using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
 using System.Linq;
+=======
+>>>>>>> ipek
 
 namespace EventsProject.ViewComponents
 {
     public class _UILayoutUpcomingEventsComponent : ViewComponent
     {
+<<<<<<< HEAD
         private readonly Context db = new Context();
+=======
+        Context db = new Context();
+>>>>>>> ipek
 
         public IViewComponentResult Invoke()
         {
