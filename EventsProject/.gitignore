@@ -13,3 +13,5 @@ bin/
 *.dll
 *.pdb
 *.json
+*.AssemblyInfo.cs
+*.inputs
