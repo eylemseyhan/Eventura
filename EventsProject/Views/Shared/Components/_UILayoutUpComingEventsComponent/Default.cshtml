@@ -18,7 +18,7 @@
                 {
                     <div class="carousel-item @(i == 0 ? "active" : "")">
                         <div class="row justify-content-center">
-                            <!-- 1. satır: 2 etkinlik -->
+                            <!-- 1. Satır: İlk 2 etkinlik -->
                             <div class="col-12 col-sm-6 col-md-6 mb-4 text-center">
                                 @for (int j = i; j < i + 2 && j < Model.Count(); j++)
                                 {
@@ -30,13 +30,12 @@
                                                 <a href="#">@eventItem.Title</a>
                                                 <a href="#">@eventItem.EventDate.ToString("dd MMMM yyyy")</a>
                                             </div>
-                                           
                                         </div>
                                     </div>
                                 }
                             </div>
 
-                            <!-- 2. satır: 2 etkinlik -->
+                            <!-- 2. Satır: Sonraki 2 etkinlik -->
                             <div class="col-12 col-sm-6 col-md-6 mb-4 text-center">
                                 @for (int j = i + 2; j < i + 4 && j < Model.Count(); j++)
                                 {
@@ -48,7 +47,6 @@
                                                 <a href="#">@eventItem.Title</a>
                                                 <a href="#">@eventItem.EventDate.ToString("dd MMMM yyyy")</a>
                                             </div>
-                                           
                                         </div>
                                     </div>
                                 }
@@ -58,6 +56,7 @@
                 }
             </div>
 
+            <!-- Önceki ve Sonraki Butonlar -->
             <a class="carousel-control-prev" href="#upcomingEventsCarousel" role="button" data-slide="prev" style="margin-left: -50px; z-index: 10;">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Önceki</span>

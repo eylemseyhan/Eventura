@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DataAccessLayer.Concrete;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EventsProject.ViewComponents
 {
-    public class _UILayoutArtistComponent:ViewComponent
+    public class _UILayoutArtistComponent : ViewComponent
     {
+        Context db = new Context();
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = db.Artists.ToList();
+            return View(values);
         }
     }
 }
