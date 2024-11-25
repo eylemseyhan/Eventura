@@ -15,9 +15,6 @@
         <div class="dorne-load"></div>
     </div>
 
-<<<<<<< HEAD
-    <section class="dorne-single-listing-area section-padding-100">
-=======
     <!-- Etkinlik Resmi -->
     @if (!string.IsNullOrEmpty(Model.ImageUrl))
     {
@@ -30,7 +27,6 @@
 
 
     <section class="dorne-single-listing-area section-padding-50">
->>>>>>> ipek
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Single Listing Content -->
@@ -39,29 +35,16 @@
 
                         <!-- Etkinlik adı -->
                         <div class="listing-title">
-<<<<<<< HEAD
-                            <h4>@Model.Title</h4> 
-=======
                             <h4>@Model.Title</h4>
->>>>>>> ipek
                         </div>
 
                         <!-- Etkinlik Açıklaması -->
                         <div class="overview-content mt-50" id="overview">
                             <p>@Model.Description</p> <!-- Etkinlik Açıklaması -->
-<<<<<<< HEAD
-                           
-                            <p>@Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
-                        </div>
-
-                       
-
-=======
 
                             <p>@Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
                         </div>
 
->>>>>>> ipek
                         <!-- Etkinlik Konumu -->
                         <div class="event-location mt-50">
                             <p><strong>Konum:</strong> @Model.Location</p> <!-- Etkinlik Konumu -->
@@ -71,9 +54,6 @@
                         <div class="location-on-map mt-50" id="lomap">
                             <h4>Haritada Göster</h4>
                             <div class="location-map">
-<<<<<<< HEAD
-                                <div id="locationMap"></div> <!-- Harita gösterimi için alan -->
-=======
                                 <div id="locationMap">
                                     <!-- Google Maps iframe dinamik olarak LocationUrl'den alınacak -->
                                     @if (!string.IsNullOrEmpty(Model.LocationUrl))
@@ -85,7 +65,6 @@
                                         <p>Harita bulunamadı.</p>
                                     }
                                 </div>
->>>>>>> ipek
                             </div>
                         </div>
 
@@ -110,10 +89,6 @@
                                 </ul>
                             </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ipek
                         </div>
 
                     </div>
@@ -125,7 +100,3 @@
 </body>
 
 </html>
-<<<<<<< HEAD
-
-=======
->>>>>>> ipek

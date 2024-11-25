@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-﻿@using EntityLayer.Concrete;
-=======
-﻿
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using EntityLayer.Concrete;
->>>>>>> ipek
 @model Event
 
 @{
@@ -23,8 +18,6 @@
     <div id="preloader">
         <div class="dorne-load"></div>
     </div>
-<<<<<<< HEAD
-=======
     <!-- Etkinlik Resmi -->
     @if (!string.IsNullOrEmpty(Model.ImageUrl))
     {
@@ -34,7 +27,6 @@
             </div>
         </div>
     }
->>>>>>> ipek
 
     <section class="dorne-single-listing-area section-padding-100">
         <div class="container">
@@ -70,9 +62,7 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
-=======
-                          <!-- Etkinlik Harita -->
+                        <!-- Etkinlik Harita -->
                         <div class="location-on-map mt-50" id="lomap">
                             <h4>Haritada Göster</h4>
                             <div class="location-map">
@@ -80,18 +70,17 @@
                                     <!-- Google Maps iframe dinamik olarak LocationUrl'den alınacak -->
                                     @if (!string.IsNullOrEmpty(Model.LocationUrl))
                                     {
-                                            <iframe src="@Model.LocationUrl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        <iframe src="@Model.LocationUrl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                     }
                                     else
                                     {
-                                            <p>Harita bulunamadı.</p>
+                                        <p>Harita bulunamadı.</p>
                                     }
                                 </div>
                             </div>
                         </div>
 
 
->>>>>>> ipek
                     </div>
                 </div>
 
@@ -124,9 +113,4 @@
 
 </body>
 
-<<<<<<< HEAD
 </html>
-
-=======
-</html>
->>>>>>> ipek

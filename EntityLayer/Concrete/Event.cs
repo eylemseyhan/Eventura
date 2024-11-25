@@ -24,9 +24,7 @@ namespace EntityLayer.Concrete
         public string? Details { get; set; }
 
 
-        public string? LocationUrl { get; set; }
-
-        public string? Details {  get; set; }
+   
 
         // İlişkiler
 

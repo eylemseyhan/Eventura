@@ -3,29 +3,81 @@
   "WorkspaceRootPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutnavbarcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutnavbarcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\migrations\\20241125153307_addlocationurltoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\migrations\\20241125153856_adddetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\wwwroot\\dorne-master\\css\\others\\magnific-popup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -50,14 +102,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutnavbarcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutnavbarcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutnavbarcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -196,70 +240,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\wwwroot\\dorne-master\\single-listing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:wwwroot\\dorne-master\\single-listing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
->>>>>>> ipek
     }
   ],
   "DocumentGroupContainers": [
@@ -269,8 +249,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -293,100 +272,180 @@
               "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-=======
-          "SelectedChildIndex": 17,
-          "Children": [
-            {
->>>>>>> ipek
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:21:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:22:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:18:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAUwFUAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\KidsEvent\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
+              "RelativeToolTip": "Views\\KidsEvent\\Index.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAwD4AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T15:36:18.734Z",
-=======
-              "DocumentIndex": 1,
+              "WhenOpened": "2024-11-25T17:36:37.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Concert\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
               "RelativeToolTip": "Views\\Concert\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAwG4AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:57:49.472Z",
->>>>>>> ipek
+              "WhenOpened": "2024-11-25T17:35:24.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-<<<<<<< HEAD
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
-              "RelativeToolTip": "Views\\Festival\\Index.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAACTAAAA",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Theater\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
+              "RelativeToolTip": "Views\\Theater\\Index.cshtml",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwDIAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T13:30:54.82Z",
-=======
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Festival\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
-              "RelativeToolTip": "Views\\Festival\\Details.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:55:31.457Z",
->>>>>>> ipek
+              "WhenOpened": "2024-11-25T17:34:51.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "ConcertController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ConcertController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
-              "RelativeToolTip": "Controllers\\ConcertController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAwA8AAAAIAAAA",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Concert\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
+              "RelativeToolTip": "Views\\Concert\\Index.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAwD4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:34:51.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TheaterController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TheaterController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
+              "RelativeToolTip": "Controllers\\TheaterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:33:36.231Z",
+              "WhenOpened": "2024-11-25T17:34:20.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "Stand_UpController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Stand_UpController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
+              "RelativeToolTip": "Controllers\\Stand_UpController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:33:21.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Festival\\Details.cshtml",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
               "RelativeToolTip": "Views\\Festival\\Details.cshtml",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAUwFUAAAAAAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAwHAAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-25T15:25:37.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
+              "RelativeToolTip": "Views\\Festival\\Index.cshtml",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAwDIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T13:30:54.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAwG4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T15:36:18.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAwCsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T13:33:31.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAAwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T23:57:48.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stand_Up\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
+              "RelativeToolTip": "Views\\Stand_Up\\Index.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwD8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:37:01.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Theater\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
+              "RelativeToolTip": "Views\\Theater\\Details.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAwHMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:37:21.645Z",
               "EditorCaption": ""
             },
             {
@@ -397,14 +456,79 @@
               "RelativeDocumentMoniker": "Views\\Stand_Up\\Details.cshtml",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
               "RelativeToolTip": "Views\\Stand_Up\\Details.cshtml",
-              "ViewState": "AQIAACgAAAAAAAAAAAAUwEYAAAAiAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAwGUAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-25T14:17:17.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
+              "Title": "KidsEventController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KidsEventController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
+              "RelativeToolTip": "Controllers\\KidsEventController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:33:06.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
+              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Event.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
+              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Event.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:14:03.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20241125153307_AddLocationUrlToEvent.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwB0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:27:35.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241125153856_AddDetails.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241125153856_AddDetails.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241125153856_AddDetails.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241125153856_AddDetails.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\Migrations\\20241125153856_AddDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:27:29.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ConcertController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConcertController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
+              "RelativeToolTip": "Controllers\\ConcertController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T12:33:36.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "font-awesome.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\font-awesome.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\font-awesome.min.css",
@@ -412,25 +536,24 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\others\\font-awesome.min.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:45.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:45.129Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "FestivalController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
               "RelativeDocumentMoniker": "Controllers\\FestivalController.cs",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
               "RelativeToolTip": "Controllers\\FestivalController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAADwvxIAAAAhAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:30:30.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "explore-map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\explore-map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\explore-map-active.js",
@@ -438,12 +561,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\google-map\\explore-map-active.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:44.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:44.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
               "Title": "magnific-popup.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\magnific-popup.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\magnific-popup.css",
@@ -451,49 +573,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\others\\magnific-popup.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:49.429Z",
-=======
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:55:07.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:49.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Theater\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
-              "RelativeToolTip": "Views\\Theater\\Details.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAcwEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:54:12.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TheaterController.cs",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TheaterController.cs",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
-              "RelativeToolTip": "Controllers\\TheaterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T16:53:40.209Z",
->>>>>>> ipek
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-<<<<<<< HEAD
+              "DocumentIndex": 23,
               "Title": "single-listing.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\single-listing.html",
@@ -501,23 +585,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\single-listing.html",
               "ViewState": "AQIAALEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-25T12:30:01.54Z",
-=======
-              "Title": "KidsEventController.cs",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
-              "RelativeDocumentMoniker": "Controllers\\KidsEventController.cs",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
-              "RelativeToolTip": "Controllers\\KidsEventController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T16:53:34.952Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:30:01.54Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 10,
+              "DocumentIndex": 24,
               "Title": "explore.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\explore.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\explore.html",
@@ -525,108 +597,23 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\explore.html",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-25T14:03:05.317Z",
-=======
-              "DocumentIndex": 8,
-              "Title": "FestivalController.cs",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FestivalController.cs",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
-              "RelativeToolTip": "Controllers\\FestivalController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T16:53:30.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T14:03:05.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConcertController.cs",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ConcertController.cs",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
-              "RelativeToolTip": "Controllers\\ConcertController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T16:53:23.5Z",
->>>>>>> ipek
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
-<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:49:41.944Z",
-=======
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Theater\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
-              "RelativeToolTip": "Views\\Theater\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:52:38.459Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T18:49:41.944Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-<<<<<<< HEAD
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAwwBMAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T13:33:31.831Z",
-=======
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\KidsEvent\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
-              "RelativeToolTip": "Views\\KidsEvent\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:52:25.015Z",
->>>>>>> ipek
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-<<<<<<< HEAD
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:57:48.172Z",
-=======
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
-              "RelativeToolTip": "Views\\Festival\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:52:02.981Z",
->>>>>>> ipek
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-<<<<<<< HEAD
+              "DocumentIndex": 26,
               "Title": "_UILayoutNavbarComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutNavbarComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutNavbarComponent.cs",
@@ -634,12 +621,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutNavbarComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:58:26.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:58:26.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Category.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Category.cs",
@@ -647,12 +633,11 @@
               "RelativeToolTip": "..\\EntityLayer\\Concrete\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:56:08.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:56:08.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -660,12 +645,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:09:06.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:09:06.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "_UILayoutFooterComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutFooterComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutFooterComponent.cs",
@@ -673,23 +657,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutFooterComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T09:42:03.638Z",
-=======
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Concert\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
-              "RelativeToolTip": "Views\\Concert\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T16:50:58.893Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T09:42:03.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-<<<<<<< HEAD
+              "DocumentIndex": 27,
               "Title": "_UILayoutArtistComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutArtistComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutArtistComponent.cs",
@@ -697,12 +669,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutArtistComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:56:44.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T08:56:44.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 36,
               "Title": "location-map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\location-map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\location-map-active.js",
@@ -710,12 +681,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\google-map\\location-map-active.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:45.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:45.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "listing.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\listing.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\listing.html",
@@ -723,23 +693,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\listing.html",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABkAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-25T13:08:48.774Z",
-=======
-              "Title": "single-listing.html",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
-              "RelativeDocumentMoniker": "wwwroot\\dorne-master\\single-listing.html",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
-              "RelativeToolTip": "wwwroot\\dorne-master\\single-listing.html",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-25T15:48:42.057Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T13:08:48.774Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\map-active.js",
@@ -747,12 +705,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\google-map\\map-active.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:46.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:46.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "jquery-2.2.4.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\jquery\\jquery-2.2.4.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\jquery\\jquery-2.2.4.min.js",
@@ -760,12 +717,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\jquery\\jquery-2.2.4.min.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:47.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:47.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "plugins.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\others\\plugins.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\others\\plugins.js",
@@ -773,12 +729,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\others\\plugins.js",
               "ViewState": "AQIAAF4AAAAAAAAAAAAEwGwAAACcIAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:49.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:49.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\active.js",
@@ -786,12 +741,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\active.js",
               "ViewState": "AQIAAA8AAAAAAAAAAAASwB4AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:32:56.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:32:56.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "popper.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\bootstrap\\popper.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\bootstrap\\popper.min.js",
@@ -799,12 +753,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\bootstrap\\popper.min.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:29:53.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:29:53.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "bootstrap.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\bootstrap\\bootstrap.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\bootstrap\\bootstrap.min.js",
@@ -812,12 +765,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\js\\bootstrap\\bootstrap.min.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-25T12:29:50.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:29:50.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "responsive.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\responsive\\responsive.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\responsive\\responsive.css",
@@ -825,12 +777,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\responsive\\responsive.css",
               "ViewState": "AQIAAHwAAAAAAAAAAAAkwIkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:57.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:57.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 42,
               "Title": "owl.carousel.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\owl.carousel.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\owl.carousel.min.css",
@@ -838,12 +789,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\others\\owl.carousel.min.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:50.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:50.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\style.css",
@@ -851,12 +801,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\style.css",
               "ViewState": "AQIAAM4BAAAAAAAAAAAkwOMBAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-24T23:47:47.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:47:47.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 41,
               "Title": "pe-icon-7-stroke.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\pe-icon-7-stroke.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\pe-icon-7-stroke.css",
@@ -864,12 +813,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\others\\pe-icon-7-stroke.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:56.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:56.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 43,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css",
@@ -877,12 +825,11 @@
               "RelativeToolTip": "wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T12:27:24.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:27:24.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "_UILayoutPopulerEventsComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutPopulerEventsComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
@@ -890,12 +837,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:13:12.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:13:12.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 47,
               "Title": "_UILayoutUpComingEventsComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutUpComingEventsComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutUpComingEventsComponent.cs",
@@ -903,12 +849,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutUpComingEventsComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:24:14.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:24:14.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 49,
               "Title": "_UILayoutSearchComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutSearchComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutSearchComponent.cs",
@@ -916,12 +861,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutSearchComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:56:28.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:56:28.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 45,
               "Title": "_UILayoutCategoryComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutCategoryComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutCategoryComponent.cs",
@@ -929,12 +873,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutCategoryComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:54:38.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:54:38.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 46,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Concrete\\Context\\Context.cs",
@@ -942,12 +885,11 @@
               "RelativeToolTip": "..\\DataAccessLayer\\Concrete\\Context\\Context.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAkwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T00:01:16.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T00:01:16.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 48,
               "Title": "_UILayoutAllEventsComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutAllEventsComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutAllEventsComponent.cs",
@@ -955,12 +897,11 @@
               "RelativeToolTip": "ViewComponents\\_UILayoutAllEventsComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T18:44:30.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T18:44:30.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 52,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
@@ -968,24 +909,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:54:42.193Z",
-=======
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Stand_Up\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
-              "RelativeToolTip": "Views\\Stand_Up\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T15:40:22.506Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:54:42.193Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
@@ -993,24 +921,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAB7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T08:57:06.693Z",
-=======
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Stand_Up\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
-              "RelativeToolTip": "Views\\Stand_Up\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T15:40:18.81Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T08:57:06.693Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 42,
+              "DocumentIndex": 54,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
@@ -1018,12 +933,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
               "ViewState": "AQIAAD4AAAAAAAAAAEBVwFcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T09:37:54.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T09:37:54.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 51,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutHeadComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutHeadComponent\\Default.cshtml",
@@ -1031,12 +945,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutHeadComponent\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:41:01.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:41:01.458Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 50,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutSearchComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutSearchComponent\\Default.cshtml",
@@ -1044,12 +957,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutSearchComponent\\Default.cshtml",
               "ViewState": "AQIAADcAAAAAAAAAAAAiwEgAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:41:44.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:41:44.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 53,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
@@ -1057,12 +969,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:54:23.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:54:23.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 57,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1070,12 +981,11 @@
               "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T13:33:40.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:33:40.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 58,
               "Title": "EfAppRoleDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfAppRoleDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfAppRoleDal.cs",
@@ -1083,12 +993,11 @@
               "RelativeToolTip": "..\\DataAccessLayer\\EntityFramework\\EfAppRoleDal.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:04:47.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:04:47.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 59,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
@@ -1099,7 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 60,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
@@ -1110,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 61,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",
@@ -1121,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
@@ -1129,19 +1038,7 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
               "ViewState": "AQIAACcAAAAAAAAAAIBJwAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:44:26.183Z",
-=======
-              "DocumentIndex": 7,
-              "Title": "Stand_UpController.cs",
-              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Stand_UpController.cs",
-              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
-              "RelativeToolTip": "Controllers\\Stand_UpController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T15:40:11.912Z",
->>>>>>> ipek
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T18:44:26.183Z"
             }
           ]
         }

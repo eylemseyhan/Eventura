@@ -29,14 +29,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/Home/Index" aria-haspopup="true" aria-expanded="false">Ana Sayfa </a>
                             </li>
-<<<<<<< HEAD
-
-                            <li class="nav-item ">
-                                <a class="nav-link" href="/Concert/Index">Konser</a>
-=======
                             <li class="nav-item">
                                 <a class="nav-link" href="/Concert/Index">Konser </a>
->>>>>>> ipek
                             </li>
 
                             <li class="nav-item">
@@ -65,7 +59,7 @@
                         </div> -->
                         <!-- Add listings btn -->
                         <div class="dorne-add-listings-btn">
-                            <a href="#" class="user-icon">
+                            <a href="@Url.Action("Index", "Dashboard", new { area = "Admin" })" class="user-icon">
                                 <img src="~/dorne-master/img/core-img/signup.png" alt="User Icon" style="width: 24px; height: 24px;">
                             </a>
                         </div>
@@ -92,8 +86,6 @@
         padding: 0; /* İçerik etrafındaki boşluğu kaldır */
         margin: 0; /* Dışarıdaki boşluğu kaldır */
     }
-
-   
 
         .user-icon:hover {
             transform: scale(1.2); /* Üzerine gelince büyüme efekti (ikonu %20 büyüt) */
