@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20241119114816_AddCityTable")]
-    partial class AddCityTable
+    [Migration("20241125153856_AddDetails")]
+    partial class AddDetails
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -178,23 +178,6 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
-                {
-                    b.Property<int>("CityId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CityId"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("CityId");
-
-                    b.ToTable("Cities");
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
                 {
                     b.Property<int>("EventId")
@@ -209,11 +192,11 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("CityId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Details")
                         .HasColumnType("text");
 
                     b.Property<DateTime>("EventDate")
@@ -227,6 +210,9 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("LocationUrl")
+                        .HasColumnType("text");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
@@ -236,8 +222,6 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("ArtistId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("CityId");
 
                     b.ToTable("Events");
                 });
@@ -442,17 +426,9 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Concrete.City", "City")
-                        .WithMany("Events")
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Artist");
 
                     b.Navigation("Category");
-
-                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -553,11 +529,6 @@ namespace DataAccessLayer.Migrations
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
-                {
-                    b.Navigation("Events");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
                 {
                     b.Navigation("Events");
                 });

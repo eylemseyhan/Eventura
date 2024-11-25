@@ -15,6 +15,19 @@
         <div class="dorne-load"></div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- Etkinlik Resmi -->
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <div class="event-image" style="width: 300px; height: 300px;">
+                <img src="@Model.ImageUrl" alt="Event Image" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    }
+
+>>>>>>> ipek
     <section class="dorne-single-listing-area section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
@@ -49,6 +62,28 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <!-- Etkinlik Harita -->
+                        <div class="location-on-map mt-50" id="lomap">
+                            <h4>Haritada Göster</h4>
+                            <div class="location-map">
+                                <div id="locationMap">
+                                    <!-- Google Maps iframe dinamik olarak LocationUrl'den alınacak -->
+                                    @if (!string.IsNullOrEmpty(Model.LocationUrl))
+                                    {
+                                        <iframe src="@Model.LocationUrl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    }
+                                    else
+                                    {
+                                        <p>Harita bulunamadı.</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+
+>>>>>>> ipek
                     </div>
                 </div>
 
@@ -81,5 +116,9 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
 
+=======
+</html>
+>>>>>>> ipek

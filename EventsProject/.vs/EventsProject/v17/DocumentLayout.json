@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -195,6 +196,70 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\stand_up\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\stand_upcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\kidseventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\ipekn\\desktop\\eventsproject\\eventsproject\\wwwroot\\dorne-master\\single-listing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:wwwroot\\dorne-master\\single-listing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> ipek
     }
   ],
   "DocumentGroupContainers": [
@@ -204,6 +269,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 7,
           "Children": [
             {
@@ -227,15 +293,29 @@
               "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
+=======
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+>>>>>>> ipek
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "Name": "ST:21:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:22:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
@@ -245,11 +325,23 @@
               "ViewState": "AQIAABYAAAAAAAAAAAAUwFUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-25T15:36:18.734Z",
+=======
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Concert\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "RelativeToolTip": "Views\\Concert\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:57:49.472Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< HEAD
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
@@ -258,11 +350,22 @@
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAACTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-25T13:30:54.82Z",
+=======
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Festival\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
+              "RelativeToolTip": "Views\\Festival\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:55:31.457Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< HEAD
               "Title": "ConcertController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
               "RelativeDocumentMoniker": "Controllers\\ConcertController.cs",
@@ -349,11 +452,48 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-25T12:27:49.429Z",
+=======
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:55:07.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Theater\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
+              "RelativeToolTip": "Views\\Theater\\Details.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:54:12.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TheaterController.cs",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TheaterController.cs",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
+              "RelativeToolTip": "Controllers\\TheaterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:53:40.209Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+<<<<<<< HEAD
               "Title": "single-listing.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\single-listing.html",
@@ -362,10 +502,21 @@
               "ViewState": "AQIAALEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-11-25T12:30:01.54Z",
+=======
+              "Title": "KidsEventController.cs",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KidsEventController.cs",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
+              "RelativeToolTip": "Controllers\\KidsEventController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:53:34.952Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 10,
               "Title": "explore.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\explore.html",
@@ -375,12 +526,37 @@
               "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-11-25T14:03:05.317Z",
+=======
+              "DocumentIndex": 8,
+              "Title": "FestivalController.cs",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FestivalController.cs",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
+              "RelativeToolTip": "Controllers\\FestivalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:53:30.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConcertController.cs",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConcertController.cs",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\ConcertController.cs",
+              "RelativeToolTip": "Controllers\\ConcertController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:53:23.5Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Index.cshtml",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
@@ -388,11 +564,21 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-19T18:49:41.944Z",
+=======
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Theater\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
+              "RelativeToolTip": "Views\\Theater\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:52:38.459Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+<<<<<<< HEAD
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -401,11 +587,22 @@
               "ViewState": "AQIAAAcAAAAAAAAAAAAwwBMAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T13:33:31.831Z",
+=======
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\KidsEvent\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
+              "RelativeToolTip": "Views\\KidsEvent\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:52:25.015Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+<<<<<<< HEAD
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
@@ -414,11 +611,22 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-24T23:57:48.172Z",
+=======
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
+              "RelativeToolTip": "Views\\Festival\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:52:02.981Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+<<<<<<< HEAD
               "Title": "_UILayoutNavbarComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutNavbarComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutNavbarComponent.cs",
@@ -466,11 +674,22 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T09:42:03.638Z",
+=======
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Concert\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
+              "RelativeToolTip": "Views\\Concert\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:50:58.893Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+<<<<<<< HEAD
               "Title": "_UILayoutArtistComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutArtistComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutArtistComponent.cs",
@@ -505,10 +724,21 @@
               "ViewState": "AQIAABIAAAAAAAAAAAAAABkAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-11-25T13:08:48.774Z",
+=======
+              "Title": "single-listing.html",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
+              "RelativeDocumentMoniker": "wwwroot\\dorne-master\\single-listing.html",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
+              "RelativeToolTip": "wwwroot\\dorne-master\\single-listing.html",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-25T15:48:42.057Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 23,
               "Title": "map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\map-active.js",
@@ -739,10 +969,22 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-24T23:54:42.193Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stand_Up\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
+              "RelativeToolTip": "Views\\Stand_Up\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T15:40:22.506Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 43,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
@@ -752,10 +994,22 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAB7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-22T08:57:06.693Z",
+=======
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stand_Up\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
+              "RelativeToolTip": "Views\\Stand_Up\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T15:40:18.81Z",
+>>>>>>> ipek
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 42,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
@@ -876,6 +1130,17 @@
               "ViewState": "AQIAACcAAAAAAAAAAIBJwAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-19T18:44:26.183Z",
+=======
+              "DocumentIndex": 7,
+              "Title": "Stand_UpController.cs",
+              "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Stand_UpController.cs",
+              "ToolTip": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
+              "RelativeToolTip": "Controllers\\Stand_UpController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:40:11.912Z",
+>>>>>>> ipek
               "EditorCaption": ""
             }
           ]

@@ -24,4 +24,8 @@ namespace EventsProject.Controllers
 
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ipek

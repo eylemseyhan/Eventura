@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20241026143857_MigrationAdı")]
-    partial class MigrationAdı
+    [Migration("20241125153307_AddLocationUrlToEvent")]
+    partial class AddLocationUrlToEvent
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -205,6 +205,9 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("Location")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LocationUrl")
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
