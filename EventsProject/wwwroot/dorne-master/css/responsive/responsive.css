@@ -45,13 +45,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .navbar-toggler {
-        border: 2px solid #fff;
-        color: #fff;
-        margin: 37px 0;
-        -webkit-transition-duration: 500ms;
-                transition-duration: 500ms;
-    }
+    
     .sticky .navbar-toggler {
         margin: 17px 0
     }
@@ -147,13 +141,7 @@
     .navbar-brand {
         margin-right: 0;
     }
-    .navbar-toggler {
-        border: 2px solid #fff;
-        color: #fff;
-        margin: 37px 0;
-        -webkit-transition-duration: 500ms;
-                transition-duration: 500ms;
-    }
+    
     .sticky .navbar-toggler {
         margin: 17px 0
     }

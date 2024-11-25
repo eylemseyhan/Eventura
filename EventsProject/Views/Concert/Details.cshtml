@@ -1,0 +1,89 @@
+﻿@using EntityLayer.Concrete;
+@model Event
+
+@{
+    ViewData["Title"] = "Etkinlik Detayları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="dorne-load"></div>
+    </div>
+
+    <section class="dorne-single-listing-area section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Single Listing Content -->
+                <div class="col-12 col-lg-8">
+                    <div class="single-listing-content">
+
+                        <!-- Etkinlik adı -->
+                        <div class="listing-title">
+                            <h4>@Model.Title</h4>
+                        </div>
+
+                        <!-- Etkinlik Açıklaması -->
+                        <div class="overview-content mt-50" id="overview">
+                            <p>@Model.Description</p> <!-- Etkinlik Açıklaması -->
+
+                            <p>@Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
+                        </div>
+
+                        
+
+
+
+
+
+                        <!-- Etkinlik Konumu -->
+                        <div class="event-location mt-50">
+                            <p><strong>Konum:</strong> @Model.Location</p> <!-- Etkinlik Konumu -->
+                        </div>
+
+                        <!-- Etkinlik Harita -->
+                        <div class="location-on-map mt-50" id="lomap">
+                            <h4>Haritada Göster</h4>
+                            <div class="location-map">
+                                <div id="locationMap"></div> <!-- Harita gösterimi için alan -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-12 col-md-8 col-lg-4">
+                    <div class="listing-sidebar">
+
+                        <!-- Bilet Al Button -->
+                        <div class="listing-verify">
+                            <a href="#" class="btn dorne-btn w-100"><i class="fa fa-check pr-3"></i> Bilet Al</a>
+
+                            <!-- Opening Hours Widget -->
+                            <div class="opening-hours-widget mt-50">
+                                <h6 style="color:white">Açılış Saati</h6>
+                                <ul class="opening-hours text-center">
+                                    <li>
+                                        <p style="color:white">@Model.EventDate.ToString("HH:mm")</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+

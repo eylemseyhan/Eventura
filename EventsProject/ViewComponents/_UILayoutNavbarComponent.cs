@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventsProject.ViewComponents
 {
-    public class _UILayoutNavbarComponent:ViewComponent
+    public class _UILayoutNavbarComponent : ViewComponent
     {
-        public IViewComponentResult Invoke() 
+        public IViewComponentResult Invoke()
         {
             return View();
         }

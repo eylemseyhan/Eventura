@@ -344,16 +344,13 @@ li {
         z-index: -1;
     }
 
-    .bg-overlay-9:after {
-        background-color: rgba(14, 2, 35, 0.9);
-    }
 
 .bg-gray {
     background-color: #f9f9f9;
 }
 
 .bg-default {
-    background-color: #341a79;
+    background-color: #D3D3D3;
 }
 
 .dorne-btn {
@@ -487,10 +484,6 @@ li {
     font-size: 15px;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-item.active .nav-link {
-    color: #cccccc; /* A��k gri */
-}
 
 
 

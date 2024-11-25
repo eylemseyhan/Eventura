@@ -21,6 +21,10 @@ namespace EntityLayer.Concrete
         public string Location { get; set; } // Etkinlik mekanı
         public string ImageUrl { get; set; } // Etkinlik görsel URL'si
 
+        public string? LocationUrl { get; set; }
+
+        public string? Details {  get; set; }
+
         // İlişkiler
      
         public virtual Category Category { get; set; }

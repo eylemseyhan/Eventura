@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     Layout = null;
 }
 
@@ -14,8 +14,17 @@
     </div>
 
     @await Component.InvokeAsync("_UILayoutNavbarComponent")
-
-  @RenderBody()
+    <section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="margin-top:80px;">
+                    <div class="about-content text-center">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     @await Component.InvokeAsync("_UILayoutFooterComponent")
