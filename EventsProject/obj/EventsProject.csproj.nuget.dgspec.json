@@ -1,45 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj": {}
+    "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\EventsProject.csproj": {}
   },
   "projects": {
-    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/BusinessLayer.csproj": {
+    "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/BusinessLayer.csproj",
-        "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
-        "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/obj/",
+        "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\eylem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
-=======
-          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eylem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/DataAccessLayer.csproj": {
-                "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/DataAccessLayer.csproj"
+              "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj": {
-                "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj"
+              "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -52,116 +49,12 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-<<<<<<< HEAD
-=======
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            }
-          },
->>>>>>> ipek
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
->>>>>>> ipek
+          "auditMode": "direct"
         }
-      }
-    },
-    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/DataAccessLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/DataAccessLayer.csproj",
-        "projectName": "DataAccessLayer",
-        "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/DataAccessLayer.csproj",
-        "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
-        "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/DataAccessLayer/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-<<<<<<< HEAD
-          "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
-=======
-          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> ipek
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj": {
-                "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-<<<<<<< HEAD
-=======
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -188,7 +81,6 @@
               "version": "[8.0.10, )"
             }
           },
->>>>>>> ipek
           "imports": [
             "net461",
             "net462",
@@ -205,39 +97,126 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
->>>>>>> ipek
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj": {
+    "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj",
-        "projectName": "EntityLayer",
-        "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/EntityLayer.csproj",
-        "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
-        "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EntityLayer/obj/",
+        "projectUniqueName": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\eylem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
-=======
-          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eylem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj",
+        "projectName": "EntityLayer",
+        "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\eylem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\eylem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -254,19 +233,20 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-<<<<<<< HEAD
-=======
           "dependencies": {
             "Microsoft.AspNet.Identity.EntityFramework": {
               "target": "Package",
               "version": "[2.2.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -293,7 +273,6 @@
               "version": "[8.0.10, )"
             }
           },
->>>>>>> ipek
           "imports": [
             "net461",
             "net462",
@@ -310,47 +289,40 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
->>>>>>> ipek
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj": {
+    "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\EventsProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj",
+        "projectUniqueName": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\EventsProject.csproj",
         "projectName": "EventsProject",
-        "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/EventsProject.csproj",
-        "packagesPath": "/Users/ebrarsedagunduz/.nuget/packages/",
-        "outputPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/obj/",
+        "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\EventsProject.csproj",
+        "packagesPath": "C:\\Users\\eylem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "/Users/ebrarsedagunduz/.nuget/NuGet/NuGet.Config"
-=======
-          "C:\\Users\\ipekn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eylem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> ipek
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/BusinessLayer.csproj": {
-                "projectPath": "/Users/ebrarsedagunduz/RiderProjects/EventsProject/BusinessLayer/BusinessLayer.csproj"
+              "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -363,9 +335,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -375,8 +346,6 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
-<<<<<<< HEAD
-=======
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -385,14 +354,6 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
-<<<<<<< HEAD
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.3, )"
-            },
->>>>>>> ipek
-=======
->>>>>>> ipek
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -412,6 +373,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Npgsql": {
               "target": "Package",
@@ -449,11 +414,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
->>>>>>> ipek
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

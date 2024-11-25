@@ -1,89 +1,135 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventsProject
 build_property.RootNamespace = EventsProject
-build_property.ProjectDir = /Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/
+build_property.ProjectDir = C:\Users\eylem\Desktop\EventsProject\EventsProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject
+build_property.MSBuildProjectDirectory = C:\Users\eylem\Desktop\EventsProject\EventsProject
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Concert/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uY2VydFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Concert/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uY2VydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutAllEventsComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0QWxsRXZlbnRzQ29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Festival/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVzdGl2YWxcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutArtistComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0QXJ0aXN0Q29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Festival/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVzdGl2YWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutCategoryComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0Q2F0ZWdvcnlDb21wb25lbnQvRGVmYXVsdC5jc2h0bWw=
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutFooterComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0Rm9vdGVyQ29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutHeadComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0SGVhZENvbXBvbmVudC9EZWZhdWx0LmNzaHRtbA==
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/KidsEvent/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2lkc0V2ZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutNavbarComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0TmF2YmFyQ29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/KidsEvent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2lkc0V2ZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutPopulerEventsComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0UG9wdWxlckV2ZW50c0NvbXBvbmVudC9EZWZhdWx0LmNzaHRtbA==
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutAllEventsComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0QWxsRXZlbnRzQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutScriptComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0U2NyaXB0Q29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutArtistComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0QXJ0aXN0Q29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutSearchComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0U2VhcmNoQ29tcG9uZW50L0RlZmF1bHQuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutCategoryComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0Q2F0ZWdvcnlDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Components/_UILayoutUpComingEventsComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX1VJTGF5b3V0VXBDb21pbmdFdmVudHNDb21wb25lbnQvRGVmYXVsdC5jc2h0bWw=
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutFooterComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0Rm9vdGVyQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutHeadComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0SGVhZENvbXBvbmVudFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutNavbarComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0TmF2YmFyQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutPopulerEventsComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0UG9wdWxlckV2ZW50c0NvbXBvbmVudFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutScriptComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0U2NyaXB0Q29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ebrarsedagunduz/RiderProjects/EventsProject/EventsProject/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-goopaxey6n
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutSearchComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0U2VhcmNoQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutUpComingEventsComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0VXBDb21pbmdFdmVudHNDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Stand_Up/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhbmRfVXBcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Stand_Up/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhbmRfVXBcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Theater/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlYXRlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Theater/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlYXRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-biktl570ee
