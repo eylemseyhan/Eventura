@@ -645,10 +645,7 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "runtime": {
-          "DataAccessLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DataAccessLayer.dll": {}
         }
       },
       "EntityLayer/1.0.0": {
@@ -659,10 +656,7 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "runtime": {
-          "EntityLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "EntityLayer.dll": {}
         }
       }
     }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventsProject.ViewComponents
 {
-    public class _UILayoutArtistComponent:ViewComponent
+    public class _UILayoutArtistComponent : ViewComponent
     {
         Context db = new Context();
         public IViewComponentResult Invoke()
