@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;  // AppUser modeliniz burada
 namespace EventsProject.Areas.Member.Controllers
 {
     [Area("Member")]
-   
+
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -27,16 +27,14 @@ namespace EventsProject.Areas.Member.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(RegisterViewModel model)
         {
-            
-                // Yeni kullanıcı nesnesi oluşturuluyor
-                AppUser user = new AppUser
-                {
-                  
-                    Name = model.Name,
-                    Surname = model.Surname,
-                    Email=model.Email,
-                    UserName=model.Username
-                };
+            // Burada modelin RegisterViewModel türünde olduğuna emin olun
+            AppUser user = new AppUser
+            {
+                Name = model.Name,
+                Surname = model.Surname,
+                Email = model.Email,
+                UserName = model.Username
+            };
 
             if (model.Password == model.ConfirmPassword)
             {
@@ -47,14 +45,14 @@ namespace EventsProject.Areas.Member.Controllers
                 }
                 else
                 {
-                    foreach(var item in result.Errors)
+                    foreach (var item in result.Errors)
                     {
-                        ModelState.AddModelError("",item.Description);
+                        ModelState.AddModelError("", item.Description);
                     }
                 }
             }
-            return View(model);
-         
+            return View(model); // Burada RegisterViewModel modeli geri döndürülmeli
         }
+
     }
 }

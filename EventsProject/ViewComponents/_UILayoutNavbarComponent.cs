@@ -7,7 +7,7 @@ namespace EventsProject.ViewComponents
     {
         public IViewComponentResult Invoke() 
         {
-           
+       
             return View();
         }
 

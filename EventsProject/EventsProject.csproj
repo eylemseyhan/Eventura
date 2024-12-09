@@ -35,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Views\Shared\Components\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

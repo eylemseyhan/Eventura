@@ -14,10 +14,10 @@ namespace EntityLayer.Concrete
         [Key] // Birincil anahtar
         public int UserFavoriteId { get; set; }
 
-        [ForeignKey("User")] // AppUser ile ilişkilendirme
+     
         public int UserId { get; set; }
 
-        [ForeignKey("Event")] // Event ile ilişkilendirme
+      
         public int EventId { get; set; }
 
         // İlişkiler

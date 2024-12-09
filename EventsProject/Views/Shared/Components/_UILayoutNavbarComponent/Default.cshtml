@@ -1,4 +1,4 @@
-﻿ <!-- ***** Search Form Area ***** -->
+﻿<!-- ** Search Form Area ** -->
 <div class="dorne-search-form d-flex align-items-center">
     <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<!-- ***** Header Area Start ***** -->
+<!-- ** Header Area Start ** -->
 <header class="header_area" id="header">
     <div class="container-fluid h-100">
         <div class="row h-100">
@@ -52,27 +52,23 @@
                         <div class="dorne-search-btn">
                             <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Ara </a>
                         </div>
+
                         <div class="dorne-add-listings-btn">
                             <a href="javascript:void(0);" class="user-icon" onclick="toggleDropdown()">
                                 <img src="~/dorne-master/img/core-img/signup.png" alt="User Icon" style="width: 24px; height: 24px;">
                             </a>
-                            <ul>
+                            <!-- Dropdown Menü -->
+                            <div id="dropdownMenu" class="dropdown-content">
                                 @if (User.Identity.IsAuthenticated)
                                 {
-                                    <span>Hoş geldiniz, @User.Identity.Name</span>
+                                    <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Hoş geldin, @User.Identity.Name</a>
                                     <a href="@Url.Action("Logout", "Login", new { area = "Member" })">Çıkış Yap</a>
                                 }
                                 else
                                 {
-                                    <span>Giriş yapmadınız.</span>
+                                    <a href="@Url.Action("SignIn", "Login", new { area = "Member" })">Kullanıcı Girişi</a>
+                                    <a href="@Url.Action("Index", "Login", new { area = "Admin" })">Admin Girişi</a>
                                 }
-                            </ul>
-
-                            <!-- Dropdown Menü -->
-                            <div id="dropdownMenu" class="dropdown-content">
-                                <a href="@Url.Action("SignUp", "Register", new { area = "Member" })">Kullanıcı Girişi</a>
-                                <a href="@Url.Action("Index", "Login", new { area = "Admin" })">Admin Girişi</a>
-                                <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Kullanıcı Paneli</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +77,6 @@
         </div>
     </div>
 </header>
-
 <style>
 
     .user-icon {
@@ -99,24 +94,24 @@
         margin: 0; /* Dışarıdaki boşluğu kaldır */
     }
 
-    .user-icon:hover {
-        transform: scale(1.2); /* Üzerine gelince büyüme efekti (ikonu %20 büyüt) */
-    }
+        .user-icon:hover {
+            transform: scale(1.2); /* Üzerine gelince büyüme efekti (ikonu %20 büyüt) */
+        }
 
-    .user-icon img {
-        width: 80%; /* İkonun genişliği, butonun genişliğine göre ayarlanacak */
-        height: 80%; /* İkonun yüksekliği, butonun yüksekliğine göre ayarlanacak */
-        border-radius: 50%; /* İkonu yuvarlak yapmak için */
-    }
+        .user-icon img {
+            width: 80%; /* İkonun genişliği, butonun genişliğine göre ayarlanacak */
+            height: 80%; /* İkonun yüksekliği, butonun yüksekliğine göre ayarlanacak */
+            border-radius: 50%; /* İkonu yuvarlak yapmak için */
+        }
 
-    .user-icon:focus {
-        outline: none; /* Outline'ı kaldır */
-        box-shadow: none; /* Varsayılan gölgeyi kaldır */
-    }
+        .user-icon:focus {
+            outline: none; /* Outline'ı kaldır */
+            box-shadow: none; /* Varsayılan gölgeyi kaldır */
+        }
 
-    .user-icon:active {
-        outline: none; /* Aktif durumdaki outline'ı kaldır */
-    }
+        .user-icon:active {
+            outline: none; /* Aktif durumdaki outline'ı kaldır */
+        }
     /* Dropdown Menüsü */
     .dropdown-content {
         display: none;
@@ -142,7 +137,6 @@
     .dorne-add-listings-btn:hover .dropdown-content {
         display: block;
     }
-
 </style>
 
 
@@ -157,5 +151,5 @@
     }
 
     // Sayfa dışında bir yere tıklanırsa dropdown menüsünü kapat
-   
+
 </script>

@@ -15,7 +15,7 @@ namespace EventsProject.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.WelcomeMessage = TempData["WelcomeMessage"];
+       
             return View();
         }
 
