@@ -9,5 +9,8 @@ namespace BusinessLayer.Abstract
 {
     public interface IArtistService:IGenericService<Artist>
     {
+        List<Artist> GetAll();
+
+        Artist TGetByID(List<int> artistIds);
     }
 }

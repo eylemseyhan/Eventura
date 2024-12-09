@@ -1,5 +1,4 @@
-﻿<!-- ***** Welcome Area Start ***** -->
-<section class="dorne-welcome-area bg-img bg-overlay">
+﻿<section class="dorne-welcome-area bg-img bg-overlay">
     <!-- Video Arka Plan -->
     <video autoplay muted loop class="bg-video" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
         <source src="~/dorne-master/videos/hero-video.mp4" type="video/mp4">
@@ -18,51 +17,34 @@
                     <!-- Tabs -->
                     <div class="nav nav-tabs" id="heroTab" role="tablist">
                         <a class="nav-item nav-link active" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="true">Etkinlikler</a>
-                        <a class="nav-item nav-link" id="nav-tickets-tab" data-toggle="tab" href="#nav-tickets" role="tab" aria-controls="nav-tickets" aria-selected="false">Biletler</a>
+                       
                     </div>
                     <!-- Tabs Content -->
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
                             <h6>Hangi etkinlikleri arıyorsunuz?</h6>
-                            <form action="#" method="get">
-                                <select class="custom-select">
-                                    <option selected>Etkinlik Şehri</option>
-                                    <option value="1">İstanbul</option>
-                                    <option value="2">Ankara</option>
-                                    <option value="3">İzmir</option>
-                                    <option value="4">Antalya</option>
-                                    <option value="5">Bursa</option>
+                            <form action="/EventSearch/Index" method="get">
+                                <select class="custom-select" name="cityId">
+                                    <option selected value="">Etkinlik Şehri</option>
+                                    @foreach (var city in (IEnumerable<DataAccessLayer.City>)ViewBag.Cities)
+                                    {
+                                        <option value="@city.CityId">@city.CityName</option>
+                                    }
                                 </select>
-                                <select class="custom-select">
-                                    <option selected>Tüm Kategoriler</option>
-                                    <option value="1">Konser</option>
-                                    <option value="2">Tiyatro</option>
-                                    <option value="3">Spor</option>
-                                    <option value="4">Festival</option>
+                                <select class="custom-select" name="categoryId">
+                                    <option selected value="">Tüm Kategoriler</option>
+                                    @foreach (var category in (IEnumerable<EntityLayer.Concrete.Category>)ViewBag.Categories)
+                                    {
+                                        <option value="@category.CategoryId">@category.Name</option>
+                                    }
                                 </select>
-                                <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Ara</button>
+                                <button type="submit" class="btn dorne-btn">
+                                    <i class="fa fa-search pr-2" aria-hidden="true"></i> Ara
+                                </button>
                             </form>
+
                         </div>
-                        <div class="tab-pane fade" id="nav-tickets" role="tabpanel" aria-labelledby="nav-tickets-tab">
-                            <h6>Aradığınız bilet türü nedir?</h6>
-                            <form action="#" method="get">
-                                <select class="custom-select">
-                                    <option selected>Bilet Şehri</option>
-                                    <option value="1">İstanbul</option>
-                                    <option value="2">Ankara</option>
-                                    <option value="3">İzmir</option>
-                                    <option value="4">Antalya</option>
-                                    <option value="5">Bursa</option>
-                                </select>
-                                <select class="custom-select">
-                                    <option selected>Tüm Kategoriler</option>
-                                    <option value="1">VIP</option>
-                                    <option value="2">Standart</option>
-                                    <option value="3">Erken Giriş</option>
-                                </select>
-                                <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Ara</button>
-                            </form>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -75,12 +57,10 @@
             <span></span>
         </div>
         <div class="social-btns">
-            <a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
-            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-haspopup="true"></i></a>
             <a href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a>
             <a href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
         </div>
     </div>
 </section>
-<!-- ***** Welcome Area End ***** -->
+

@@ -18,13 +18,9 @@ namespace EventsProject.Controllers
             var eventDetail = db.Events.FirstOrDefault(x => x.EventId == id);
             if (eventDetail == null)
             {
-
-                return NotFound();
+                return NotFound(); // Etkinlik bulunamazsa 404 döndür
             }
-            return View(eventDetail);
+            return View(eventDetail); // Bu view bir Event nesnesi bekliyor
         }
-
     }
 }
-
- 

@@ -1,4 +1,4 @@
-﻿ <!-- ***** Search Form Area ***** -->
+﻿<!-- ***** Search Form Area ***** -->
 <div class="dorne-search-form d-flex align-items-center">
     <div class="container">
         <div class="row">
@@ -46,23 +46,27 @@
                                 <a class="nav-link" href="/Festival/Index">Festival</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">İletişim</a>
+                                <a class="nav-link" href="/Contact/Index">İletişim</a>
                             </li>
                         </ul>
                         <!-- Search btn -->
                         <div class="dorne-search-btn">
                             <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Ara </a>
                         </div>
-                        <!-- Signin btn -->
-                        <!--  <div class="dorne-signin-btn">
-                            <a href="#">Sign in  or Register</a>
-                        </div> -->
-                        <!-- Add listings btn -->
+
                         <div class="dorne-add-listings-btn">
-                            <a href="@Url.Action("Index", "Dashboard", new { area = "Admin" })" class="user-icon">
+                            <a href="javascript:void(0);" class="user-icon" onclick="toggleDropdown()">
                                 <img src="~/dorne-master/img/core-img/signup.png" alt="User Icon" style="width: 24px; height: 24px;">
                             </a>
+                            <!-- Dropdown Menü -->
+                            <div id="dropdownMenu" class="dropdown-content">
+                                <a href="@Url.Action("SignUp", "Register", new { area = "Member" })">Kullanıcı Girişi</a>
+                                <a href="@Url.Action("Index", "Login", new { area = "Admin" })">Admin Girişi</a>
+                                <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Kullanıcı Paneli</a>
+                            </div>
+
                         </div>
+
 
                     </div>
                 </nav>
@@ -105,9 +109,44 @@
         .user-icon:active {
             outline: none; /* Aktif durumdaki outline'ı kaldır */
         }
+    /* Dropdown Menüsü */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+    /* Dropdown Menü gösterme */
+    .dorne-add-listings-btn:hover .dropdown-content {
+        display: block;
+    }
 </style>
 
 
 
 
+
+<script>
+    // Dropdown menüsünü açma ve kapama
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    // Sayfa dışında bir yere tıklanırsa dropdown menüsünü kapat
+
+</script>
