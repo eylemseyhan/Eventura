@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-        public class Ticket
-        {
-            public int TicketId { get; set; }  // Birincil anahtar
-            public int EventId { get; set; }    // Etkinlik ID'si
-            public decimal Price { get; set; }  // Bilet fiyatı
-            public string SeatNumber { get; set; } // Koltuk numarası
-            public bool IsAvailable { get; set; } // Biletin durumu (mevcut / satıldı)
+    public class Ticket
+    {
+        public int TicketId { get; set; }  // Birincil anahtar
+        public int EventId { get; set; }    // Etkinlik ID'si
+        public decimal Price { get; set; }  // Bilet fiyatı
+        public string TicketNumber { get; set; }
+        public bool IsAvailable { get; set; } // Biletin durumu (mevcut / satıldı)
+        public int TicketCount { get; set; }
 
-            // İlişkiler
-            public virtual Event Event { get; set; }
-        }
+
+        // İlişkiler
+        public virtual Event Event { get; set; }
+    }
 }
-
-

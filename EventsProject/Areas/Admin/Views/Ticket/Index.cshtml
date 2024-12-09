@@ -1,0 +1,193 @@
+﻿@model List<EntityLayer.Concrete.Ticket>
+
+@{
+    ViewData["Title"] = "Ticket Listesi";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px 0;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f9fa;
+        padding: 10px 15px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .btn-primary {
+        color: #fff;
+        text-decoration: none;
+        background-color: #007bff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+    .action-icons a {
+        margin-right: 8px;
+        text-decoration: none;
+    }
+
+    .action-icons i {
+        font-size: 1.2rem;
+    }
+
+    .ticket-details {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .ticket-row {
+        padding: 10px;
+        border: 1px solid #dee2e6;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Ticket Listesi</div>
+            <a href="@Url.Action("Create", "Ticket", new { area = "Admin" })" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Yeni Bilet Ekle
+            </a>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Etkinlik</th>
+                        <th>Bilet Fiyatı</th>
+                        <th>Toplam Bilet Sayısı</th>
+                        <th>Aksiyonlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        var eventsGrouped = Model.GroupBy(ticket => ticket.Event?.EventId);
+                        foreach (var group in eventsGrouped)
+                        {
+                            var eventObj = group.First().Event;
+                            var totalTickets = group.Count();
+
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0);" class="event-name" data-event-id="@eventObj?.EventId" onclick="toggleTicketDetails(@eventObj?.EventId)">
+                                        @eventObj?.Title ?? "Etkinlik Adı Bulunamadı"
+                                    </a>
+                                </td>
+                                <td>@group.First().Price</td>
+                                <td>@totalTickets</td>
+                                <td class="action-icons">
+                                    <a href="@Url.Action("Edit", "Ticket", new { id = group.First().TicketId, area = "Admin" })">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+
+                                    <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = eventObj?.EventId, area = "Admin" })')">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+
+
+                                </td>
+                            </tr>
+
+                            <tr id="ticket-details-@eventObj?.EventId" class="ticket-details">
+                                <td colspan="4">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Bilet Numarası</th>
+                                                <th>Durum</th>
+                                                <th>Fiyat</th>
+                                                <th>Aksiyonlar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var ticket in group)
+                                            {
+                                                <tr class="ticket-row">
+                                                    <td>@ticket.TicketNumber</td>
+                                                    <td>@(ticket.IsAvailable ? "Mevcut" : "Satıldı")</td>
+                                                    <td>@ticket.Price</td>
+                                                    <td class="action-icons">
+                                                        <a href="@Url.Action("EditTicket", "Ticket", new { ticketId = ticket.TicketId, area = "Admin" })">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+
+
+                                                        <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.TicketId, area = "Admin" })')">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">Kayıt bulunamadı.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleTicketDetails(eventId) {
+        var detailsRow = document.getElementById('ticket-details-' + eventId);
+        if (detailsRow.style.display === "none" || detailsRow.style.display === "") {
+            detailsRow.style.display = "table-row";
+        } else {
+            detailsRow.style.display = "none";
+        }
+    }
+    function confirmDelete(deleteUrl) {
+        if (confirm("Bu bileti silmek istediğinize emin misiniz?")) {
+            window.location.href = deleteUrl;
+        }
+    }
+</script>

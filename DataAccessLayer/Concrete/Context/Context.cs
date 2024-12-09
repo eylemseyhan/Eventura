@@ -23,6 +23,8 @@ namespace DataAccessLayer.Concrete
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<UserFavorite> UserFavorites { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Message> Messages { get; set; }
        
 
     }

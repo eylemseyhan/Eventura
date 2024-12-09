@@ -654,6 +654,7 @@
       "EntityLayer/1.0.0": {
         "dependencies": {
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.4",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.Extensions.Identity.Stores": "8.0.10",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"

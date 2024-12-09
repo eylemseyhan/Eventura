@@ -9,5 +9,9 @@ namespace BusinessLayer.Abstract
 {
     public interface ICategoryService:IGenericService<Category>
     {
+        List<Category> GetAll();
+        Category TGetByID(List<int> categoryIds);
+        List<string> GetCategoryNames();
+        List<Category> GetCategories();
     }
 }

@@ -1,0 +1,65 @@
+﻿@model EntityLayer.Concrete.Ticket
+
+@{
+    ViewData["Title"] = "Yeni Bilet Ekle";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-title">Yeni Bilet Ekle</div>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            <label for="EventId">Etkinlik</label>
+                            <select class="form-control" id="EventId" name="EventId" required>
+                                @if (ViewBag.Events != null)
+                                {
+                                    foreach (var eventItem in ViewBag.Events)
+                                    {
+                                        <option value="@eventItem.EventId">@eventItem.Title</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option disabled>Etkinlik bulunamadı</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Price">Bilet Fiyatı</label>
+                            <input type="number" class="form-control" id="Price" name="Price" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="TicketNumber">Bilet Numarası</label>
+                            <input type="text" class="form-control" id="TicketNumber" name="TicketNumber" readonly style="display: none;" />
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="TicketCount">Bilet Adedi</label>
+                            <input type="number" class="form-control" id="TicketCount" name="TicketCount" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="IsAvailable">Durum</label>
+                            <select class="form-control" id="IsAvailable" name="IsAvailable" required>
+                                <option value="true">Mevcut</option>
+                                <option value="false">Satıldı</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

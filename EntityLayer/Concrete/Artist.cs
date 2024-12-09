@@ -10,6 +10,7 @@ namespace EntityLayer.Concrete
   
         public class Artist
         {
+        [Key]
             public int ArtistId { get; set; }    // Birincil anahtar
             public string Name { get; set; }      // Sanatçı adı
             public string Bio { get; set; }       // Sanatçı biyografisi

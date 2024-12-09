@@ -151,7 +151,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ArtistId");
 
-                    b.ToTable("Artists");
+                    b.ToTable("Artists", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
@@ -172,7 +172,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
@@ -220,7 +220,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Events");
+                    b.ToTable("Events", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -248,7 +248,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("TicketId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Ticket", b =>
@@ -276,7 +276,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("Tickets");
+                    b.ToTable("Tickets", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.UserFavorite", b =>
@@ -287,23 +287,19 @@ namespace DataAccessLayer.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserFavoriteId"));
 
-                    b.Property<int>("TicketId")
+                    b.Property<int>("EventId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("UserId1")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("UserFavoriteId");
 
-                    b.HasIndex("TicketId");
+                    b.HasIndex("EventId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("UserFavorites");
+                    b.ToTable("UserFavorites", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -452,19 +448,19 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.UserFavorite", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Ticket", "Ticket")
+                    b.HasOne("EntityLayer.Concrete.Event", "Event")
                         .WithMany()
-                        .HasForeignKey("TicketId")
+                        .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Concrete.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1")
+                        .WithMany("UserFavorites")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Ticket");
+                    b.Navigation("Event");
 
                     b.Navigation("User");
                 });
@@ -518,6 +514,11 @@ namespace DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.Navigation("UserFavorites");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Artist", b =>

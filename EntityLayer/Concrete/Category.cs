@@ -10,6 +10,7 @@ namespace EntityLayer.Concrete
 {
     public class Category
     {
+        [Key]
         public int CategoryId { get; set; }  // Birincil anahtar
         public string Name { get; set; }      // Kategori adı
 

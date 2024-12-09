@@ -15,6 +15,9 @@ namespace DataAccessLayer.Abstract
         void Update(T t);
         List<T> GetList();
         T GetByID(int id);
+        List<T> GetList(Func<T, bool> filter);
+        List<T> GetTicketsWithEvents();
+        List<T> GetAll(Expression<Func<T, bool>> filter = null);
         List<T> GetListByFilter(Expression<Func<T, bool>> filter);
     }
 }

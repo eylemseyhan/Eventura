@@ -1,26 +1,19 @@
-﻿/* ----------------------------------------------
-:: Template Name: Dorne - Directory & Listing Template
+﻿:: Template Name: Dorne - Directory & Listing Template
 :: Template Author: Colorlib
 :: Template Author URI: https://colorlib.com
 :: Version: v1.0.0
 :: Last Updated: 12-23-2017
 ---------------------------------------------- */
-
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-
 /* Import CSS */
-
 @import 'css/bootstrap/bootstrap.min.css';
 @import 'css/others/animate.css';
 @import 'css/others/magnific-popup.css';
 @import 'css/others/owl.carousel.min.css';
 @import 'css/others/font-awesome.min.css';
 @import 'css/others/pe-icon-7-stroke.css';
-
 /* Base CSS */
-
 * {
     margin: 0;
     padding: 0;
@@ -344,16 +337,13 @@ li {
         z-index: -1;
     }
 
-    .bg-overlay-9:after {
-        background-color: rgba(14, 2, 35, 0.9);
-    }
 
 .bg-gray {
     background-color: #f9f9f9;
 }
 
 .bg-default {
-    background-color: #341a79;
+    background-color: #D3D3D3;
 }
 
 .dorne-btn {
@@ -487,10 +477,6 @@ li {
     font-size: 15px;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-item.active .nav-link {
-    color: #cccccc; /* A��k gri */
-}
 
 
 

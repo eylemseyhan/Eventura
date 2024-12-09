@@ -1,4 +1,7 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,31 +11,57 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    internal class ArtistManager : IArtistService
+    public class ArtistManager : IArtistService
     {
-        public void TAdd(Artist t)
+         private readonly IArtistDal _artistDal;
+
+        public ArtistManager(IArtistDal artistDal)
         {
-            throw new NotImplementedException();
+            _artistDal = artistDal;
         }
 
-        public void TDelete(Artist t)
+        public List<Artist> GetAll()
         {
-            throw new NotImplementedException();
+            return _artistDal.GetAll();
+        }
+        
+
+
+
+        public void TAdd(Artist artist)
+        {
+
+            // Burada validasyon ve diğer işlemler yapılabilir.
+            _artistDal.Insert(artist);
         }
 
+        public void TDelete(Artist artist)
+        {
+            // Sanatçıyı silme işlemi
+            _artistDal.Delete(artist);
+        }
         public Artist TGetByID(int id)
+        {
+            using (var c = new Context())
+            {
+                return c.Artists.FirstOrDefault(c => c.ArtistId == id);
+            }
+        }
+
+        public Artist TGetByID(List<int> artistIds)
         {
             throw new NotImplementedException();
         }
 
         public List<Artist> TGetList()
         {
-            throw new NotImplementedException();
+            return _artistDal.GetAll();
         }
 
-        public void TUpdate(Artist t)
+        public void TUpdate(Artist artist)
         {
-            throw new NotImplementedException();
+            // Sanatçıyı güncelleme işlemi    
+            _artistDal.Update(artist);
         }
     }
 }

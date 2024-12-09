@@ -87,13 +87,48 @@
                             <h4 class="text-section">Admin İşlemleri</h4>
                         </li>
                         <li class="nav-item">
-                            <a href="/Home/Index"
+                            <a href="@Url.Action("Index", "Events", new { area = "Admin" })" >
+
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Etkinlikler</p>
+
+                            </a>
+
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Categories", new { area = "Admin" })">
 
                                 <i class="fas fa-award" style="text-align:center"></i>
                                 <p>Kategoriler</p>
 
                             </a>
 
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Artist", new { area = "Admin" })">
+
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Sanatçılar</p>
+
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Ticket", new { area = "Admin" })">
+
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Biletler</p>
+
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Messages", new { area = "Admin" })" class="user-icon">
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Mesajlar</p>
+                            </a>
                         </li>
 
                     </ul>

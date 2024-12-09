@@ -24,7 +24,9 @@
                                 <p>Konser</p>
                             </div>
                             <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" onclick="toggleFavorite(this)" data-event-id="1">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +43,9 @@
                                 <p>Festival</p>
                             </div>
                             <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" onclick="toggleFavorite(this)" data-event-id="2">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +62,9 @@
                                 <p>Stand-up</p>
                             </div>
                             <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" onclick="toggleFavorite(this)" data-event-id="3">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +81,9 @@
                                 <p>Çocuk Etkinliği</p>
                             </div>
                             <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" onclick="toggleFavorite(this)" data-event-id="4">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +100,9 @@
                                 <p>Festival</p>
                             </div>
                             <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0);" onclick="toggleFavorite(this)" data-event-id="5">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -101,6 +111,33 @@
         </div>
     </div>
 </section>
+
+<script>
+    function toggleFavorite(element) {
+        // Kalp ikonu elemanını seç
+        const icon = element.querySelector('i');
+
+        // Etkinlik ID'sini alın
+        const eventId = element.getAttribute('data-event-id');
+
+        // Favori ekleme/silme işlemini gerçekleştirin
+        if (icon.classList.contains('fa-heart-o')) {
+            // Favori olarak işaretle
+            icon.classList.remove('fa-heart-o');
+            icon.classList.add('fa-heart');
+
+            // Burada favori ekleme işlemini API'ye gönderin
+            console.log(Etkinlik ${eventId} favorilere eklendi.);
+        } else {
+            // Favoriden çıkar
+            icon.classList.remove('fa-heart');
+            icon.classList.add('fa-heart-o');
+
+            // Burada favoriden çıkarma işlemini API'ye gönderin
+            console.log(Etkinlik ${eventId} favorilerden çıkarıldı.);
+        }
+    }
+</script>
 
 <style>
     .single-features-area {

@@ -9,6 +9,7 @@ namespace EventsProject.Controllers
         Context db = new Context();
         public IActionResult Index()
         {
+            ViewBag.WelcomeMessage = TempData["WelcomeMessage"];
             var values = db.Events.Where(x => x.CategoryId == 1).ToList();
             return View(values);
         }

@@ -25,6 +25,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     <PackageReference Include="Npgsql" Version="8.0.5" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="8.5.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,11 +34,14 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Member\Controllers\" />
     <Folder Include="Areas\Member\Data\" />
-    <Folder Include="Areas\Member\Models\" />
-    <Folder Include="Areas\Member\Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\pluto-1.0.0\.DS_Store" />
+    <None Include="wwwroot\pluto-1.0.0\images\.DS_Store" />
+    <None Include="wwwroot\pluto-1.0.0\images\layout_img\.DS_Store" />
+    <None Include="wwwroot\pluto-1.0.0\modules\.DS_Store" />
   </ItemGroup>
 
 </Project>
