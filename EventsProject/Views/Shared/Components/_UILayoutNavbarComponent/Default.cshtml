@@ -62,6 +62,7 @@
                                 @if (User.Identity.IsAuthenticated)
                                 {
                                     <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Hoş geldin, @User.Identity.Name</a>
+                                    <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Hesabım</a>
                                     <a href="@Url.Action("Logout", "Login", new { area = "Member" })">Çıkış Yap</a>
                                 }
                                 else

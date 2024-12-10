@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using EntityLayer.Concrete;
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -22,10 +20,17 @@ namespace DataAccessLayer.Concrete
         public DbSet<Category> Categories { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<UserFavorite> UserFavorites { get; set; }
-        public DbSet<City> Cities { get; set; }
+     
         public DbSet<Message> Messages { get; set; }
-       
+        public DbSet<City> Cities { get; set; }
+        public DbSet<UserFavorite> UserFavorites { get; set; }
+
+
+
+
+
+
+
 
     }
 }

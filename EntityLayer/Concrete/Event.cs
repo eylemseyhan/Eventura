@@ -33,6 +33,7 @@ namespace EntityLayer.Concrete
         public virtual Artist Artist { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }
         public virtual City City { get; set; }
+       
     }
 
 

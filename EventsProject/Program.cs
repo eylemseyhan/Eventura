@@ -46,9 +46,9 @@ builder.Services.AddControllersWithViews();
 // Add DbContext and Identity configuration
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>()
-    .AddEntityFrameworkStores<Context>();
+    .AddEntityFrameworkStores<Context>()
+    .AddDefaultTokenProviders(); // Token provider eklenmiþ
 
-// Add authentication and authorization
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

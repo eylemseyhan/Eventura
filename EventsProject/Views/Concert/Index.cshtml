@@ -44,6 +44,7 @@
                                         </a>
                                     }
                                 </div>
+
                             </div>
                         </a>
                     </div>
@@ -112,17 +113,39 @@
 
             <script>
                 function addToFavorites(eventId) {
-                    console.log("Favorilere ekleniyor, EventId:", eventId);
-                    alert("Etkinlik favorilere eklendi!");
+                    // Check if the user is authenticated
+                    var isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower();
+
+                    if (!isAuthenticated) {
+                        showLoginPopup(); // Show login popup if not authenticated
+                        return;
+                    }
+
+                    // AJAX request to add the event to favorites
+                    $.ajax({
+                        url: '@Url.Action("AddToFavorites", "Concert")', // Action URL
+                        type: 'POST',
+                        data: { eventId: eventId },
+                        success: function(response) {
+                            if (response.success) {
+                                alert(response.message); // Success message
+                            } else {
+                                alert(response.message); // Error message
+                            }
+                        },
+                        error: function() {
+                            alert('Bir hata oluştu. Lütfen tekrar deneyin.'); // Error alert
+                        }
+                    });
                 }
 
                 function showLoginPopup() {
-                  
                     document.getElementById('loginPopup').style.display = 'flex';
                 }
 
                 function closeLoginPopup() {
-                 
                     document.getElementById('loginPopup').style.display = 'none';
                 }
             </script>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

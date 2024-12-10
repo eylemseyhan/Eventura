@@ -23,35 +23,33 @@ namespace EventsProject.Controllers
             }
             return View(eventDetail);
         }
-
-
+        // Bilet Alma İşlemi
         [HttpPost]
-        public IActionResult AddToFavorites(int? eventId) // Nullable kontrolü ekleyelim
+        public IActionResult BuyTicket(int eventId)
         {
-            if (eventId == null || eventId == 0)
+            if (User.Identity.IsAuthenticated)
             {
-                return Json(new { success = false, message = "Geçersiz EventId" });
+                // Kullanıcı Giriş Yaptıysa TicketCount'u Azalt
+                var eventDetail = db.Tickets.FirstOrDefault(x => x.EventId == eventId);
+                if (eventDetail != null && eventDetail.TicketCount > 0)
+                {
+                    eventDetail.TicketCount--;  // TicketCount 1 azalır
+                    db.SaveChanges();  // Veritabanı değişikliklerini kaydet
+                    return RedirectToAction("Details", new { id = eventId });
+                }
+                else
+                {
+                    TempData["Message"] = "Biletler tükenmiş veya etkinlik bulunamadı!";
+                    return RedirectToAction("Details", new { id = eventId });
+                }
             }
-
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
-            // EventId'nin veritabanında var olup olmadığını kontrol edin
-            var eventExists = db.Events.Any(x => x.EventId == eventId.Value);
-            if (!eventExists)
+            else
             {
-                return Json(new { success = false, message = "Etkinlik bulunamadı." });
+                TempData["Message"] = "Lütfen giriş yapınız!";
+                return RedirectToAction("Login", "Account");
             }
-
-            var userFavorite = new UserFavorite
-            {
-                UserId = userId,
-                EventId = eventId.Value
-            };
-
-            db.UserFavorites.Add(userFavorite);
-            db.SaveChanges();
-
-            return Json(new { success = true });
         }
+
+
     }
 }
