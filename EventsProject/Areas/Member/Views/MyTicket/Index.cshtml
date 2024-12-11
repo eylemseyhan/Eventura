@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrete
+@model List<Ticket>
+
+@{
+    ViewData["Title"] = "Benim Biletlerim";
+    Layout = "~/Areas/Member/Views/Shared/_MemberDashboardLayout.cshtml";
+}
+
+<h2 class="text-center mb-4">Benim Biletlerim</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="row">
+        @foreach (var ticket in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <img src="@ticket.Event.ImageUrl" alt="@ticket.Event.Title" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">@ticket.Event.Title</h5>
+                        <p class="card-text">@ticket.Event.Description</p>
+                        <p class="text-muted">
+                            Etkinlik Tarihi: @ticket.Event.EventDate.ToString("dd MMM yyyy HH:mm")
+                        </p>
+                        <p class="text-muted">
+                            Bilet Numarası: <strong>@ticket.TicketNumber</strong>
+                        </p>
+                        <p class="font-weight-bold">
+                            Fiyat: @ticket.EventsTicket.Price.ToString("C")
+                        </p>
+                        <p class="text-success">
+                            Durum: @(ticket.IsAvailable ? "Aktif" : "Satıldı")
+                        </p>
+                        <a href="@Url.Action("Details", "Event", new { id = ticket.Event.EventId })" class="btn btn-primary btn-block">Etkinlik Detayı</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Henüz bir bilet satın almadınız.</p>
+}

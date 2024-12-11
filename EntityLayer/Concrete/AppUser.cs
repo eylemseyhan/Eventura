@@ -20,6 +20,10 @@ namespace EntityLayer.Concrete
         
       
         public virtual ICollection<Ticket> Ticket { get; set; }
+        public virtual ICollection<UserFavorite> UserFavorites { get; set; }
+        public virtual ICollection<SavedCard> SavedCards { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
+
 
     }
 }

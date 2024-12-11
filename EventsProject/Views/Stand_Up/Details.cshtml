@@ -67,27 +67,24 @@
             <div class="event-sidebar">
                 <div class="listing-sidebar">
 
-                    <!-- Bilet Al Button -->
                     <div class="listing-verify">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <!-- Bilet Al Button -->
                             <form method="post" action="@Url.Action("BuyTicket", "Stand_Up")">
                                 <input type="hidden" name="eventId" value="@Model.EventId" />
                                 <button type="submit" class="btn dorne-btn w-100 opening-hours-btn">
                                     <i class="fa fa-check pr-3"></i> Bilet Al
                                 </button>
                             </form>
-
                         }
                         else
                         {
                             <a href="@Url.Action("SignIn", "Login", new { area = "Member" })" class="btn dorne-btn w-100">
                                 <i class="fa fa-sign-in pr-3"></i> Giriş Yap ve Bilet Al
                             </a>
-
                         }
                     </div>
+
 
                         <!-- Opening Hours Widget -->
                         <div class="opening-hours-widget mt-">

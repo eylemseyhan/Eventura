@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Member\Views\Dashboard\Favorites.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="jQuery" Version="3.7.1" />
@@ -35,10 +39,10 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
-    <Folder Include="Views\Shared\Components\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Member\Views\Dashboard\Favorites.cshtml" />
     <None Include="wwwroot\pluto-1.0.0\.DS_Store" />
     <None Include="wwwroot\pluto-1.0.0\images\.DS_Store" />
     <None Include="wwwroot\pluto-1.0.0\images\layout_img\.DS_Store" />

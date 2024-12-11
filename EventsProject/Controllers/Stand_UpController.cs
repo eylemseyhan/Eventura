@@ -23,32 +23,52 @@ namespace EventsProject.Controllers
             }
             return View(eventDetail);
         }
-        // Bilet Alma İşlemi
-        [HttpPost]
-        public IActionResult BuyTicket(int eventId)
-        {
-            if (User.Identity.IsAuthenticated)
+ [HttpPost]
+public IActionResult BuyTicket(int eventId)
+{
+    if (!User.Identity.IsAuthenticated)
+    {
+        TempData["Message"] = "Lütfen giriş yapınız!";
+        return RedirectToAction("SignIn", "Login", new { area = "Member" });
+    }
+
+    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+    var ticket = db.Tickets
+        .Where(t => t.EventId == eventId && t.UserId == null && t.IsAvailable)
+        .FirstOrDefault();
+
+    if (ticket == null)
+    {
+        TempData["Message"] = "Biletler tükenmiş veya etkinlik bulunamadı!";
+        return RedirectToAction("Details", new { id = eventId });
+    }
+
+            // Etkinlik için soldout ve capacity değerlerini kontrol et
+            var eventTicket = db.EventsTickets
+                .Where(et => et.EventId == eventId && et.EventsTicketId == ticket.EventsTicketId)
+                .FirstOrDefault();
+
+            if (eventTicket != null && eventTicket.SoldCount == eventTicket.TicketCapacity)
             {
-                // Kullanıcı Giriş Yaptıysa TicketCount'u Azalt
-                var eventDetail = db.Tickets.FirstOrDefault(x => x.EventId == eventId);
-                if (eventDetail != null && eventDetail.TicketCount > 0)
-                {
-                    eventDetail.TicketCount--;  // TicketCount 1 azalır
-                    db.SaveChanges();  // Veritabanı değişikliklerini kaydet
-                    return RedirectToAction("Details", new { id = eventId });
-                }
-                else
-                {
-                    TempData["Message"] = "Biletler tükenmiş veya etkinlik bulunamadı!";
-                    return RedirectToAction("Details", new { id = eventId });
-                }
+                // Etkinlik kapasitesi dolmuşsa pop-up mesajı göster
+                TempData["ShowSoldOutPopup"] = true;
+                return RedirectToAction("Details", new { id = eventId });
             }
-            else
-            {
-                TempData["Message"] = "Lütfen giriş yapınız!";
-                return RedirectToAction("Login", "Account");
-            }
-        }
+
+            ticket.UserId = userId;
+    ticket.IsAvailable = false;
+
+    if (eventTicket != null)
+    {
+        eventTicket.SoldCount += 1;
+    }
+
+    db.SaveChanges();
+
+    TempData["Message"] = "Bilet başarıyla alındı!";
+    return RedirectToAction("Details", new { id = eventId });
+}
 
 
     }

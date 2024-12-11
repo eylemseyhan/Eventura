@@ -17,6 +17,7 @@ namespace EntityLayer.Concrete
         public int CategoryId { get; set; }  // Kategori ID'si
         public int ArtistId { get; set; }    // Sanatçı ID'si
         public int? CityId { get; set; }    
+        public int? EventsTicketId { get; set; }
       
         public string Title { get; set; }    // Etkinlik adı
         public string Description { get; set; } // Etkinlik açıklaması
@@ -33,7 +34,9 @@ namespace EntityLayer.Concrete
         public virtual Artist Artist { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }
         public virtual City City { get; set; }
-       
+        public virtual ICollection<EventsTicket> EventsTickets { get; set; }
+
+        public virtual ICollection<UserFavorite> UserFavorites { get; set; }    
     }
 
 
