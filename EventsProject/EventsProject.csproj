@@ -57,7 +57,6 @@
     <None Include="Views\Shared\Components\_UILayoutCategoryComponent\Default.cshtml" />
     <None Include="Views\Shared\Components\_UILayoutFooterComponent\Default.cshtml" />
     <None Include="Views\Shared\Components\_UILayoutHeadComponent\Default.cshtml" />
-    <None Include="Views\Shared\Components\_UILayoutNavbarComponent\Default.cshtml" />
     <None Include="Views\Shared\Components\_UILayoutPopulerEventsComponent\Default.cshtml" />
     <None Include="Views\Shared\Components\_UILayoutScriptComponent\Default.cshtml" />
     <None Include="Views\Shared\Components\_UILayoutSearchComponent\Default.cshtml" />

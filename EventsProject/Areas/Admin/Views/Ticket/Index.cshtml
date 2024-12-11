@@ -1,7 +1,7 @@
-﻿@model List<EntityLayer.Concrete.Ticket>
+﻿@model IEnumerable<EntityLayer.Concrete.EventsTickets>
 
 @{
-    ViewData["Title"] = "Ticket Listesi";
+    ViewData["Title"] = "Event Tickets";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -81,8 +81,8 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <div class="card-title">Ticket Listesi</div>
-            <a href="@Url.Action("Create", "Ticket", new { area = "Admin" })" class="btn btn-primary">
+            <div class="card-title">Event Tickets Management</div>
+            <a href="@Url.Action("Create","Ticket", new {area = "Admin"})" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Yeni Bilet Ekle
             </a>
         </div>
@@ -90,76 +90,58 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Etkinlik</th>
-                        <th>Bilet Fiyatı</th>
-                        <th>Toplam Bilet Sayısı</th>
-                        <th>Aksiyonlar</th>
+                        <th>Ticket ID</th>
+                        <th>Event</th>
+                        <th>Ticket Name</th>
+                        <th>Ticket Capacity</th>
+                        <th>Sold Count</th>
+                        <th>Price</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null && Model.Count > 0)
+                    @if (Model != null && Model.Any())
                     {
-                        var eventsGrouped = Model.GroupBy(ticket => ticket.Event?.EventId);
-                        foreach (var group in eventsGrouped)
+                        foreach (var ticket in Model)
                         {
-                            var eventObj = group.First().Event;
-                            var totalTickets = group.Count();
-
                             <tr>
+                                <td>@ticket.EventsTicketId</td>
                                 <td>
-                                    <a href="javascript:void(0);" class="event-name" data-event-id="@eventObj?.EventId" onclick="toggleTicketDetails(@eventObj?.EventId)">
-                                        @eventObj?.Title ?? "Etkinlik Adı Bulunamadı"
-                                    </a>
+                                    @{
+                                        var relatedEvent = ticket.Events?.FirstOrDefault();
+                                    }
+                                    @if (relatedEvent != null)
+                                    {
+                                        <select class="form-control" name="EventId">
+                                            <option value="@relatedEvent.EventId">@relatedEvent.Title</option>
+                                            @foreach (var eventItem in ViewBag.Events as List<EntityLayer.Concrete.Event>)
+                                            {
+                                                <option value="@eventItem.EventId" @(eventItem.EventId == relatedEvent.EventId ? "selected" : "")>@eventItem.Title</option>
+                                            }
+                                        </select>
+                                    }
+                                    else
+                                    {
+                                        <select class="form-control" name="EventId">
+                                            <option>No Event</option>
+                                            @foreach (var eventItem in ViewBag.Events as List<EntityLayer.Concrete.Event>)
+                                            {
+                                                <option value="@eventItem.EventId">@eventItem.Title</option>
+                                            }
+                                        </select>
+                                    }
                                 </td>
-                                <td>@group.First().Price</td>
-                                <td>@totalTickets</td>
+                                <td>@ticket.Name</td>
+                                <td>@ticket.TicketCapacity</td>
+                                <td>@ticket.SoldCount</td>
+                                <td>@ticket.Price.ToString("C")</td>
                                 <td class="action-icons">
-                                    <a href="@Url.Action("Edit", "Ticket", new { id = group.First().TicketId, area = "Admin" })">
+                                    <a asp-action="Edit" asp-route-id="@ticket.EventsTicketId">
                                         <i class="fas fa-edit"></i>
                                     </a>
-
-                                    <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = eventObj?.EventId, area = "Admin" })')">
+                                    <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })')">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-
-
-                                </td>
-                            </tr>
-
-                            <tr id="ticket-details-@eventObj?.EventId" class="ticket-details">
-                                <td colspan="4">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Bilet Numarası</th>
-                                                <th>Durum</th>
-                                                <th>Fiyat</th>
-                                                <th>Aksiyonlar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach (var ticket in group)
-                                            {
-                                                <tr class="ticket-row">
-                                                    <td>@ticket.TicketNumber</td>
-                                                    <td>@(ticket.IsAvailable ? "Mevcut" : "Satıldı")</td>
-                                                    <td>@ticket.Price</td>
-                                                    <td class="action-icons">
-                                                        <a href="@Url.Action("EditTicket", "Ticket", new { ticketId = ticket.TicketId, area = "Admin" })">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-
-
-                                                        <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.TicketId, area = "Admin" })')">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-
-
-                                                    </td>
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>
                                 </td>
                             </tr>
                         }
@@ -167,7 +149,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="4" class="text-center">Kayıt bulunamadı.</td>
+                            <td colspan="7" class="text-center">No event tickets found.</td>
                         </tr>
                     }
                 </tbody>
@@ -177,16 +159,8 @@
 </div>
 
 <script>
-    function toggleTicketDetails(eventId) {
-        var detailsRow = document.getElementById('ticket-details-' + eventId);
-        if (detailsRow.style.display === "none" || detailsRow.style.display === "") {
-            detailsRow.style.display = "table-row";
-        } else {
-            detailsRow.style.display = "none";
-        }
-    }
     function confirmDelete(deleteUrl) {
-        if (confirm("Bu bileti silmek istediğinize emin misiniz?")) {
+        if (confirm("Are you sure you want to delete this ticket?")) {
             window.location.href = deleteUrl;
         }
     }

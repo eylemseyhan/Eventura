@@ -3,25 +3,29 @@ using Microsoft.AspNetCore.Mvc;
 using EntityLayer.Concrete;
 using EventsProject.Areas.Member.Models;
 using Microsoft.AspNetCore.Authorization;
-using EventsProject.Areas.Member.Models;
+
 namespace EventsProject.Areas.Member.Controllers
 {
     [Area("Member")]
     [AllowAnonymous]
     public class LoginController : Controller
     {
-
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
 
-        public LoginController(SignInManager<AppUser> signInManager)
+        public LoginController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
         }
+
+        // Giriş sayfası
         [HttpGet]
         public IActionResult SignIn()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> SignIn(LoginViewModel model)
         {
@@ -30,13 +34,11 @@ namespace EventsProject.Areas.Member.Controllers
                 var result = await _signInManager.PasswordSignInAsync(
                     model.Username,
                     model.Password,
-                  false, true);
+                    false, true);
 
                 if (result.Succeeded)
                 {
-                    // Başarılı girişten sonra yönlendirme yapılır
                     return RedirectToAction("Index", "Home", new { area = "" });
-
                 }
                 else if (result.IsLockedOut)
                 {
@@ -47,16 +49,20 @@ namespace EventsProject.Areas.Member.Controllers
                     ModelState.AddModelError("", "Geçersiz giriş denemesi. Lütfen bilgilerinizi kontrol ediniz.");
                 }
             }
-            return View(model);
+            return View(model); // Burada LoginViewModel modeli geri döndürülmeli
         }
 
 
+        // Çıkış işlemi
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
+            // Kullanıcıyı çıkartıyoruz
             await _signInManager.SignOutAsync();
-            return RedirectToAction("SignIn", "Login");
-        }
 
+            // Kullanıcıyı "Index" sayfasına yönlendiriyoruz
+            // Areas dışındaki "Home" controller ve "Index" action
+            return RedirectToAction("Index", "Home", new {area = ""});
+        }
     }
 }

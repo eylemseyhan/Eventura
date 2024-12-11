@@ -1,7 +1,4 @@
-﻿@model EventsProject.Areas.Member.Models.LoginViewModel
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,6 +29,36 @@
 
     <!-- Template Stylesheet -->
     <link href="~/darkpan-1.0.0/css/style.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #8B0000; /* Koyu kırmızı arka plan */
+            margin: 0;
+            height: 100vh;
+        }
+
+        /* İçteki kareyi koyu gri ve bulanık yapmak için */
+        .sign-in-container {
+            background-color: #6c757d; /* Koyu gri arka plan */
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+            backdrop-filter: blur(10px); /* Hafif bulanıklık efekti */
+            -webkit-backdrop-filter: blur(10px); /* Safari desteği için */
+        }
+
+        /* Giriş yap butonunun gri arka planı */
+        .btn-primary {
+            background-color: #6c757d; /* Gri renk */
+            border-color: #6c757d;
+        }
+
+            .btn-primary:hover {
+                background-color: #5a6268; /* Gri tonunda hover efekti */
+                border-color: #545b62;
+            }
+    </style>
 </head>
 
 <body>
@@ -44,15 +71,15 @@
         </div>
         <!-- Spinner End -->
         <!-- Sign In Start -->
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-color: darkred;">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="sign-in-container" style="background-color: #222;">
+                        <div class="d-flex align-items-center justify-content-between mb-3 ">
                             <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Kullanıcı</h3>
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Giriş Yap</h3>
                             </a>
-                            <h3>Giriş Yap</h3>
+                            
                         </div>
                         <form method="post" action="@Url.Action("SignIn", "Login", new { area = "Member" })">
 
@@ -69,20 +96,14 @@
 
                             <button class="btn btn-primary py-3 w-100 mb-4">Giriş Yap</button>
                             <div class="text-center mt-3">
-                                <span>Hesabın yok mu? </span>
-                                <a href="@Url.Action("SignUp", "Register", new { area = "Member" })" class="text-primary">Giriş Yap</a>
+                                <span style="color:white">Hesabın yok mu? </span>
+                                <a href="@Url.Action("SignUp", "Register", new { area = "Member" })" class="text-primary">Kayıt Ol</a>
                             </div>
                         </form>
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- JavaScript Libraries -->

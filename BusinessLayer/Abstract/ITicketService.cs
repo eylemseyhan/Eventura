@@ -5,7 +5,7 @@ namespace BusinessLayer.Abstract
 {
     public interface ITicketService : IGenericService<Ticket>
     {
-        List<Ticket> GetTicketsWithEvents(); // Event ile birlikte Ticket listesi
+        
 
 
 

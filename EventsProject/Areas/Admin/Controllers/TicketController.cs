@@ -3,6 +3,8 @@ using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace EventsProject.Areas.Admin.Controllers
 {
@@ -10,235 +12,107 @@ namespace EventsProject.Areas.Admin.Controllers
     public class TicketController : Controller
     {
         private readonly ITicketService _ticketService;
+        private readonly IEventsTicketsService _eventsTicketService;
         private readonly IEventService _eventService;
         private readonly ILogger<TicketController> _logger;
 
-        public TicketController(ITicketService ticketService, IEventService eventService, ILogger<TicketController> logger)
+        public TicketController(IEventsTicketsService eventsTicketService, IEventService eventService, ILogger<TicketController> logger, ITicketService ticketService)
         {
+            _eventsTicketService = eventsTicketService;
             _ticketService = ticketService;
             _eventService = eventService;
             _logger = logger;
         }
 
-        public ActionResult Create()
+        // Event biletlerini listeleme
+        public IActionResult Index()
         {
+            // Event listesini ViewBag ile gönderiyoruz
+            ViewBag.Events = _eventService.GetAllEvents(); // EventService'den Event'leri alıyoruz
 
-            ViewBag.Events = _eventService.GetAllEvents();
-            return View();
+            var tickets = _eventsTicketService.GetEventTicketsWithEvents(); // Ticket'ları alıyoruz
+            return View(tickets); // View'a göndereceğiz
         }
 
-        [HttpPost]
-        public ActionResult Create(Ticket ticket)
+        // GET: Admin/Ticket/Create
+        public ActionResult Create()
         {
-            try
+            ViewBag.Events = _eventService.GetAllEvents();  // Event listesini ViewBag ile gönderiyoruz
+            return View();  // Create.cshtml'ye yönlendiriyor
+        }
+
+        // POST: Admin/Ticket/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(EventsTickets eventsTicket)
+        {
+            if (ModelState.IsValid)
             {
-                if (ticket.TicketCount <= 0)
+                // Etkinlik bileti ekle
+                _eventsTicketService.TAdd(eventsTicket);
+                for (int i = 0; i < eventsTicket.TicketCapacity; i++)
                 {
-                    TempData["ErrorMessage"] = "Bilet adedi en az 1 olmalıdır.";
-                    ViewBag.Events = _eventService.GetAllEvents();
-                    return View(ticket);
+                    var ticketNumber = GenerateTicketNumber(eventsTicket.EventId, i);
+                    var ticket = new Ticket
+                    {
+                        EventsTicketId = eventsTicket.EventsTicketId,
+                        TicketNumber = ticketNumber,
+                        IsAvailable = true
+                    };
+                    _ticketService.TAdd(ticket);
                 }
-
-                _ticketService.TAdd(ticket);
-
-                TempData["SuccessMessage"] = "Bilet başarıyla oluşturuldu.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index");  // Başarıyla ekledikten sonra listeye dön
             }
-            catch (Exception ex)
+
+            ViewBag.Events = _eventService.GetAllEvents(); // Hata durumunda etkinlik listesi tekrar gönderilir
+            return View(eventsTicket);  // Formu tekrar gösteriyoruz
+        }
+
+        private string GenerateTicketNumber(int eventId, int index)
+        {
+            // Ticket numarasını belirli bir formatta oluşturabiliriz.
+            return $"{eventId}-{index + 1:D4}"; // Örneğin: EventId-0001, EventId-0002, vb.
+        }
+    
+
+    // Bilet düzenleme sayfası
+    public IActionResult Edit(int id)
+        {
+            var ticket = _eventsTicketService.TGetByID(id);
+            if (ticket == null)
             {
-                _logger.LogError($"Bilet oluşturma hatası: {ex.Message}");
-                TempData["ErrorMessage"] = "Bir hata oluştu.";
+                return NotFound(); // Bilet bulunmazsa hata sayfası göster
             }
 
-            ViewBag.Events = _eventService.GetAllEvents();
+            ViewBag.Events = _eventService.TGetList(); // Etkinlikleri ViewBag'de getiriyoruz
             return View(ticket);
         }
 
-
-
-
-
-        public IActionResult Index()
-        {
-            var tickets = _ticketService.GetTicketsWithEvents();
-            return View(tickets);
-        }
-
-
-
-
-        // GET: Admin/Ticket/Edit/5
-        [HttpGet]
-        // Bilet güncelle (GET)
-        // Bilet güncelle (GET)
-        // Bilet güncelle (GET)
-        // Bilet güncelle (GET)
-        [HttpGet]
-        public IActionResult Edit(int id)
-        {
-            try
-            {
-                var ticket = _ticketService.TGetByID(id);
-                if (ticket == null)
-                {
-                    _logger.LogWarning($"Bilet bulunamadı: {id}");
-                    return NotFound();
-                }
-
-                // Etkinlik biletlerini almak
-                var eventTickets = _ticketService.GetTicketsWithEvents();
-                var totalTickets = eventTickets.Count(t => t.EventId == ticket.EventId);
-
-                // TicketCount ve Price'ı güncelle
-                ticket.TicketCount = totalTickets;
-                ticket.Price = ticket.Price > 0 ? ticket.Price : 0;
-
-                // Etkinlik verilerini ViewBag ile gönder
-                ViewBag.Events = _eventService.GetAllEvents();
-                return View(ticket);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Bilet düzenleme hatası: {ex.Message}");
-                return View("Error");
-            }
-        }
-
+        // Bilet düzenleme işlemi
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(Ticket ticket)
+        public IActionResult Edit(EventsTickets ticket)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ticket.Price <= 0)
-                {
-                    TempData["ErrorMessage"] = "Fiyat geçerli olmalıdır.";
-                    ViewBag.Events = _eventService.GetAllEvents();
-                    return View(ticket);
-                }
-
-                // Etkinlik ID'sine göre tüm biletleri al
-                var eventTickets = _ticketService.GetTicketsWithEvents().Where(t => t.EventId == ticket.EventId).ToList();
-
-                if (eventTickets == null || !eventTickets.Any())
-                {
-                    TempData["ErrorMessage"] = "Bu etkinliğe ait biletler bulunamadı.";
-                    return RedirectToAction("Index");
-                }
-
-                // Etkinlikteki tüm biletlerin fiyatını güncelle
-                foreach (var eventTicket in eventTickets)
-                {
-                    eventTicket.Price = ticket.Price;  // Yeni fiyatı ata
-                    eventTicket.IsAvailable = ticket.IsAvailable; // Durumu güncelle
-                    _ticketService.TUpdate(eventTicket); // Bilet güncelle
-                }
-
-                TempData["SuccessMessage"] = "Tüm biletlerin fiyatı ve durumu başarıyla güncellendi.";
+                _eventsTicketService.TUpdate(ticket);
                 return RedirectToAction("Index");
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Bilet düzenleme hatası: {ex.Message} | Stack Trace: {ex.StackTrace}");
-                TempData["ErrorMessage"] = $"Bir hata oluştu: {ex.Message}";
-                ViewBag.Events = _eventService.GetAllEvents();
-                return View(ticket);
-            }
+
+            ViewBag.Events = _eventService.TGetList(); // Etkinlikler yeniden geliyor
+            return View(ticket);
         }
 
-
-
-        // GET: Admin/Ticket/EditTicket/5
-        [HttpGet]
-        public IActionResult EditTicket(int ticketId)
-        {
-            try
-            {
-                var ticket = _ticketService.TGetByID(ticketId);
-                if (ticket == null)
-                {
-                    _logger.LogWarning($"Bilet bulunamadı: {ticketId}");
-                    return NotFound();
-                }
-
-                // Etkinlik verilerini ViewBag ile gönder
-                ViewBag.Events = _eventService.GetAllEvents();
-                return View(ticket);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Bilet düzenleme hatası: {ex.Message}");
-                return View("Error");
-            }
-        }
-
-        // POST: Admin/Ticket/EditTicket
+        // Bilet silme işlemi
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult EditTicket(Ticket ticket)
-        {
-            try
-            {
-                if (ticket.Price <= 0)
-                {
-                    TempData["ErrorMessage"] = "Fiyat geçerli olmalıdır.";
-                    ViewBag.Events = _eventService.GetAllEvents();
-                    return View(ticket);
-                }
-
-                // Güncellenen biletin fiyat ve durumu
-                var existingTicket = _ticketService.TGetByID(ticket.TicketId);
-                if (existingTicket == null)
-                {
-                    TempData["ErrorMessage"] = "Bilet bulunamadı.";
-                    return RedirectToAction("Index");
-                }
-
-                existingTicket.Price = ticket.Price; // Fiyatı güncelle
-                existingTicket.IsAvailable = ticket.IsAvailable; // Durumu güncelle
-
-                // Bilet güncelle
-                _ticketService.TUpdate(existingTicket);
-
-                TempData["SuccessMessage"] = "Bilet başarıyla güncellendi.";
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Bilet düzenleme hatası: {ex.Message} | Stack Trace: {ex.StackTrace}");
-                TempData["ErrorMessage"] = $"Bir hata oluştu: {ex.Message}";
-                ViewBag.Events = _eventService.GetAllEvents();
-                return View(ticket);
-            }
-        }
-
-
         public IActionResult Delete(int id)
         {
-            try
+            var ticket = _eventsTicketService.TGetByID(id);
+            if (ticket != null)
             {
-                var ticket = _ticketService.TGetByID(id);
-                if (ticket == null)
-                {
-                    _logger.LogWarning($"Bilet silinemedi, bilet bulunamadı: {id}");
-                    return NotFound();
-                }
-
-                _ticketService.TDelete(ticket); // 
-                return RedirectToAction("Index"); // Liste sayfasına yönlendir
+                _eventsTicketService.TDelete(ticket);
+                return RedirectToAction("Index");
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Bilet silme hatası: {ex.Message}"); // Hata mesajını log'a yazdırıyoruz
-                return View("Error");
-            }
+            return NotFound(); // Bilet bulunmazsa hata sayfası göster
         }
-
-
-
-
-
-
-
     }
 }

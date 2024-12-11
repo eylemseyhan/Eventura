@@ -5,6 +5,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface ITicketDal : IGenericDal<Ticket>
     {
-        List<Ticket> GetTicketsWithEvents(); 
+        
     }
 }

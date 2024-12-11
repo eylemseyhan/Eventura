@@ -11,15 +11,26 @@ namespace EntityLayer.Concrete
 {
     public class Ticket
     {
+        [Key]
         public int TicketId { get; set; }  // Birincil anahtar
-        public int EventId { get; set; }    // Etkinlik ID'si
-        public decimal Price { get; set; }  // Bilet fiyatı
+
+
+        public int? UserId { get; set; }
+
+        public int? EventsTicketId { get; set; }
+
         public string TicketNumber { get; set; }
         public bool IsAvailable { get; set; } // Biletin durumu (mevcut / satıldı)
-        public int TicketCount { get; set; }
+        
+        
 
 
         // İlişkiler
-        public virtual Event Event { get; set; }
+ 
+
+        public virtual AppUser User { get; set; }
+        public virtual EventsTickets EventsTicket { get; set; }
+
+
     }
 }

@@ -27,11 +27,9 @@ namespace EventsProject.Areas.Member.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(RegisterViewModel model)
         {
-
-            // Yeni kullanıcı nesnesi oluşturuluyor
+            // Burada modelin RegisterViewModel türünde olduğuna emin olun
             AppUser user = new AppUser
             {
-
                 Name = model.Name,
                 Surname = model.Surname,
                 Email = model.Email,
@@ -53,8 +51,8 @@ namespace EventsProject.Areas.Member.Controllers
                     }
                 }
             }
-            return View(model);
-
+            return View(model); // Burada RegisterViewModel modeli geri döndürülmeli
         }
+
     }
 }

@@ -36,7 +36,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("CityId");
 
-                    b.ToTable("Cities");
+                    b.ToTable("Cities", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.AppRole", b =>
@@ -168,7 +168,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ArtistId");
 
-                    b.ToTable("Artists");
+                    b.ToTable("Artists", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
@@ -189,7 +189,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
@@ -242,7 +242,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Events");
+                    b.ToTable("Events", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Message", b =>
@@ -274,7 +274,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -302,7 +302,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("TicketId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Ticket", b =>
@@ -333,7 +333,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("Tickets");
+                    b.ToTable("Tickets", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.UserFavorite", b =>
@@ -356,7 +356,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserFavorites");
+                    b.ToTable("UserFavorites", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

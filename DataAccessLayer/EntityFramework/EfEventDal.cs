@@ -54,5 +54,10 @@ namespace DataAccessLayer.EntityFramework
                         .FirstOrDefault(e => e.EventId == id);
             }
         }
+        public List<Event> GetAllEvents()
+        {
+            using var context = new Context();
+            return context.Events.ToList(); // Bütün etkinlikleri getirir
+        }
     }
 }

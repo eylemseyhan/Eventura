@@ -1,11 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using DataAccessLayer.Concrete;
-using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer.Concrete
 {
@@ -18,101 +13,29 @@ namespace BusinessLayer.Concrete
             _ticketDal = ticketDal;
         }
 
-
-        // Rastgele bilet numarası oluşturma
-        private string GenerateTicketNumber()
+        public void TAdd(Ticket t)
         {
-            using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
-            var buffer = new byte[8];
-            rng.GetBytes(buffer);
-            return Convert.ToBase64String(buffer)
-                .Substring(0, 8)
-                .ToUpperInvariant();
+            throw new NotImplementedException();
         }
 
-
-
-        // Bilet ekleme
-        public void TAdd(Ticket ticket)
+        public void TDelete(Ticket t)
         {
-            if (ticket.TicketCount <= 0)
-            {
-                throw new ArgumentException("Ticket count must be greater than zero.");
-            }
-
-            if (ticket.EventId == 0)
-            {
-                throw new ArgumentException("EventId must be valid.");
-            }
-
-            for (int i = 0; i < ticket.TicketCount; i++)
-            {
-                var newTicket = new Ticket
-                {
-                    EventId = ticket.EventId,
-                    Price = ticket.Price,
-                    IsAvailable = ticket.IsAvailable,
-                    TicketNumber = GenerateTicketNumber(), // Ensure this is correctly set
-                };
-
-                try
-                {
-                    _ticketDal.Insert(newTicket);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Bilet eklenirken hata oluştu: {ex.Message}");
-                    throw;
-                }
-            }
+            throw new NotImplementedException();
         }
 
-
-
-
-        // Bilet güncelleme
-        public void TUpdate(Ticket ticket)
-        {
-            _ticketDal.Update(ticket); // Kategoriyi güncelleme
-        }
-
-
-
-
-
-
-        // Bilet silme
-        public void TDelete(Ticket ticket)
-        {
-            _ticketDal.Delete(ticket);
-        }
-
-        // ID'ye göre bilet getirme
         public Ticket TGetByID(int id)
         {
-            return _ticketDal.GetByID(id);
+            throw new NotImplementedException();
         }
 
-        // Tüm biletleri listeleme
         public List<Ticket> TGetList()
         {
-            return _ticketDal.GetList();
+            throw new NotImplementedException();
         }
 
-        // Etkinliklerle birlikte biletleri listeleme
-        public List<Ticket> GetTicketsWithEvents()
+        public void TUpdate(Ticket t)
         {
-            using (var context = new Context())
-            {
-                return context.Tickets
-                    .Include(t => t.Event)
-                    .ThenInclude(e => e.Artist)  // Example of loading Artist
-                    .ToList();
-            }
+            throw new NotImplementedException();
         }
-
-
-
-
     }
 }

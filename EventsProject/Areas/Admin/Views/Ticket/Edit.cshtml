@@ -1,14 +1,14 @@
-﻿@model EntityLayer.Concrete.Ticket
+﻿@* @model EntityLayer.Concrete.EventsTicket
 
 @{
-    ViewData["Title"] = "Bilet Güncelle";
+    ViewData["Title"] = "Bilet Etkinliği Güncelle";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h3>Bilet Güncelle</h3>
+            <h3>Bilet Etkinliği Güncelle</h3>
         </div>
         <div class="card-body">
             @if (TempData["ErrorMessage"] != null)
@@ -26,7 +26,7 @@
 
             <form asp-action="Edit" method="post">
                 @Html.AntiForgeryToken()
-                <input type="hidden" name="TicketId" value="@Model.TicketId" />
+                <input type="hidden" name="EventsTicketId" value="@Model.EventsTicketId" />
 
                 <div class="form-group">
                     <label for="EventId">Etkinlik</label>
@@ -41,14 +41,10 @@
                     </select>
                 </div>
 
-
-
                 <div class="form-group">
-                    <label for="EventTicketCount">Etkinlik Bilet Sayısı</label>
-                    <!-- Bilet sayısını düzenlenebilir hale getirelim -->
-                    <input type="number" id="EventTicketCount" name="TicketCount" class="form-control" value="@Model.TicketCount" required />
+                    <label for="TicketCapacity">Bilet Kapasitesi</label>
+                    <input type="number" id="TicketCapacity" name="TicketCapacity" class="form-control" value="@Model.TicketCapacity" required />
                 </div>
-
 
                 <div class="form-group">
                     <label for="Price">Fiyat</label>
@@ -56,18 +52,19 @@
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
 
-
                 <div class="form-group">
-                    <label for="IsAvailable">Durum</label>
-                    <select id="IsAvailable" name="IsAvailable" class="form-control">
-                        <option value="true" @(Model.IsAvailable ? "selected" : "")>Mevcut</option>
-                        <option value="false" @(!Model.IsAvailable ? "selected" : "")>Satıldı</option>
-                    </select>
+                    <label for="Name">Bilet Adı</label>
+                    <input type="text" id="Name" name="Name" value="@Model.Name" class="form-control" required />
                 </div>
 
+                <div class="form-group">
+                    <label for="SoldCount">Satılan Bilet Sayısı</label>
+                    <input type="number" id="SoldCount" name="SoldCount" class="form-control" value="@Model.SoldCount" required />
+                </div>
 
                 <button type="submit" class="btn btn-primary">Güncelle</button>
             </form>
         </div>
     </div>
 </div>
+ *@

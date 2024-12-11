@@ -12,67 +12,79 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Dependency Injection (DI) için servisleri ekleme
 
-
-
-
-
+// Register services
+builder.Services.AddScoped<IEventsTicketsService, EventsTicketManager>(); // Ensure this is added
+builder.Services.AddScoped<IEventsTicketDal, EfEventsTicketDal>();
+// Register other services similarly
 builder.Services.AddScoped<IArtistDal, EfArtistDal>();
 builder.Services.AddScoped<IArtistService, ArtistManager>();
-
 
 builder.Services.AddScoped<IEventService, EventManager>();
 builder.Services.AddScoped<IEventDal, EfEventDal>();
 
-
-
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<EfCategoryDal, EfCategoryDal>();
-builder.Services.AddScoped<IGenericDal<Category>, EfCategoryDal>(); // Register IGenericDal<Category>
+builder.Services.AddScoped<IGenericDal<Category>, EfCategoryDal>();
 
-builder.Services.AddScoped<ITicketService, TicketManager>(); // Register ITicketService with TicketManager implementation
+builder.Services.AddScoped<ITicketService, TicketManager>();
 builder.Services.AddScoped<ITicketDal, EfTicketDal>();
 builder.Services.AddScoped<IGenericDal<Ticket>, EfTicketDal>();
 builder.Services.AddScoped<IGenericDal<Artist>, EfArtistDal>();
 
-//message
 builder.Services.AddScoped<IGenericDal<Message>, EfMessageDal>();
-builder.Services.AddScoped<IMessageDal, EfMessageDal>(); // Ayrıca ITicketDal'i de register ediyoruz
+builder.Services.AddScoped<IMessageDal, EfMessageDal>();
 builder.Services.AddScoped<IMessageService, MessageManager>();
-// City
+
 builder.Services.AddScoped<ICityService, CityManager>();
-builder.Services.AddScoped<ICityDal, EfCityDal>(); // ICityDal'i de doğru şekilde kaydediyoruz
+builder.Services.AddScoped<ICityDal, EfCityDal>();
 builder.Services.AddScoped<IGenericDal<City>, EfCityDal>();
-builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Context>();
-builder.Services.AddIdentity<AppUser, AppRole>()
-    .AddEntityFrameworkStores<Context>();
 
-// ArtistManager'ı IArtistService türüne kaydedin
+// Identity ayarları ve cookie konfigürasyonu
+builder.Services.AddIdentity<AppUser, AppRole>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+})
+.AddEntityFrameworkStores<Context>()
+.AddDefaultTokenProviders();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Oturum süresi
+    options.LoginPath = "/Member/Account/Login"; // Giriş sayfası
+    options.SlidingExpiration = true; // Kullanıcı aktifse süre uzar
+});
+
+// MVC ve diğer servisler
 builder.Services.AddControllersWithViews();
-
-
 builder.Services.AddMvc();
+
 
 
 var app = builder.Build();
 
-
+// Middleware'ler
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseAuthentication();
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication(); // Kullanıcı kimlik doğrulama
+app.UseAuthorization(); // Yetkilendirme
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
@@ -83,6 +95,5 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
 });
-
 
 app.Run();

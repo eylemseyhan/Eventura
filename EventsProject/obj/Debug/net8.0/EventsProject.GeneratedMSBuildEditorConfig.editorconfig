@@ -86,12 +86,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Admin/Views/Ticket/EditTicket.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0XEVkaXRUaWNrZXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Admin/Views/Ticket/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxGYXZvcml0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxTZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Tickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxUaWNrZXRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Login/SignIn.cshtml]
@@ -100,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Register/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFJlZ2lzdGVyXFNpZ25VcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Shared/_MemberDashboardLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxfTWVtYmVyRGFzaGJvYXJkTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Concert/Details.cshtml]
@@ -164,6 +184,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutHeadComponent/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0SGVhZENvbXBvbmVudFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutMemberNavbarComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1VJTGF5b3V0TWVtYmVyTmF2YmFyQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Views/Shared/Components/_UILayoutNavbarComponent/Default.cshtml]
