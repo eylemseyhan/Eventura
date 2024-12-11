@@ -48,10 +48,7 @@ namespace BusinessLayer.Concrete
             _eventsTicketDal.Update(t); // Güncelleme işlemi
         }
 
-        public List<string> GetEventNames()
-        {
-            return _eventsTicketDal.GetEventNames();  // DAL'daki GetEventNames metodunu çağırıyoruz
-        }
+        
         
 
 

@@ -5,7 +5,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IEventsTicketsService : IGenericService<EventsTickets>
     {
-        List<string> GetEventNames();
+        
         List<EventsTickets> TGetList(); // Sadece metod imzası
     }
 }

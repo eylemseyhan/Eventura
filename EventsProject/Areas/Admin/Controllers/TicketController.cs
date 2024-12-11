@@ -30,9 +30,8 @@ namespace EventsProject.Areas.Admin.Controllers
             var tickets = _eventsTicketService.TGetList() ?? new List<EventsTickets>();
 
             // GetEventNames metodunu kullanarak etkinlik başlıklarını alıyoruz
-            var eventNames = _eventsTicketService.GetEventNames();
+            
 
-            ViewBag.EventNames = eventNames; // Etkinlik başlıklarını ViewBag ile gönderiyoruz
             return View(tickets);
         }
 
