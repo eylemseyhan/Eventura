@@ -25,6 +25,18 @@ namespace DataAccessLayer.EntityFramework
             }
         }
 
+        public List<EventsTickets> GetEventsNames()
+        {
+            using (var context = new Context())
+            {
+                // EventsTickets ve ilişkili Event'lerin Title'ını dahil et
+                return context.EventsTickets
+                    .Include(et => et.Events)  // EventsTickets ile ilişkili Event'leri dahil et
+                    .ThenInclude(e => e.Title)  // Event'lerin Title alanını da dahil et
+                    .ToList(); // Liste olarak geri döndür
+            }
+        }
+
 
         public List<EventsTickets> GetEventsTicketsByEventId(int eventId)
             {
@@ -49,16 +61,11 @@ namespace DataAccessLayer.EntityFramework
                         .ToList();
                 }
             }
-        public List<EventsTickets> GetEventTicketsWithEvents()
+
+        public List<string> GetEventNames()
         {
-            using (var context = new Context())
-            {
-                return context.EventsTickets
-                    .Include(et => et.Events)      // Event ilişkisini dahil ediyoruz
-                    .ThenInclude(e => e.Artist)    // Event'in Artist ilişkisini dahil ediyoruz
-                    .ToList();
-            }
+            throw new NotImplementedException();
         }
-        }
+    }
     }
 

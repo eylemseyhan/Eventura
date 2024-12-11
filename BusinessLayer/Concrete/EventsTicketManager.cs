@@ -17,6 +17,11 @@ namespace BusinessLayer.Concrete
             _eventsTicketDal = eventsTicketDal;
         }
 
+        public List<EventsTickets> GetEventTicketsWithEvents()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(EventsTickets t)
         {
             _eventsTicketDal.Insert(t); // Insert işlemi
@@ -32,9 +37,10 @@ namespace BusinessLayer.Concrete
             return _eventsTicketDal.GetByID(id); // ID'ye göre bilet getirme
         }
 
+        // IEventsTicketsService arayüzündeki TGetList metodunun implementasyonu
         public List<EventsTickets> TGetList()
         {
-            return _eventsTicketDal.GetList(); // Bütün biletleri listeleme
+            return _eventsTicketDal.GetList();  // DAL'daki GetList metodunu çağırıyoruz
         }
 
         public void TUpdate(EventsTickets t)
@@ -42,16 +48,13 @@ namespace BusinessLayer.Concrete
             _eventsTicketDal.Update(t); // Güncelleme işlemi
         }
 
-        public List<EventsTickets> GetEventTicketsWithEvents()
+        public List<string> GetEventNames()
         {
-            using (var context = new Context())
-            {
-                return context.EventsTickets
-                    .Include(et => et.Events)      // Event ilişkisini dahil ediyoruz
-                    .ThenInclude(e => e.Artist)    // Event'in Artist ilişkisini dahil ediyoruz
-                    .ToList();
-            }
+            return _eventsTicketDal.GetEventNames();  // DAL'daki GetEventNames metodunu çağırıyoruz
         }
+        
+
+
 
     }
 }

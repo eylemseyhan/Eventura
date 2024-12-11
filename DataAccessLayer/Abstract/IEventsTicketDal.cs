@@ -10,8 +10,8 @@ namespace DataAccessLayer.Abstract
 {
     public interface IEventsTicketDal: IGenericDal<EventsTickets>
     {
-        
-       
+        List<EventsTickets> GetList();
+        List<string> GetEventNames();
 
     }
 }

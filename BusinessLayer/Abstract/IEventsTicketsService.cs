@@ -1,10 +1,11 @@
 ﻿using EntityLayer.Concrete;
+using System.Collections.Generic;
 
 namespace BusinessLayer.Abstract
 {
     public interface IEventsTicketsService : IGenericService<EventsTickets>
     {
-        // Yeni metodumuzu interface'e ekliyoruz
-        List<EventsTickets> GetEventTicketsWithEvents();
+        List<string> GetEventNames();
+        List<EventsTickets> TGetList(); // Sadece metod imzası
     }
 }

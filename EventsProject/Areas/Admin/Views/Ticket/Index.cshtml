@@ -108,27 +108,20 @@
                                 <td>@ticket.EventsTicketId</td>
                                 <td>
                                     @{
-                                        var relatedEvent = ticket.Events?.FirstOrDefault();
+                                        // ViewBag'in doğru türde bir IEnumerable<EntityLayer.Concrete.Event> içerdiğinden emin olun
+                                        var eventName = (ViewBag.EventNames as IEnumerable<EntityLayer.Concrete.Event>)?
+                                        .FirstOrDefault(e => e.EventId == ticket.EventId)?.Title;
                                     }
-                                    @if (relatedEvent != null)
+
+
+
+                                    @if (eventName != null)
                                     {
-                                        <select class="form-control" name="EventId">
-                                            <option value="@relatedEvent.EventId">@relatedEvent.Title</option>
-                                            @foreach (var eventItem in ViewBag.Events as List<EntityLayer.Concrete.Event>)
-                                            {
-                                                <option value="@eventItem.EventId" @(eventItem.EventId == relatedEvent.EventId ? "selected" : "")>@eventItem.Title</option>
-                                            }
-                                        </select>
+                                        <span>@eventName</span>
                                     }
                                     else
                                     {
-                                        <select class="form-control" name="EventId">
-                                            <option>No Event</option>
-                                            @foreach (var eventItem in ViewBag.Events as List<EntityLayer.Concrete.Event>)
-                                            {
-                                                <option value="@eventItem.EventId">@eventItem.Title</option>
-                                            }
-                                        </select>
+                                        <span>No Event</span>
                                     }
                                 </td>
                                 <td>@ticket.Name</td>
@@ -153,6 +146,7 @@
                         </tr>
                     }
                 </tbody>
+
             </table>
         </div>
     </div>

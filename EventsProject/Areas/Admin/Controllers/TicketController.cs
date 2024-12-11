@@ -27,12 +27,15 @@ namespace EventsProject.Areas.Admin.Controllers
         // Event biletlerini listeleme
         public IActionResult Index()
         {
-            // Event listesini ViewBag ile gönderiyoruz
-            ViewBag.Events = _eventService.GetAllEvents(); // EventService'den Event'leri alıyoruz
+            var tickets = _eventsTicketService.TGetList() ?? new List<EventsTickets>();
 
-            var tickets = _eventsTicketService.GetEventTicketsWithEvents(); // Ticket'ları alıyoruz
-            return View(tickets); // View'a göndereceğiz
+            // GetEventNames metodunu kullanarak etkinlik başlıklarını alıyoruz
+            var eventNames = _eventsTicketService.GetEventNames();
+
+            ViewBag.EventNames = eventNames; // Etkinlik başlıklarını ViewBag ile gönderiyoruz
+            return View(tickets);
         }
+
 
         // GET: Admin/Ticket/Create
         public ActionResult Create()
