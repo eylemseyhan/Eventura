@@ -66,6 +66,12 @@ namespace BusinessLayer.Concrete
         {
             return _eventDal.GetList();
         }
+        public List<string> GetEventTitles()
+        {
+            using var context = new Context();
+            return context.Events.Select(e => e.Title).ToList();
+        }
+
 
 
         // Filtreleme işlemleri

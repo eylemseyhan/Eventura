@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityLayer.Concrete
 {
@@ -22,6 +23,8 @@ namespace EntityLayer.Concrete
 
         public virtual ICollection<Event> Events { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }
+        [NotMapped]
+        public string EventTitle { get; set; } // Bu alan veritabanına yansımayacak.
 
 
     }

@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        padding: 0 15px;
+        padding: 20px;
     }
 
     .card {
@@ -30,7 +30,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: #f8f9fa;
-        padding: 10px 15px;
+        padding: 15px;
         border-bottom: 1px solid #dee2e6;
     }
 
@@ -39,7 +39,7 @@
         text-decoration: none;
         background-color: #007bff;
         border: none;
-        padding: 5px 10px;
+        padding: 10px 15px;
         border-radius: 5px;
     }
 
@@ -50,12 +50,19 @@
     table {
         width: 100%;
         border-collapse: collapse;
+        margin: 0;
+        padding: 0;
     }
 
         table th, table td {
             text-align: left;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #dee2e6;
+        }
+
+        table th {
+            background-color: #f1f1f1;
+            font-weight: bold;
         }
 
     .action-icons a {
@@ -66,23 +73,13 @@
     .action-icons i {
         font-size: 1.2rem;
     }
-
-    .ticket-details {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .ticket-row {
-        padding: 10px;
-        border: 1px solid #dee2e6;
-    }
 </style>
 
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <div class="card-title">Event Tickets Management</div>
-            <a href="@Url.Action("Create","Ticket", new {area = "Admin"})" class="btn btn-primary">
+            <h5 class="card-title">Event Tickets Management</h5>
+            <a href="@Url.Action("Create", "Ticket", new { area = "Admin" })" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Yeni Bilet Ekle
             </a>
         </div>
@@ -91,7 +88,7 @@
                 <thead>
                     <tr>
                         <th>Ticket ID</th>
-                        <th>Event</th>
+                        <th>Event Title</th>
                         <th>Ticket Name</th>
                         <th>Ticket Capacity</th>
                         <th>Sold Count</th>
@@ -106,33 +103,16 @@
                         {
                             <tr>
                                 <td>@ticket.EventsTicketId</td>
-                                <td>
-                                    @{
-                                        // ViewBag'in doğru türde bir IEnumerable<EntityLayer.Concrete.Event> içerdiğinden emin olun
-                                        var eventName = (ViewBag.EventNames as IEnumerable<EntityLayer.Concrete.Event>)?
-                                        .FirstOrDefault(e => e.EventId == ticket.EventId)?.Title;
-                                    }
-
-
-
-                                    @if (eventName != null)
-                                    {
-                                        <span>@eventName</span>
-                                    }
-                                    else
-                                    {
-                                        <span>No Event</span>
-                                    }
-                                </td>
+                                <td>@(string.IsNullOrEmpty(ticket.EventTitle) ? "N/A" : ticket.EventTitle)</td>
                                 <td>@ticket.Name</td>
                                 <td>@ticket.TicketCapacity</td>
                                 <td>@ticket.SoldCount</td>
                                 <td>@ticket.Price.ToString("C")</td>
                                 <td class="action-icons">
-                                    <a asp-action="Edit" asp-route-id="@ticket.EventsTicketId">
+                                    <a asp-action="Edit" asp-route-id="@ticket.EventsTicketId" title="Edit">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })')">
+                                    <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })')" title="Delete">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </td>
@@ -146,7 +126,6 @@
                         </tr>
                     }
                 </tbody>
-
             </table>
         </div>
     </div>

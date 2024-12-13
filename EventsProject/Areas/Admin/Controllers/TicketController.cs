@@ -29,8 +29,13 @@ namespace EventsProject.Areas.Admin.Controllers
         {
             var tickets = _eventsTicketService.TGetList() ?? new List<EventsTickets>();
 
-            // GetEventNames metodunu kullanarak etkinlik başlıklarını alıyoruz
+            foreach (var ticket in tickets)
+            {
+                var eventTitle = _eventService.TGetByID(ticket.EventId)?.Title;
+                ticket.EventTitle = eventTitle; // Görselde kullanmak için ekliyoruz
+            }
             
+
 
             return View(tickets);
         }

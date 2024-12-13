@@ -7,6 +7,8 @@ namespace BusinessLayer.Abstract
     {
         // Etkinlikleri şehre göre getirme
         List<Event> GetEventsByCity(int cityId);
+        Event TGetByID(int id);
+
 
         // Etkinlikleri kategoriye göre getirme
         List<Event> GetEventsByCategory(int categoryId);
