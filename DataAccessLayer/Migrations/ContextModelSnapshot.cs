@@ -22,6 +22,23 @@ namespace DataAccessLayer.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("DataAccessLayer.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CityId"));
+
+                    b.Property<string>("CityName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("CityId");
+
+                    b.ToTable("Cities", (string)null);
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -151,7 +168,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ArtistId");
 
-                    b.ToTable("Artists");
+                    b.ToTable("Artists", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
@@ -172,7 +189,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
@@ -187,6 +204,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("CategoryId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("CityId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
@@ -220,7 +240,41 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Events");
+                    b.HasIndex("CityId");
+
+                    b.ToTable("Events", (string)null);
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -248,7 +302,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("TicketId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Ticket", b =>
@@ -268,7 +322,10 @@ namespace DataAccessLayer.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
-                    b.Property<string>("SeatNumber")
+                    b.Property<int>("TicketCount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("TicketNumber")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -276,7 +333,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("Tickets");
+                    b.ToTable("Tickets", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.UserFavorite", b =>
@@ -287,23 +344,19 @@ namespace DataAccessLayer.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserFavoriteId"));
 
-                    b.Property<int>("TicketId")
+                    b.Property<int>("EventId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("UserId1")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("UserFavoriteId");
 
-                    b.HasIndex("TicketId");
+                    b.HasIndex("EventId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("UserFavorites");
+                    b.ToTable("UserFavorites", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -423,9 +476,15 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("DataAccessLayer.City", "City")
+                        .WithMany("Events")
+                        .HasForeignKey("CityId");
+
                     b.Navigation("Artist");
 
                     b.Navigation("Category");
+
+                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Payment", b =>
@@ -452,19 +511,19 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.UserFavorite", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Ticket", "Ticket")
-                        .WithMany()
-                        .HasForeignKey("TicketId")
+                    b.HasOne("EntityLayer.Concrete.Event", "Event")
+                        .WithMany("UserFavorites")
+                        .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Concrete.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1")
+                        .WithMany("UserFavorites")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Ticket");
+                    b.Navigation("Event");
 
                     b.Navigation("User");
                 });
@@ -520,6 +579,16 @@ namespace DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("DataAccessLayer.City", b =>
+                {
+                    b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.Navigation("UserFavorites");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Artist", b =>
                 {
                     b.Navigation("Events");
@@ -533,6 +602,8 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Event", b =>
                 {
                     b.Navigation("Tickets");
+
+                    b.Navigation("UserFavorites");
                 });
 #pragma warning restore 612, 618
         }

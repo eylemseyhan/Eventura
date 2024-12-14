@@ -14,7 +14,10 @@ namespace EntityLayer.Concrete
         public string? Image { get; set; }
         public string? Email { get; set; }
 
-
+        public ICollection<UserFavorite> UserFavorites { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+        public ICollection<SavedCard> SavedCards { get; set; }
 
     }
 }

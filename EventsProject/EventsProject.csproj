@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="jQuery" Version="3.7.1" />
@@ -33,11 +40,36 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Member\Controllers\" />
     <Folder Include="Areas\Member\Data\" />
-    <Folder Include="Areas\Member\Models\" />
-    <Folder Include="Areas\Member\Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Concert\Details.cshtml" />
+    <None Include="Views\Concert\Index.cshtml" />
+    <None Include="Views\Festival\Details.cshtml" />
+    <None Include="Views\Festival\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\KidsEvent\Details.cshtml" />
+    <None Include="Views\KidsEvent\Index.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutAllEventsComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutArtistComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutCategoryComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutFooterComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutHeadComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutPopulerEventsComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutScriptComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutSearchComponent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_UILayoutUpComingEventsComponent\Default.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Stand_Up\Details.cshtml" />
+    <None Include="Views\Stand_Up\Index.cshtml" />
+    <None Include="Views\Theater\Details.cshtml" />
+    <None Include="Views\Theater\Index.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
 
 </Project>

@@ -1,13 +1,11 @@
 ﻿using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface  ITicketService:IGenericService<Ticket>
+    public interface ITicketService : IGenericService<Ticket>
     {
+        // Add method to add multiple tickets at once
+        void TAddRange(IEnumerable<Ticket> tickets);
     }
 }

@@ -23,7 +23,56 @@ namespace DataAccessLayer.Concrete
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<UserFavorite> UserFavorites { get; set; }
-       
+
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<City> Cities  { get; set; }
+
+        public DbSet<SavedCard> SavedCards { get; set; }
+        public DbSet<EventsTickets> EventsTickets { get; set; }
+        public DbSet<EventEventsTickets> EventEventsTicket { get; set; }
+
+        
+
+        // İlişkilerin yapılandırılması
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // EventEventsTickets için bileşik birincil anahtar tanımlaması
+            modelBuilder.Entity<EventEventsTickets>()
+                .HasKey(e => new { e.EventId, e.EventsTicketsEventsTicketId }); // Bileşik Anahtar
+
+            // Event ve Ticket ile ilişkilerin kurulması
+            modelBuilder.Entity<EventEventsTickets>()
+                .HasOne(e => e.Event)
+                .WithMany()  // Event ile ilişki
+                .HasForeignKey(e => e.EventId); // EventId ForeignKey ilişkisi
+
+            
+
+
+            // UserFavorite ile AppUser arasındaki ilişkiyi tanımla
+            modelBuilder.Entity<UserFavorite>()
+                .HasOne(uf => uf.User)
+                .WithMany(u => u.UserFavorites)
+                .HasForeignKey(uf => uf.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // UserFavorite ile Event arasındaki ilişkiyi tanımla
+            modelBuilder.Entity<UserFavorite>()
+                .HasOne(uf => uf.Event)
+                .WithMany(e => e.UserFavorites)
+                .HasForeignKey(uf => uf.EventId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            
+
+
+        }
+
+
+
+
 
     }
 }

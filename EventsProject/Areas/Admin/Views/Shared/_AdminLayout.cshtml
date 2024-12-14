@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>KAdmin Paneli</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
           name="viewport" />
     <link rel="icon"
@@ -17,19 +17,19 @@
     <script src="~/kaiadmin-lite-1.2.0/assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
         WebFont.load({
-          google: { families: ["Public Sans:300,400,500,600,700"] },
-          custom: {
-            families: [
-              "Font Awesome 5 Solid",
-              "Font Awesome 5 Regular",
-              "Font Awesome 5 Brands",
-              "simple-line-icons",
-            ],
-            urls: ["assets/css/fonts.min.css"],
-          },
-          active: function () {
-            sessionStorage.fonts = true;
-          },
+            google: { families: ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["assets/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
         });
     </script>
 
@@ -46,7 +46,7 @@
         <!-- Sidebar -->
         <div class="sidebar" data-background-color="dark">
             <div class="sidebar-logo">
-                <!-- Logo Header -->
+             @*    <!-- Logo Header -->
                 <div class="logo-header" data-background-color="dark">
                     <a href="index.html" class="logo">
                         <img src="~/kaiadmin-lite-1.2.0/assets/img/kaiadmin/logo_light.svg"
@@ -66,7 +66,7 @@
                         <i class="gg-more-vertical-alt"></i>
                     </button>
                 </div>
-                <!-- End Logo Header -->
+                <!-- End Logo Header --> *@
             </div>
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
@@ -87,14 +87,44 @@
                             <h4 class="text-section">Admin İşlemleri</h4>
                         </li>
                         <li class="nav-item">
-                            <a href="/Home/Index"
+                            <a href="@Url.Action("Index", "Events", new { area = "Admin" })" class="user-icon">
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Etkinlikler</p>
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Artist", new { area = "Admin" })" class="user-icon">
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Sanatçılar</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Categories", new { area = "Admin" })" class="user-icon">
                                 <i class="fas fa-award" style="text-align:center"></i>
                                 <p>Kategoriler</p>
-
                             </a>
-
                         </li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Ticket", new { area = "Admin" })" class="user-icon">
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Biletler</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Messages", new { area = "Admin" })" class="user-icon">
+                                <i class="fas fa-award" style="text-align:center"></i>
+                                <p>Mesajlar</p>
+                            </a>
+                        </li>
+
+
+
+
+
 
                     </ul>
                 </div>
@@ -432,9 +462,9 @@
             <!-- End Navbar -->
         </div>
 
-        @RenderBody();
+            @RenderBody();
 
-       
+
     </div>
 
     </div>
@@ -476,30 +506,30 @@
     <script src="~/kaiadmin-lite-1.2.0/assets/js/demo.js"></script>
     <script>
         $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-          type: "line",
-          height: "70",
-          width: "100%",
-          lineWidth: "2",
-          lineColor: "#177dff",
-          fillColor: "rgba(23, 125, 255, 0.14)",
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#177dff",
+            fillColor: "rgba(23, 125, 255, 0.14)",
         });
 
         $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-          type: "line",
-          height: "70",
-          width: "100%",
-          lineWidth: "2",
-          lineColor: "#f3545d",
-          fillColor: "rgba(243, 84, 93, .14)",
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#f3545d",
+            fillColor: "rgba(243, 84, 93, .14)",
         });
 
         $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-          type: "line",
-          height: "70",
-          width: "100%",
-          lineWidth: "2",
-          lineColor: "#ffa534",
-          fillColor: "rgba(255, 165, 52, .14)",
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#ffa534",
+            fillColor: "rgba(255, 165, 52, .14)",
         });
     </script>
 </body>

@@ -1,13 +1,17 @@
 ﻿using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface ICategoryService:IGenericService<Category>
+    public interface ICategoryService : IGenericService<Category>
     {
+        // Kategorileri almak için metod
+        List<Category> GetCategories();
+
+        // Sadece kategori adlarını almak için
+        List<string> GetCategoryNames();
+
+        List<Category> GetAll();
+        Category TGetByID(List<int> categoryIds);
     }
 }

@@ -1,38 +1,82 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
     public class EventManager : IEventService
     {
+        private readonly IEventDal _eventDal;
+
+        public EventManager(IEventDal eventDal)
+        {
+            _eventDal = eventDal;
+        }
+
         public void TAdd(Event t)
         {
-            throw new NotImplementedException();
+            // Event başlığı boş olamaz, kategori ve sanatçı ID'si kontrol edilebilir
+            if (!string.IsNullOrEmpty(t.Title) && t.CategoryId != 0 && t.ArtistId != 0)
+            {
+                _eventDal.Insert(t); // Etkinliği ekle
+            }
+            else
+            {
+                // Gerekirse buraya bir hata mesajı ekleyebilirsiniz
+                throw new Exception("Başlık, kategori ve sanatçı bilgileri gerekli!");
+            }
         }
-
-        public void TDelete(Event t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Event TGetByID(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Event> TGetList()
         {
-            throw new NotImplementedException();
+            return _eventDal.GetList();
         }
 
-        public void TUpdate(Event t)
+        // ID'ye Göre Getirme
+        public Event TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _eventDal.GetByID(id);
         }
+        public void TDelete(Event t)
+        {
+            _eventDal.Delete(t);
+        }
+
+        // Güncelleme
+        public void TUpdate(Event eventObj)
+        {
+            using (var context = new Context())
+            {
+                context.Events.Update(eventObj);
+                context.SaveChanges();
+            }
+        }
+        public List<Event> TGetListWithArtistAndCategory()
+        {
+            return _eventDal.TGetListWithArtistAndCategory();
+        }
+
+        public Event TGetByIDWithArtistAndCategory(int id)
+        {
+            return _eventDal.TGetByIDWithArtistAndCategory(id);
+        }
+
+        public List<Event> GetAllEvents()
+        {
+            return _eventDal.GetList();
+        }
+        public List<string> GetEventTitles()
+        {
+            using var context = new Context();
+            return context.Events.Select(e => e.Title).ToList();
+        }
+
+
+
+        // Filtreleme işlemleri
+        public List<Event> GetEventsByCity(int cityId) => _eventDal.GetEventsByCity(cityId);
+        public List<Event> GetEventsByCategory(int categoryId) => _eventDal.GetEventsByCategory(categoryId);
+        public List<Event> GetEventsByCityAndCategory(int cityId, int categoryId) => _eventDal.GetEventsByCityAndCategory(cityId, categoryId);
     }
 }

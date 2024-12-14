@@ -12,11 +12,11 @@ namespace EntityLayer.Concrete
     public class UserFavorite
     {
         public int UserFavoriteId { get; set; } // Birincil anahtar
-        public string UserId { get; set; }       // Kullanıcı ID'si (Identity User ile ilişkilendirilecek)
-        public int TicketId { get; set; }        // Bilet ID'si (Favori olarak eklenen bilet)
+        public int UserId { get; set; }       // Kullanıcı ID'si (Identity User ile ilişkilendirilecek)
+        public int EventId { get; set; }       // Bilet ID'si (Favori olarak eklenen bilet)
 
         // İlişkiler
         public virtual AppUser User { get; set; }
-        public virtual Ticket Ticket { get; set; }
+        public virtual Event Event { get; set; }
     }
 }

@@ -37,13 +37,17 @@
                             <h4>@Model.Title</h4>
                         </div>
 
+                        
+
                         <!-- Etkinlik Açıklaması -->
                         <div class="overview-content mt-50" id="overview">
                             <p>@Model.Description</p> <!-- Etkinlik Açıklaması -->
+                            <p>@Model.Details</p>
 
                             <p>@Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
                         </div>
 
+                       
 
 
                         <!-- Etkinlik Konumu -->

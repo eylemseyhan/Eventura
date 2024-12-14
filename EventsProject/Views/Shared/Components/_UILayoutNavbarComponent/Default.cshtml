@@ -1,4 +1,4 @@
-﻿ <!-- ***** Search Form Area ***** -->
+﻿<!-- ** Search Form Area ** -->
 <div class="dorne-search-form d-flex align-items-center">
     <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<!-- ***** Header Area Start ***** -->
+<!-- ** Header Area Start ** -->
 <header class="header_area" id="header">
     <div class="container-fluid h-100">
         <div class="row h-100">
@@ -32,7 +32,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/Concert/Index">Konser </a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="/Theater/Index">Tiyatro</a>
                             </li>
@@ -46,24 +45,34 @@
                                 <a class="nav-link" href="/Festival/Index">Festival</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">İletişim</a>
+                                <a class="nav-link" href="/Contact/Index">İletişim</a>
                             </li>
                         </ul>
                         <!-- Search btn -->
                         <div class="dorne-search-btn">
                             <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Ara </a>
                         </div>
-                        <!-- Signin btn -->
-                        <!--  <div class="dorne-signin-btn">
-                            <a href="#">Sign in  or Register</a>
-                        </div> -->
-                        <!-- Add listings btn -->
                         <div class="dorne-add-listings-btn">
-                            <a href="@Url.Action("Index", "Dashboard", new { area = "Admin" })" class="user-icon">
-                                <img src="~/dorne-master/img/core-img/signup.png" alt="User Icon" style="width: 24px; height: 24px;">
+                            <a href="javascript:void(0);" class="user-icon" onclick="toggleDropdown()">
+                                <i class="fa fa-user-circle" style="color: white; font-size: 32px;"></i> <!-- Beyaz Font Awesome ikonu -->
                             </a>
+                            <!-- Dropdown Menü -->
+                            <div id="dropdownMenu" class="dropdown-content">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Hoş geldin, @User.Identity.Name</a>
+                                    <a href="@Url.Action("Index", "Dashboard", new { area = "Member" })">Hesabım</a>
+                                    <a href="@Url.Action("Logout", "Login", new { area = "Member" })">Çıkış Yap</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("SignIn", "Login", new { area = "Member" })">Kullanıcı Girişi</a>
+                                    <a href="@Url.Action("Index", "Login", new { area = "Admin" })">Admin Girişi</a>
+                                }
+                            </div>
                         </div>
 
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -73,41 +82,76 @@
 <style>
 
     .user-icon {
-        display: inline-flex; /* Flexbox ile içeriği ortalamak için */
-        justify-content: center; /* İçerikleri yatayda ortala */
-        align-items: center; /* İçerikleri dikeyde ortala */
-        width: 70px; /* Yuvarlak butonun yeni genişliği */
-        height: 70px; /* Yuvarlak butonun yeni yüksekliği */
-        background: transparent; /* Arka planı transparan yap */
-        border: none; /* Kenarlıkları kaldır */
-        outline: none; /* Outline'ı kaldır */
-        transition: transform 0.3s; /* Hover efektinde ölçek geçişi için */
-        cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
-        padding: 0; /* İçerik etrafındaki boşluğu kaldır */
-        margin: 0; /* Dışarıdaki boşluğu kaldır */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        background: transparent;
+        border: none;
+        outline: none;
+        transition: transform 0.3s;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
     }
 
         .user-icon:hover {
-            transform: scale(1.2); /* Üzerine gelince büyüme efekti (ikonu %20 büyüt) */
+            transform: scale(1.2); /* Üzerine gelince büyüme efekti */
         }
 
-        .user-icon img {
-            width: 80%; /* İkonun genişliği, butonun genişliğine göre ayarlanacak */
-            height: 80%; /* İkonun yüksekliği, butonun yüksekliğine göre ayarlanacak */
-            border-radius: 50%; /* İkonu yuvarlak yapmak için */
+        .user-icon i {
+            font-size: 32px; /* Font Awesome ikon boyutu */
+            color: white; /* İkonun beyaz olması */
         }
 
         .user-icon:focus {
-            outline: none; /* Outline'ı kaldır */
-            box-shadow: none; /* Varsayılan gölgeyi kaldır */
+            outline: none;
+            box-shadow: none;
         }
 
         .user-icon:active {
-            outline: none; /* Aktif durumdaki outline'ı kaldır */
+            outline: none;
         }
 
+    /* Dropdown Menüsü */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+    /* Dropdown Menü gösterme */
+    .dorne-add-listings-btn:hover .dropdown-content {
+        display: block;
+    }
 </style>
 
 
 
 
+
+<script>
+    // Dropdown menüsünü açma ve kapama
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    // Sayfa dışında bir yere tıklanırsa dropdown menüsünü kapat
+
+</script>
