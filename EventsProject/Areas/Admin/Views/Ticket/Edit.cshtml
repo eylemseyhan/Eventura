@@ -1,70 +1,66 @@
-﻿@* @model EntityLayer.Concrete.EventsTicket
+﻿@model EventsProject.Areas.Admin.Models.EventTicketEditDto
 
 @{
-    ViewData["Title"] = "Bilet Etkinliği Güncelle";
+    ViewData["Title"] = "Bilet Düzenle";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h2>Bilet Düzenle</h2>
+
 <div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>Bilet Etkinliği Güncelle</h3>
+    <form asp-action="Edit" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="EventsTicketId" value="@Model.EventsTicketId" />
+
+        <!-- Etkinlik Seçimi -->
+        <div class="form-group">
+            <label for="EventId">Etkinlik Başlığı</label>
+            <select class="form-control" id="EventId" name="EventId">
+                <option value="">Etkinlik Seçin</option>
+                @if (ViewBag.Events != null)
+                {
+                    foreach (var eventItem in ViewBag.Events)
+                    {
+                        <option value="@eventItem.Value" @(eventItem.Value == Model.EventId.ToString() ? "selected" : "")>
+                            @eventItem.Text
+                        </option>
+                    }
+                }
+            </select>
         </div>
-        <div class="card-body">
-            @if (TempData["ErrorMessage"] != null)
-            {
-                <div class="alert alert-danger">
-                    @TempData["ErrorMessage"]
-                </div>
-            }
-            @if (TempData["SuccessMessage"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["SuccessMessage"]
-                </div>
-            }
 
-            <form asp-action="Edit" method="post">
-                @Html.AntiForgeryToken()
-                <input type="hidden" name="EventsTicketId" value="@Model.EventsTicketId" />
-
-                <div class="form-group">
-                    <label for="EventId">Etkinlik</label>
-                    <select id="EventId" name="EventId" class="form-control" required>
-                        <option value="">Etkinlik seçin</option>
-                        @foreach (var eventItem in ViewBag.Events)
-                        {
-                            <option value="@eventItem.EventId" @(eventItem.EventId == Model.EventId ? "selected" : "")>
-                                @eventItem.Title
-                            </option>
-                        }
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="TicketCapacity">Bilet Kapasitesi</label>
-                    <input type="number" id="TicketCapacity" name="TicketCapacity" class="form-control" value="@Model.TicketCapacity" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="Price">Fiyat</label>
-                    <input type="number" id="Price" name="Price" value="@Model.Price" class="form-control" required />
-                    <span asp-validation-for="Price" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="Name">Bilet Adı</label>
-                    <input type="text" id="Name" name="Name" value="@Model.Name" class="form-control" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="SoldCount">Satılan Bilet Sayısı</label>
-                    <input type="number" id="SoldCount" name="SoldCount" class="form-control" value="@Model.SoldCount" required />
-                </div>
-
-                <button type="submit" class="btn btn-primary">Güncelle</button>
-            </form>
+        <!-- Bilet Fiyatı -->
+        <div class="form-group">
+            <label for="Price">Bilet Fiyatı</label>
+            <input type="number" class="form-control" id="Price" name="Price" value="@Model.Price" />
         </div>
-    </div>
+
+        <!-- Bilet Adedi -->
+        <div class="form-group">
+            <label for="TicketCapacity">Bilet Adedi</label>
+            <input type="number" class="form-control" id="TicketCapacity" name="TicketCapacity" value="@Model.TicketCapacity" />
+        </div>
+
+        <!-- Bilet Türü (VIP veya Genel) -->
+        <div class="form-group">
+            <label for="Name">Tür (VIP veya Genel)</label>
+            <input class="form-control" id="Name" name="Name" value="@Model.Name" />
+        </div>
+
+        <!-- Hata Mesajları -->
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <!-- Kaydet Butonu -->
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
 </div>
- *@

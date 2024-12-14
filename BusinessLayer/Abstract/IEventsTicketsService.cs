@@ -7,5 +7,11 @@ namespace BusinessLayer.Abstract
     {
         
         List<EventsTickets> TGetList(); // Sadece metod imzası
+        void TAdd(EventsTickets t); // Yeni ticket ekler
+        List<Ticket> GetTicketsByEventsTicketId(int eventsTicketId);
+        List<EventsTickets> GetEventsTicketsByEventId(int eventId); // EventId'ye göre EventsTickets döndürür
+
+
+
     }
 }

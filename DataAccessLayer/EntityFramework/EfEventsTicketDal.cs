@@ -20,10 +20,22 @@ namespace DataAccessLayer.EntityFramework
             using (var context = new Context())
             {
                 return context.EventEventsTicket
-                    .Include(e => e.Event)  // Sadece Event ile ilişkiyi yükle
+                    .Include(e => e.Event) // Event ile ilişkiyi yükle
                     .ToList();
             }
         }
+        public List<Ticket> GetTicketsByEventsTicketId(int eventsTicketId)
+        {
+            using (var context = new Context())
+            {
+                // Retrieve Tickets where the EventsTicketId matches
+                return context.Tickets
+                    .Where(t => t.EventsTicketId == eventsTicketId)
+                    .ToList();
+            }
+        }
+        
+
 
 
 
@@ -52,6 +64,10 @@ namespace DataAccessLayer.EntityFramework
             }
 
         
+
+
+
+
 
 
     }

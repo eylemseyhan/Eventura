@@ -10,6 +10,11 @@ namespace BusinessLayer.Concrete
 {
     internal class AppUserManager : IAppUserService
     {
+        public AppUser GetUserById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(AppUser t)
         {
             throw new NotImplementedException();

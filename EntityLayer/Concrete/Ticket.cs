@@ -13,6 +13,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int TicketId { get; set; }  // Birincil anahtar
+        public int EventId { get; set; }
 
 
         public int? UserId { get; set; }

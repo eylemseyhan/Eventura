@@ -1,121 +1,60 @@
-﻿@model EntityLayer.Concrete.EventsTickets
+﻿@model EventsProject.Areas.Admin.Models.EventTicketCreateDto
 
 @{
-    ViewData["Title"] = "Create New Event Ticket";
+    ViewData["Title"] = "Create Event Ticket";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-<style>
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 0 15px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px 0;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f8f9fa;
-        padding: 10px 15px;
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-    .form-control {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #dee2e6;
-        border-radius: 4px;
-    }
-
-    .btn-primary {
-        color: #fff;
-        background-color: #007bff;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-</style>
+<h2>@ViewData["Title"]</h2>
 
 <div class="container">
-    <div class="card">
-        <div class="card-header">
-            <div class="card-title">Create New Event Ticket</div>
-            <a asp-action="Index" class="btn btn-secondary btn-sm">
-                <i class="fas fa-list"></i> Back to List
-            </a>
-        </div>
-        <div class="card-body">
-            <form asp-action="Create" method="post">
-                @Html.AntiForgeryToken()
-
-                <div class="form-group">
-                    <label for="EventId">Event</label>
-                    <select asp-for="EventId" class="form-control" asp-items="@(new SelectList(ViewBag.Events, "EventId", "Title"))" required>
-                        <option value="">Select an event</option>
-                    </select>
+    <div class="page-inner">
+        <div class="page-header">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-title">Yeni Etkinlik Bileti Ekle</div>
                 </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        @Html.AntiForgeryToken()
 
+                        <!-- Etkinlik Seçimi -->
+                        <div class="form-group">
+                            <label for="EventId">Event Title</label>
+                            <select class="form-control" id="EventId" name="EventId">
+                                <option value="">Select Event</option>
+                                @if (ViewBag.Events != null)
+                                {
+                                    @foreach (var eventItem in ViewBag.Events as SelectList)
+                                    {
+                                        <option value="@eventItem.Value">@eventItem.Text</option>
+                                    }
+                                }
+                            </select>
+                        </div>
 
-                <div class="form-group">
-                    <label for="TicketCapacity">Ticket Capacity</label>
-                    <input asp-for="TicketCapacity" class="form-control" type="number" min="1" required />
-                    @Html.ValidationMessageFor(model => model.TicketCapacity)
+                        <!-- Bilet Fiyatı -->
+                        <div class="form-group">
+                            <label for="Price">Bilet Fiyatı</label>
+                            <input type="number" class="form-control" id="Price" name="Price" value="@Model.Price" />
+                        </div>
+
+                        <!-- Bilet Adedi -->
+                        <div class="form-group">
+                            <label for="TicketCapacity">Bilet Adedi</label>
+                            <input type="number" class="form-control" id="TicketCapacity" name="TicketCapacity" value="@Model.TicketCapacity" />
+                        </div>
+
+                        <!-- Tür (VIP veya Genel) -->
+                        <div class="form-group">
+                            <label for="Name">Tür (VIP veya Genel)</label>
+                            <input class="form-control" id="Name" name="Name" value="@Model.Name" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <label for="Price">Ticket Price</label>
-                    <input asp-for="Price" class="form-control" type="number" step="0.01" required />
-                    @Html.ValidationMessageFor(model => model.Price)
-                </div>
-
-                <div class="form-group">
-                    <label for="Name">Ticket Type</label>
-                    <select asp-for="Name" class="form-control" required>
-                        <option value="VIP">VIP</option>
-                        <option value="General">General</option>
-                    </select>
-                    @Html.ValidationMessageFor(model => model.Name)
-                </div>
-
-                <div class="form-group">
-                    <label for="SoldCount">Tickets Sold</label>
-                    <input asp-for="SoldCount" class="form-control" type="number" readonly value="0" />
-                    @Html.ValidationMessageFor(model => model.SoldCount)
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Create Ticket
-                </button>
-            </form>
+            </div>
         </div>
     </div>
 </div>

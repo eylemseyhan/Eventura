@@ -48,8 +48,22 @@ namespace BusinessLayer.Concrete
             _eventsTicketDal.Update(t); // Güncelleme işlemi
         }
 
-        
-        
+        public List<Ticket> GetTicketsByEventsTicketId(int eventsTicketId)
+        {
+            
+            return _eventsTicketDal.GetTicketsByEventsTicketId(eventsTicketId);
+        }
+        // EventId'ye göre EventsTickets döndürür
+        public List<EventsTickets> GetEventsTicketsByEventId(int eventId)
+        {
+            return _eventsTicketDal.GetEventsTicketsByEventId(eventId);
+        }
+
+
+
+
+
+
 
 
 

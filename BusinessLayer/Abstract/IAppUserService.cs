@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface  IAppUserService:IGenericService<AppUser>
     {
+        AppUser GetUserById(int id);
     }
 }

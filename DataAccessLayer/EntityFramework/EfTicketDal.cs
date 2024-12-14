@@ -10,7 +10,13 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfTicketDal : GenericRepository<Ticket>, ITicketDal
     {
-       
+        public void AddRange(IEnumerable<Ticket> tickets)
+        {
+            using var c = new Context();
+            c.Set<Ticket>().AddRange(tickets);
+            c.SaveChanges();
+        }
+
 
     }
 }

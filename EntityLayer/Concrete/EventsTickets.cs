@@ -20,8 +20,9 @@ namespace EntityLayer.Concrete
         public string Name { get; set; }
 
         public int SoldCount { get; set; }
-
+        [NotMapped]
         public virtual ICollection<Event> Events { get; set; }
+        [NotMapped]
         public virtual ICollection<Ticket> Tickets { get; set; }
         [NotMapped]
         public string EventTitle { get; set; } // Bu alan veritabanına yansımayacak.

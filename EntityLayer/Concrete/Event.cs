@@ -37,7 +37,7 @@ namespace EntityLayer.Concrete
         public virtual ICollection<Ticket> Tickets { get; set; }
         public virtual City City { get; set; }
         public ICollection<UserFavorite> UserFavorites { get; set; }
-        public virtual ICollection<EventsTickets> EventsTickets { get; set; }
+        public virtual ICollection<EventsTickets> EventsTickets { get; set; } // Bir etkinliğin birden fazla bileti olabilir
     }
 
 

@@ -21,6 +21,14 @@ namespace DataAccessLayer.Repository
             c.SaveChanges();
         }
 
+        public void TAdd(T entity)
+        {
+            using var c = new Context();
+            c.Set<T>().Add(entity); // Veya Entity Framework'deki uygun DbSet ile ekleyin.
+            c.SaveChanges();
+        }
+
+
         public T GetByID(int id)
         {
             using var c = new Context();
@@ -80,6 +88,19 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             return filter == null ? c.Set<T>().ToList() : c.Set<T>().Where(filter).ToList();
+        }
+        public void Add(T entity)
+        {
+            using var c = new Context();
+            c.Set<T>().Add(entity);
+            c.SaveChanges();
+        }
+
+        public void AddRange(IEnumerable<T> entities)
+        {
+            using var c = new Context();
+            c.Set<T>().AddRange(entities);
+            c.SaveChanges();
         }
 
 

@@ -109,7 +109,7 @@
                                 <td>@ticket.SoldCount</td>
                                 <td>@ticket.Price.ToString("C")</td>
                                 <td class="action-icons">
-                                    <a asp-action="Edit" asp-route-id="@ticket.EventsTicketId" title="Edit">
+                                    <a href="@Url.Action("Edit", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })" title="Edit">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <a href="javascript:void(0);" onclick="confirmDelete('@Url.Action("Delete", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })')" title="Delete">

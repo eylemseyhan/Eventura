@@ -1,5 +1,8 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Collections.Generic;
+
 
 namespace BusinessLayer.Abstract
 {
@@ -7,7 +10,11 @@ namespace BusinessLayer.Abstract
     {
         // Etkinlikleri şehre göre getirme
         List<Event> GetEventsByCity(int cityId);
-        Event TGetByID(int id);
+        public Event TGetByID(int id)
+        {
+            using var context = new Context();
+            return context.Events.FirstOrDefault(e => e.EventId == id);
+        }
 
 
         // Etkinlikleri kategoriye göre getirme
@@ -18,6 +25,7 @@ namespace BusinessLayer.Abstract
 
         List<Event> TGetList();
         List<Event> GetAllEvents();
-      
+        
+
     }
 }
