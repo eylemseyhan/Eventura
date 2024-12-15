@@ -30,8 +30,9 @@
                             <p>@item.Description</p>
                         </div>
                         <div class="feature-events-details-btn">
-                            <a href="#">+</a>
+                            <a href="@Url.Action("Details", "Home", new { id = item.EventId })">+</a>
                         </div>
+
                     </div>
                 </div>
             }

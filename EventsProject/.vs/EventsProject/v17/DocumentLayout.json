@@ -3,35 +3,61 @@
   "WorkspaceRootPath": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutsearchcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutsearchcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\views\\ticket\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\views\\ticket\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutalleventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutalleventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\models\\ticketeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\models\\ticketeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\models\\ticketcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\models\\ticketcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04E965BE-0094-4402-BD62-9C951DAFF2C6}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\businesslayer\\abstract\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\models\\eventticketeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\models\\eventticketeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutpopulereventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutpopulereventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutpopulereventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutpopulereventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\models\\eventwithpriceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:models\\eventwithpriceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\models\\eventticketcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\models\\eventticketcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,9 +80,6 @@
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\abstract\\iappuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\abstract\\igenericdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,16 +91,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\eventstickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E965BE-0094-4402-BD62-9C951DAFF2C6}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\businesslayer\\abstract\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\entityframework\\efeventdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -145,10 +158,6 @@
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\migrations\\20241210122427_fix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\member\\views\\dashboard\\tickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\member\\views\\dashboard\\tickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -203,16 +212,7 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\member\\views\\shared\\_memberdashboardlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\userfavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\savedcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\member\\views\\login\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -231,13 +231,6 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\member\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\theater\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -250,10 +243,6 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\festivalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\entityframework\\efuserfavoritedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -261,18 +250,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\migrations\\20241210113906_restoreemailcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -303,16 +280,8 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutalleventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutalleventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutalleventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutalleventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutartistcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -338,16 +307,8 @@
       "AbsoluteMoniker": "D:0:0:{7BDE0DDB-0D27-442D-A6BB-B62032E5F57F}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\dataaccesslayer\\entityframework\\efcitydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutupcomingeventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutupcomingeventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutscriptcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutscriptcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutpopulereventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutpopulereventscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutheadcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -360,10 +321,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutcategorycomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutcategorycomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\viewcomponents\\_uilayoutartistcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:viewcomponents\\_uilayoutartistcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -382,10 +339,6 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\areas\\admin\\views\\messages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:areas\\admin\\views\\messages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -402,9 +355,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15237158-562A-4FE4-8337-3E9BEBE39E05}|..\\EntityLayer\\EntityLayer.csproj|c:\\users\\eylem\\desktop\\eventsproject\\entitylayer\\concrete\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -456,10 +406,6 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutscriptcomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutcategorycomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutcategorycomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -477,10 +423,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\concert\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\wwwroot\\kaiadmin-lite-1.2.0\\components\\sweetalert.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -529,10 +471,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\festival\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\kidsevent\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\theater\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -614,10 +552,6 @@
       "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|c:\\users\\eylem\\desktop\\eventsproject\\eventsproject\\views\\shared\\components\\_uilayoutpopulereventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E55A1D39-4DEB-4D00-A6D8-BE3AF1197B98}|EventsProject.csproj|solutionrelative:views\\shared\\components\\_uilayoutpopulereventscomponent\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ipekn\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -640,7 +574,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -664,46 +598,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\TicketController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\TicketController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\TicketController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\TicketController.cs",
-              "ViewState": "AQIAAAEBAAAAAAAAAAAuwBoBAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T16:40:19.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventTicketCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketCreateDto.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\EventTicketCreateDto.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketCreateDto.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\EventTicketCreateDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:00:26.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Ticket\\Create.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Ticket\\Create.cshtml",
-              "ViewState": "AQIAACAAAAAAAAAAAAAowDwAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "Views\\Home\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T13:19:43.911Z",
+              "WhenOpened": "2024-12-15T14:46:00.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAnwKoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T18:13:05.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\AppUser.cs",
+              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\AppUser.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\AppUser.cs",
+              "RelativeToolTip": "..\\EntityLayer\\Concrete\\AppUser.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:43:32.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\MessagesController.cs",
@@ -716,72 +650,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Ticket.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Ticket.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAA+wCQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T15:56:55.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventTicketEditDto.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketEditDto.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\EventTicketEditDto.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketEditDto.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\EventTicketEditDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:37:28.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TicketCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\TicketCreateDto.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\TicketCreateDto.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\TicketCreateDto.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\TicketCreateDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:06:42.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_UILayoutSearchComponent.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutSearchComponent.cs",
-              "RelativeDocumentMoniker": "ViewComponents\\_UILayoutSearchComponent.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutSearchComponent.cs",
-              "RelativeToolTip": "ViewComponents\\_UILayoutSearchComponent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T12:03:50.923Z",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "ViewState": "AQIAACAAAAAAAAAAAAAowDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T13:19:43.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Ticket\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Ticket\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAAAAAA",
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAnwCAAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:17:43.87Z",
+              "WhenOpened": "2024-11-19T18:44:26.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
+              "Title": "FestivalController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FestivalController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
+              "RelativeToolTip": "Controllers\\FestivalController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAqwDkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T12:53:04.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:54:38.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEventService.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IEventService.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IEventService.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IEventService.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Abstract\\IEventService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T18:00:34.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
+              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAuwHAAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T15:36:18.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Concert\\Details.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
+              "RelativeToolTip": "Views\\Concert\\Details.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T14:40:56.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAYwDkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:10:33.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
+              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Event.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
+              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Event.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA3wCUAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:14:03.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwBAAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T23:54:23.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_UILayoutPopulerEventsComponent.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutPopulerEventsComponent.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutPopulerEventsComponent.cs",
+              "RelativeToolTip": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwCkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T12:13:12.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventWithPriceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Models\\EventWithPriceViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\EventWithPriceViewModel.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Models\\EventWithPriceViewModel.cs",
+              "RelativeToolTip": "Models\\EventWithPriceViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:11:49.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EventTicketCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketCreateDto.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\EventTicketCreateDto.cs",
+              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\EventTicketCreateDto.cs",
+              "RelativeToolTip": "Areas\\Admin\\Models\\EventTicketCreateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T15:00:26.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "ITicketService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\ITicketService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\ITicketService.cs",
@@ -794,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "EfAppUserDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfAppUserDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfAppUserDal.cs",
@@ -807,20 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TicketEditDto.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\TicketEditDto.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\TicketEditDto.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\TicketEditDto.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\TicketEditDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T14:13:59.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "IAppUserDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IAppUserDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IAppUserDal.cs",
@@ -833,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "AppUserManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\AppUserManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\AppUserManager.cs",
@@ -846,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "IAppUserService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IAppUserService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IAppUserService.cs",
@@ -859,20 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\AppUser.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\AppUser.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\AppUser.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\AppUser.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAmwBYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:08:46.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "IGenericDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IGenericDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IGenericDal.cs",
@@ -885,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Models\\LoginViewModel.cs",
@@ -897,7 +909,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "EventsTickets.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\EventsTickets.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\EventsTickets.cs",
@@ -909,43 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Event.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Event.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T17:14:03.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAmwCEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:14:23.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IEventService.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IEventService.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IEventService.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IEventService.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\Abstract\\IEventService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T18:00:34.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Ticket\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Ticket\\Index.cshtml",
@@ -957,7 +933,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IEventsTicketDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IEventsTicketDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IEventsTicketDal.cs",
@@ -969,7 +945,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "EfEventDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfEventDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfEventDal.cs",
@@ -981,7 +957,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "EventsTicketManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\EventsTicketManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\EventsTicketManager.cs",
@@ -993,7 +969,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "ICategoryDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\ICategoryDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\ICategoryDal.cs",
@@ -1005,7 +981,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "EventEventsTickets.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\EventEventsTickets.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\EventEventsTickets.cs",
@@ -1017,7 +993,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "CategoryManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\CategoryManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\CategoryManager.cs",
@@ -1029,7 +1005,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\ICategoryService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\ICategoryService.cs",
@@ -1041,7 +1017,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Categories\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Categories\\Create.cshtml",
@@ -1053,7 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Artist\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Artist\\Create.cshtml",
@@ -1065,7 +1041,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "IEventDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IEventDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IEventDal.cs",
@@ -1077,7 +1053,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "EventManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\EventManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\EventManager.cs",
@@ -1089,7 +1065,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Artist\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Artist\\Index.cshtml",
@@ -1101,7 +1077,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Events\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Events\\Index.cshtml",
@@ -1113,7 +1089,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "MessageManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\MessageManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\MessageManager.cs",
@@ -1125,7 +1101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "EfArtistDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfArtistDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfArtistDal.cs",
@@ -1137,7 +1113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "EfMessageDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfMessageDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfMessageDal.cs",
@@ -1149,7 +1125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Concrete\\Context\\Context.cs",
@@ -1161,7 +1137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "EfCategoryDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfCategoryDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfCategoryDal.cs",
@@ -1173,7 +1149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "20241210122427_Fix.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241210122427_Fix.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241210122427_Fix.cs",
@@ -1185,19 +1161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:14:58.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Tickets.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Dashboard\\Tickets.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Dashboard\\Tickets.cshtml",
@@ -1209,7 +1173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "AppRoleManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\AppRoleManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\AppRoleManager.cs",
@@ -1221,7 +1185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "UserFavoriteManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\UserFavoriteManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\UserFavoriteManager.cs",
@@ -1233,7 +1197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Dashboard\\Index.cshtml",
@@ -1245,7 +1209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutNavbarComponent\\Default.cshtml",
@@ -1257,7 +1221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "_UILayoutNavbarComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutNavbarComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutNavbarComponent.cs",
@@ -1269,7 +1233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutMemberNavbarComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutMemberNavbarComponent\\Default.cshtml",
@@ -1281,7 +1245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "_UILayoutMemberNavbarComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutMemberNavbarComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutMemberNavbarComponent.cs",
@@ -1293,7 +1257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "Favorites.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Dashboard\\Favorites.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Dashboard\\Favorites.cshtml",
@@ -1305,7 +1269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "DashboardViewModelcs.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Models\\DashboardViewModelcs.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Models\\DashboardViewModelcs.cs",
@@ -1317,7 +1281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "Settings.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Dashboard\\Settings.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Dashboard\\Settings.cshtml",
@@ -1329,7 +1293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Dashboard\\Profile.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Dashboard\\Profile.cshtml",
@@ -1341,7 +1305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Controllers\\DashboardController.cs",
@@ -1353,7 +1317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "_MemberDashboardLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Shared\\_MemberDashboardLayout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Shared\\_MemberDashboardLayout.cshtml",
@@ -1365,19 +1329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "UserFavorite.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\UserFavorite.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\UserFavorite.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\UserFavorite.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\UserFavorite.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:10:32.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "SavedCard.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\SavedCard.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\SavedCard.cs",
@@ -1389,31 +1341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Payment.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Payment.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Payment.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Payment.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAowB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:10:10.049Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 60,
-              "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Message.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Message.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Message.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Message.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAYwA0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T14:23:56.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
               "Title": "SignIn.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Login\\SignIn.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Login\\SignIn.cshtml",
@@ -1425,7 +1353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 61,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutHeadComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutHeadComponent\\Default.cshtml",
@@ -1437,7 +1365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 65,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Stand_Up\\Index.cshtml",
@@ -1449,19 +1377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Category.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Category.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Category.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:56:08.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 63,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Controllers\\LoginController.cs",
@@ -1473,7 +1389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 62,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Festival\\Index.cshtml",
@@ -1487,18 +1403,6 @@
               "$type": "Document",
               "DocumentIndex": 66,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Concert\\Index.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Index.cshtml",
-              "RelativeToolTip": "Views\\Concert\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T17:34:51.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\KidsEvent\\Index.cshtml",
               "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Index.cshtml",
@@ -1509,19 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "FestivalController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FestivalController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\FestivalController.cs",
-              "RelativeToolTip": "Controllers\\FestivalController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAqwDkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:53:04.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 64,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Theater\\Index.cshtml",
@@ -1533,19 +1425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T18:14:10.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 67,
               "Title": "EfUserFavoriteDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfUserFavoriteDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfUserFavoriteDal.cs",
@@ -1557,7 +1437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 68,
               "Title": "20241209173005_FixUserId.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241209173005_FixUserId.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241209173005_FixUserId.cs",
@@ -1570,7 +1450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 69,
               "Title": "20241210113906_RestoreEmailColumn.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241210113906_RestoreEmailColumn.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241210113906_RestoreEmailColumn.cs",
@@ -1582,31 +1462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:10:33.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:49:41.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 71,
               "Title": "_SearchLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_SearchLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_SearchLayout.cshtml",
@@ -1618,7 +1474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 70,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -1630,7 +1486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 72,
               "Title": "SignUp.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Views\\Register\\SignUp.cshtml",
               "RelativeDocumentMoniker": "Areas\\Member\\Views\\Register\\SignUp.cshtml",
@@ -1642,7 +1498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 73,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Models\\LoginViewModel.cs",
@@ -1654,7 +1510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 74,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Controllers\\RegisterController.cs",
@@ -1666,7 +1522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 75,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Member\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "Areas\\Member\\Models\\RegisterViewModel.cs",
@@ -1678,7 +1534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 76,
               "Title": "EventsController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\EventsController.cs",
@@ -1690,19 +1546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutAllEventsComponent\\Default.cshtml",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwB8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:44:26.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 77,
               "Title": "_UILayoutAllEventsComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutAllEventsComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutAllEventsComponent.cs",
@@ -1714,7 +1558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 80,
               "Title": "EventsSearchController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\EventsSearchController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventsSearchController.cs",
@@ -1726,7 +1570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 78,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutArtistComponent\\Default.cshtml",
@@ -1738,7 +1582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 79,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutFooterComponent\\Default.cshtml",
@@ -1750,7 +1594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 83,
               "Title": "EfCityDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfCityDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfCityDal.cs",
@@ -1762,19 +1606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:54:38.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 82,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\EventSearch\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\EventSearch\\Index.cshtml",
@@ -1786,7 +1618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 81,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutSearchComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutSearchComponent\\Default.cshtml",
@@ -1798,19 +1630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
-              "Title": "_UILayoutUpComingEventsComponent.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutUpComingEventsComponent.cs",
-              "RelativeDocumentMoniker": "ViewComponents\\_UILayoutUpComingEventsComponent.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutUpComingEventsComponent.cs",
-              "RelativeToolTip": "ViewComponents\\_UILayoutUpComingEventsComponent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:24:14.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 84,
               "Title": "_UILayoutScriptComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutScriptComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutScriptComponent.cs",
@@ -1822,7 +1642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 85,
               "Title": "_UILayoutHeadComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutHeadComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutHeadComponent.cs",
@@ -1834,7 +1654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 87,
               "Title": "_UILayoutCategoryComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutCategoryComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutCategoryComponent.cs",
@@ -1846,19 +1666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
-              "Title": "_UILayoutPopulerEventsComponent.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutPopulerEventsComponent.cs",
-              "RelativeDocumentMoniker": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutPopulerEventsComponent.cs",
-              "RelativeToolTip": "ViewComponents\\_UILayoutPopulerEventsComponent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:13:12.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 88,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1870,7 +1678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 86,
               "Title": "_UILayoutFooterComponent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutFooterComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\_UILayoutFooterComponent.cs",
@@ -1882,19 +1690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
-              "Title": "_UILayoutArtistComponent.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutArtistComponent.cs",
-              "RelativeDocumentMoniker": "ViewComponents\\_UILayoutArtistComponent.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ViewComponents\\_UILayoutArtistComponent.cs",
-              "RelativeToolTip": "ViewComponents\\_UILayoutArtistComponent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:56:44.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 89,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\EventSearch\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\EventSearch\\Details.cshtml",
@@ -1906,7 +1702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 91,
               "Title": "ContactController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\ContactController.cs",
               "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
@@ -1918,7 +1714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 90,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Contact\\Index.cshtml",
@@ -1930,7 +1726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 93,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Login\\Index.cshtml",
@@ -1942,7 +1738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 94,
               "Title": "ArtistController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\ArtistController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ArtistController.cs",
@@ -1954,19 +1750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AQIAAGIAAAAAAAAAAABRwG4AAABvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T18:13:05.01Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 92,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Messages\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Messages\\Index.cshtml",
@@ -1978,7 +1762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 96,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\City.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\City.cs",
@@ -1990,7 +1774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 97,
               "Title": "AppRole.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\AppRole.cs",
               "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\AppRole.cs",
@@ -2002,7 +1786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 95,
               "Title": "IMessageService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IMessageService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IMessageService.cs",
@@ -2014,7 +1798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 99,
               "Title": "ArtistManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\ArtistManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\ArtistManager.cs",
@@ -2026,19 +1810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
-              "Title": "Artist.cs",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Artist.cs",
-              "RelativeDocumentMoniker": "..\\EntityLayer\\Concrete\\Artist.cs",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Artist.cs",
-              "RelativeToolTip": "..\\EntityLayer\\Concrete\\Artist.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:41:50.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 98,
               "Title": "PaymentManager.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Concrete\\PaymentManager.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Concrete\\PaymentManager.cs",
@@ -2050,7 +1822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 103,
               "Title": "IPaymentDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IPaymentDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IPaymentDal.cs",
@@ -2062,7 +1834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 104,
               "Title": "IMessageDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IMessageDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IMessageDal.cs",
@@ -2074,7 +1846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 100,
               "Title": "EfPaymentDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfPaymentDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfPaymentDal.cs",
@@ -2086,7 +1858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 105,
               "Title": "ICityDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\ICityDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\ICityDal.cs",
@@ -2098,7 +1870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 107,
               "Title": "IAppRoleDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IAppRoleDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IAppRoleDal.cs",
@@ -2110,7 +1882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 102,
               "Title": "IUserFavoriteDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IUserFavoriteDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IUserFavoriteDal.cs",
@@ -2122,7 +1894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 101,
               "Title": "EfAppRoleDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\EntityFramework\\EfAppRoleDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\EntityFramework\\EfAppRoleDal.cs",
@@ -2134,7 +1906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 109,
               "Title": "ICityService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\ICityService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\ICityService.cs",
@@ -2146,7 +1918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 110,
               "Title": "IArtistService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IArtistService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IArtistService.cs",
@@ -2158,7 +1930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 106,
               "Title": "IArtistDal.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Abstract\\IArtistDal.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Abstract\\IArtistDal.cs",
@@ -2170,7 +1942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 111,
               "Title": "IAppRoleService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IAppRoleService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IAppRoleService.cs",
@@ -2182,19 +1954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutCategoryComponent\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:54:42.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 108,
               "Title": "IPaymentService.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\BusinessLayer\\Abstract\\IPaymentService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Abstract\\IPaymentService.cs",
@@ -2206,7 +1966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 113,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -2218,7 +1978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 112,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutScriptComponent\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutScriptComponent\\Default.cshtml",
@@ -2230,7 +1990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 172,
+              "DocumentIndex": 154,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Models\\City.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\City.cs",
@@ -2241,7 +2001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 171,
+              "DocumentIndex": 153,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Models\\Context.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\Context.cs",
@@ -2252,7 +2012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 114,
               "Title": "20241203145449_AddMessagesTable.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241203145449_AddMessagesTable.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241203145449_AddMessagesTable.cs",
@@ -2264,7 +2024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 117,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -2276,7 +2036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 116,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -2288,7 +2048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 115,
               "Title": "contact.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\contact.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\contact.html",
@@ -2300,19 +2060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Concert\\Details.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Concert\\Details.cshtml",
-              "RelativeToolTip": "Views\\Concert\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T17:35:24.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 120,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Categories\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Categories\\Edit.cshtml",
@@ -2324,7 +2072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 118,
               "Title": "sweetalert.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\kaiadmin-lite-1.2.0\\components\\sweetalert.html",
               "RelativeDocumentMoniker": "wwwroot\\kaiadmin-lite-1.2.0\\components\\sweetalert.html",
@@ -2336,7 +2084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 119,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Artist\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Artist\\Details.cshtml",
@@ -2348,7 +2096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 121,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\CategoriesController.cs",
@@ -2360,7 +2108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 122,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Areas\\Admin\\Views\\Categories\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Categories\\Details.cshtml",
@@ -2372,7 +2120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 123,
               "Title": "tables.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\kaiadmin-lite-1.2.0\\tables\\tables.html",
               "RelativeDocumentMoniker": "wwwroot\\kaiadmin-lite-1.2.0\\tables\\tables.html",
@@ -2384,7 +2132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 124,
               "Title": "datatables.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\kaiadmin-lite-1.2.0\\tables\\datatables.html",
               "RelativeDocumentMoniker": "wwwroot\\kaiadmin-lite-1.2.0\\tables\\datatables.html",
@@ -2396,7 +2144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 125,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
@@ -2408,7 +2156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 128,
               "Title": "KidsEventController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\KidsEventController.cs",
               "RelativeDocumentMoniker": "Controllers\\KidsEventController.cs",
@@ -2420,7 +2168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 127,
               "Title": "Stand_UpController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\Stand_UpController.cs",
               "RelativeDocumentMoniker": "Controllers\\Stand_UpController.cs",
@@ -2432,7 +2180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 126,
               "Title": "TheaterController.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Controllers\\TheaterController.cs",
               "RelativeDocumentMoniker": "Controllers\\TheaterController.cs",
@@ -2444,7 +2192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 129,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Festival\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Festival\\Details.cshtml",
@@ -2456,19 +2204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\KidsEvent\\Details.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\KidsEvent\\Details.cshtml",
-              "RelativeToolTip": "Views\\KidsEvent\\Details.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCcAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T15:36:18.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 130,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Theater\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Theater\\Details.cshtml",
@@ -2480,7 +2216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 131,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Stand_Up\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Stand_Up\\Details.cshtml",
@@ -2492,7 +2228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 132,
               "Title": "20241125153307_AddLocationUrlToEvent.cs",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Migrations\\20241125153307_AddLocationUrlToEvent.cs",
@@ -2504,7 +2240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 134,
               "Title": "font-awesome.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\font-awesome.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\font-awesome.min.css",
@@ -2516,7 +2252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 135,
               "Title": "explore-map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\explore-map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\explore-map-active.js",
@@ -2528,7 +2264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 133,
               "Title": "magnific-popup.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\magnific-popup.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\magnific-popup.css",
@@ -2540,7 +2276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 136,
               "Title": "single-listing.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\single-listing.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\single-listing.html",
@@ -2552,7 +2288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 137,
               "Title": "explore.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\explore.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\explore.html",
@@ -2564,7 +2300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 142,
               "Title": "location-map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\location-map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\location-map-active.js",
@@ -2576,7 +2312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 138,
               "Title": "listing.html",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\listing.html",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\listing.html",
@@ -2588,7 +2324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 141,
               "Title": "map-active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\google-map\\map-active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\google-map\\map-active.js",
@@ -2600,7 +2336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 140,
               "Title": "jquery-2.2.4.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\jquery\\jquery-2.2.4.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\jquery\\jquery-2.2.4.min.js",
@@ -2612,7 +2348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 139,
               "Title": "active.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\active.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\active.js",
@@ -2624,7 +2360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 143,
               "Title": "popper.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\bootstrap\\popper.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\bootstrap\\popper.min.js",
@@ -2636,7 +2372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 161,
+              "DocumentIndex": 144,
               "Title": "bootstrap.min.js",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\js\\bootstrap\\bootstrap.min.js",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\js\\bootstrap\\bootstrap.min.js",
@@ -2648,7 +2384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 163,
+              "DocumentIndex": 146,
               "Title": "responsive.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\responsive\\responsive.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\responsive\\responsive.css",
@@ -2660,7 +2396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 165,
+              "DocumentIndex": 148,
               "Title": "owl.carousel.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\owl.carousel.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\owl.carousel.min.css",
@@ -2672,7 +2408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 162,
+              "DocumentIndex": 145,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\style.css",
@@ -2684,7 +2420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 164,
+              "DocumentIndex": 147,
               "Title": "pe-icon-7-stroke.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\others\\pe-icon-7-stroke.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\others\\pe-icon-7-stroke.css",
@@ -2696,7 +2432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 166,
+              "DocumentIndex": 149,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css",
               "RelativeDocumentMoniker": "wwwroot\\dorne-master\\css\\bootstrap\\bootstrap.min.css",
@@ -2708,19 +2444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 167,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
-              "ToolTip": "C:\\Users\\eylem\\Desktop\\EventsProject\\EventsProject\\Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\_UILayoutPopulerEventsComponent\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T23:54:23.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 168,
+              "DocumentIndex": 150,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\DataAccessLayer\\Concrete\\Context\\Context.cs",
@@ -2731,7 +2455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 169,
+              "DocumentIndex": 151,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Event.cs",
@@ -2742,7 +2466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 170,
+              "DocumentIndex": 152,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\ipekn\\Desktop\\EventsProject\\EntityLayer\\Concrete\\Ticket.cs",

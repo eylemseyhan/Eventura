@@ -15,7 +15,7 @@
     <WebStackScaffolding_DependencyDialogWidth>650,4</WebStackScaffolding_DependencyDialogWidth>
     <Area_SelectedScaffolderID>AreaScaffolder</Area_SelectedScaffolderID>
     <Area_SelectedScaffolderCategoryPath>root/Common</Area_SelectedScaffolderCategoryPath>
-    <WebStackScaffolding_LayoutPageFile>~/Areas/Member/Views/Shared/_MemberDashboardLayout.cshtml</WebStackScaffolding_LayoutPageFile>
+    <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_EnablerDialogWidth>650,4</WebStackScaffolding_EnablerDialogWidth>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
