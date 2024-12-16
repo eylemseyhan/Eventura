@@ -90,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Favorites.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxGYXZvcml0ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +112,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Dashboard/Tickets.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERhc2hib2FyZFxUaWNrZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXExvZ2luXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Login/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXExvZ2luXFJlc2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eylem/Desktop/EventsProject/EventsProject/Areas/Member/Views/Login/SignIn.cshtml]

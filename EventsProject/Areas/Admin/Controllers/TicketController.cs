@@ -305,7 +305,7 @@ namespace EventsProject.Areas.Admin.Controllers
 
 
 
-        // Bilet silme işlemi
+        // Bilet silme işlemi BURAYA BAK TEKRAR
         [HttpPost]
         public IActionResult Delete(int id)
         {

@@ -31,15 +31,7 @@ public class _UILayoutPopulerEventsComponent : ViewComponent
             .Where(e => eventIds.Contains(e.EventId))
             .ToList();
 
-        //var eventPrices = _context.EventsTickets
-        //    .Where(et => eventIds.Contains(et.EventId))
-        //    .GroupBy(et => et.EventId)
-        //    .Select(group => new
-        //    {
-        //        EventId = group.Key,
-        //        Price = group.FirstOrDefault() == null ? 0 : group.FirstOrDefault().Price
-        //    })
-        //    .ToList();
+      
 
         var eventsWithPrices = _context.Events
                                     .Select(e => new EventWithPriceViewModel

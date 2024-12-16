@@ -27,7 +27,7 @@ namespace EventsProject.Controllers
 
 
         [HttpPost]
-        public IActionResult AddToFavorites(int? eventId) // Nullable kontrolü ekleyelim
+        public IActionResult AddToFavorites(int? eventId)
         {
             if (eventId == null || eventId == 0)
             {
@@ -36,13 +36,30 @@ namespace EventsProject.Controllers
 
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            // EventId'nin veritabanında var olup olmadığını kontrol edin
+            // Kullanıcının geçerli olup olmadığını kontrol et
+            var userExists = db.Users.Any(x => x.Id == userId);
+            if (!userExists)
+            {
+                return Json(new { success = false, message = "Geçersiz kullanıcı." });
+            }
+
+            // EventId'nin veritabanında var olup olmadığını kontrol et
             var eventExists = db.Events.Any(x => x.EventId == eventId.Value);
             if (!eventExists)
             {
                 return Json(new { success = false, message = "Etkinlik bulunamadı." });
             }
 
+            // Kullanıcının bu etkinliği daha önce favorilerine ekleyip eklemediğini kontrol et
+            var existingFavorite = db.UserFavorites
+                .Any(x => x.UserId == userId && x.EventId == eventId.Value);
+
+            if (existingFavorite)
+            {
+                return Json(new { success = false, message = "Bu etkinlik zaten favorilerinizde." });
+            }
+
+            // Eğer daha önce eklenmemişse, favorilere ekle
             var userFavorite = new UserFavorite
             {
                 UserId = userId,
@@ -52,7 +69,7 @@ namespace EventsProject.Controllers
             db.UserFavorites.Add(userFavorite);
             db.SaveChanges();
 
-            return Json(new { success = true });
+            return Json(new { success = true, message = "Etkinlik başarıyla favorilere eklendi." });
         }
     }
 }

@@ -50,6 +50,16 @@ namespace EventsProject.Controllers
                 return Json(new { success = false, message = "Etkinlik bulunamadı." });
             }
 
+            // Kullanıcının bu etkinliği daha önce favorilerine ekleyip eklemediğini kontrol et
+            var existingFavorite = db.UserFavorites
+                .Any(x => x.UserId == userId && x.EventId == eventId.Value);
+
+            if (existingFavorite)
+            {
+                return Json(new { success = false, message = "Bu etkinlik zaten favorilerinizde." });
+            }
+
+            // Eğer daha önce eklenmemişse, favorilere ekle
             var userFavorite = new UserFavorite
             {
                 UserId = userId,
@@ -61,6 +71,8 @@ namespace EventsProject.Controllers
 
             return Json(new { success = true, message = "Etkinlik başarıyla favorilere eklendi." });
         }
+
+
 
 
 

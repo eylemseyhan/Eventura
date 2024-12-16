@@ -5,6 +5,8 @@ using EventsProject.Areas.Member.Models;
 using Microsoft.AspNetCore.Authorization;
 using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
+using BusinessLayer.Abstract;
+using EventsProject.Controllers;
 namespace EventsProject.Areas.Member.Controllers
 {
     [Area("Member")]
@@ -12,12 +14,15 @@ namespace EventsProject.Areas.Member.Controllers
     public class DashboardController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
+        
+        private readonly IEventService _eventService;
 
         Context db = new Context();
 
-        public DashboardController(UserManager<AppUser> userManager)
+        public DashboardController(UserManager<AppUser> userManager, IEventService eventService)
         {
             _userManager = userManager;
+            _eventService = eventService;
         }
 
         // Dashboard ana sayfası
@@ -35,7 +40,7 @@ namespace EventsProject.Areas.Member.Controllers
                 Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
-                Image = user.Image ?? "/images/default-profile.png" // Varsayılan profil resmi
+                Image = user.Image ?? "/images/profiles/icons8-user-50.png" // Varsayılan profil resmi
             };
 
             return View(model);
@@ -48,6 +53,17 @@ namespace EventsProject.Areas.Member.Controllers
             return View();
         }
 
+        public IActionResult Details(int id)
+        {
+            var eventDetails = _eventService.TGetByID(id);
+            if (eventDetails == null)
+            {
+                return NotFound();
+            }
+
+            return View(eventDetails); // Etkinlik detayları için view'a gönderiyoruz
+        }
+
         // Kullanıcı biletleri sayfası
         public IActionResult Tickets()
         {
@@ -56,7 +72,7 @@ namespace EventsProject.Areas.Member.Controllers
         }
 
         // Kullanıcı favoriler sayfası
-        // Kullanıcı favoriler sayfası
+       
         public async Task<IActionResult> Favorites()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -82,10 +98,171 @@ namespace EventsProject.Areas.Member.Controllers
         }
 
         // Kullanıcı ayarları sayfası
-        public IActionResult Settings()
+        public async Task<IActionResult> Settings()
         {
-            // Ayarlar sayfası için işlem yapılacak
-            return View();
+            // Kullanıcıyı al
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                // Kullanıcı oturum açmamışsa login sayfasına yönlendir
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Kullanıcı modelini View'e gönder
+            return View(user);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateSettings(string currentPassword, string newPassword, string email)
+        {
+            // Mevcut kullanıcının bilgilerini al
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Şifre değiştirme işlemi
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                var passwordCheck = await _userManager.CheckPasswordAsync(user, currentPassword);
+                if (passwordCheck)
+                {
+                    var result = await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
+                    if (!result.Succeeded)
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                        return View("Settings", user);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Mevcut şifre yanlış.");
+                    return View("Settings", user);
+                }
+            }
+
+            // E-posta güncelleme işlemi
+            if (!string.IsNullOrEmpty(email) && email != user.Email)
+            {
+                var emailResult = await _userManager.SetEmailAsync(user, email);
+                if (!emailResult.Succeeded)
+                {
+                    foreach (var error in emailResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return View("Settings", user);
+                }
+            }
+
+            // Başarıyla güncellendi
+            TempData["SuccessMessage"] = "Bilgileriniz başarıyla güncellendi.";
+            return RedirectToAction("Settings");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadProfileImage(IFormFile ProfileImage)
+        {
+            var user = await _userManager.GetUserAsync(User); // Mevcut kullanıcıyı al
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            if (ProfileImage != null && ProfileImage.Length > 0)
+            {
+                // Yüklenen dosya adı için benzersiz bir isim oluştur
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ProfileImage.FileName);
+                var filePath = Path.Combine("wwwroot/images/profiles", uniqueFileName);
+
+                // Dosyayı belirtilen yola kaydet
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ProfileImage.CopyToAsync(stream);
+                }
+
+                // Kullanıcının eski resmi varsa, sunucudan sil
+                if (!string.IsNullOrEmpty(user.Image))
+                {
+                    var oldImagePath = Path.Combine("wwwroot", user.Image);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                // Yeni dosya yolunu Image özelliğine ata ve kullanıcıyı güncelle
+                user.Image = $"/images/profiles/{uniqueFileName}";
+                await _userManager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("Settings");
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> UpdatePersonalInfo(string Name, string Surname, string Email)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            user.Name = Name;
+            user.Surname = Surname;
+            user.Email = Email;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View("Settings", user);
+            }
+
+            TempData["SuccessMessage"] = "Bilgiler başarıyla güncellendi.";
+            return RedirectToAction("Settings");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(string CurrentPassword, string NewPassword, string ConfirmPassword)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            if (NewPassword != ConfirmPassword)
+            {
+                ModelState.AddModelError("", "Yeni şifreler eşleşmiyor.");
+                return View("Settings", user);
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, CurrentPassword, NewPassword);
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Şifre değiştirilemedi. Lütfen mevcut şifrenizi doğru girdiğinizden emin olun.");
+                return View("Settings", user);
+            }
+
+            return RedirectToAction("Settings");
+        }
+        [HttpPost]
+        public IActionResult UpdateNotifications(bool EmailNotifications, bool SmsNotifications, bool PushNotifications)
+        {
+            // Kullanıcının bildirim ayarlarını veritabanında güncelleyin (örnek kod)
+            // NotificationSettingsService.Update(user.Id, EmailNotifications, SmsNotifications, PushNotifications);
+
+            return RedirectToAction("Settings");
+        }
+
+
+
+
+
+
+
     }
 }

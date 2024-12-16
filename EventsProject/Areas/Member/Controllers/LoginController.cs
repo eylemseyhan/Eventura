@@ -19,7 +19,6 @@ namespace EventsProject.Areas.Member.Controllers
             _userManager = userManager;
         }
 
-        // Giriş sayfası
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -46,10 +45,73 @@ namespace EventsProject.Areas.Member.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Geçersiz giriş denemesi. Lütfen bilgilerinizi kontrol ediniz.");
+                    ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı."); // Hata mesajı
                 }
             }
-            return View(model); // Burada LoginViewModel modeli geri döndürülmeli
+            return View(model); // LoginViewModel geri döndürülür
+        }
+
+
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(model.Username);
+                if (user != null)
+                {
+                    // Kullanıcı bulunduysa yeni bir şifre oluşturmasına izin ver
+                    return RedirectToAction("ResetPassword", new { username = model.Username });
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Kullanıcı adı bulunamadı.");
+                }
+            }
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult ResetPassword(string username)
+        {
+            var model = new ResetPasswordViewModel { Username = username };
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(model.Username);
+                if (user != null)
+                {
+                    var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+                    var result = await _userManager.ResetPasswordAsync(user, resetToken, model.NewPassword);
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("SignIn");
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Kullanıcı adı bulunamadı.");
+                }
+            }
+            return View(model);
         }
 
 
@@ -62,7 +124,7 @@ namespace EventsProject.Areas.Member.Controllers
 
             // Kullanıcıyı "Index" sayfasına yönlendiriyoruz
             // Areas dışındaki "Home" controller ve "Index" action
-            return RedirectToAction("Index", "Home", new {area = ""});
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
     }
 }
