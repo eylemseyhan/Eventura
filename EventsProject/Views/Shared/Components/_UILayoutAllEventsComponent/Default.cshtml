@@ -1,7 +1,4 @@
-﻿@using EntityLayer.Concrete
-@model List<Event>
-
-<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url('https://i.hizliresim.com/j1yb9c8.jpg');">
+﻿<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url('https://i.hizliresim.com/j1yb9c8.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -19,8 +16,10 @@
                     <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
                         <div class="feature-events-thumb">
                             <img src="@item.ImageUrl" alt="">
-                            <div class="date-map-area d-flex">
-                                <a href="#">@item.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</a>
+                            <div class="date-map-area d-flex justify-content-between align-items-center">
+                                <div class="date-box">
+                                    @item.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))
+                                </div>
                                 <a href="#"><img src="~/dorne-master/img/core-img/map.png" alt=""></a>
                             </div>
                         </div>
@@ -32,7 +31,6 @@
                         <div class="feature-events-details-btn">
                             <a href="@Url.Action("Details", "Home", new { id = item.EventId })">+</a>
                         </div>
-
                     </div>
                 </div>
             }
@@ -48,6 +46,65 @@
 </section>
 
 <style>
+    .single-feature-events-area {
+        
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .single-feature-events-area:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-events-thumb {
+        width: 100%;
+        height: 200px; /* Sabit yükseklik */
+        overflow: hidden;
+        position: relative; /* Alt öğeler için referans konum oluştur */
+        background: #f7f7f7;
+    }
+
+        .feature-events-thumb img {
+            width: 100%;
+            height: 100%; /* Kutunun yüksekliği kadar olacak */
+            object-fit: cover; /* Resmi düzgün kırp */
+        }
+
+    .date-map-area {
+        position: absolute; /* Tarih ve harita ikonunu resmin dışına yerleştir */
+        bottom: 25px; /* Resmin hemen altına yerleştir */
+        left: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.8); /* Şeffaf arka plan */
+        padding: 3px 5px; /* Daha küçük bir kutu için padding azaltıldı */
+        border-radius: 5px; /* Daha küçük köşe yuvarlama */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        z-index: 10; /* Resmin üstünde görünmesini sağla */
+        height: 35px; /* Yükseklik sınırlandı */
+        line-height: 20px; /* Metin hizalaması için */
+        font-size: 12px; /* Daha küçük yazı */
+    }
+
+    .date-box {
+        font-weight: bold;
+        font-size: 12px; /* Daha küçük yazı */
+    }
+
+    .date-map-area a img {
+        width: 18px; /* Daha küçük ikon */
+        height: 18px;
+    }
+
+    .date-map-area a {
+        height: 10px;
+    }
+
     .more-events {
         margin-top: 50px;
     }
@@ -64,34 +121,36 @@
         transition: color 0.3s;
     }
 
-        .more-events-btn::after {
-            content: "▼";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 100%;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+    .more-events-btn::after {
+        content: "▼";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-        .more-events-btn:hover {
-            color: #007bff;
-        }
+    .more-events-btn:hover {
+        color: #007bff;
+    }
 
-            .more-events-btn:hover::after {
-                opacity: 1;
-            }
+    .more-events-btn:hover::after {
+        opacity: 1;
+    }
 
-            .more-events-btn:hover::before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: white;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
+    .more-events-btn:hover::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+   
 </style>
 
 <script>

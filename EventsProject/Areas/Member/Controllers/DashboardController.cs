@@ -64,15 +64,43 @@ namespace EventsProject.Areas.Member.Controllers
             return View(eventDetails); // Etkinlik detayları için view'a gönderiyoruz
         }
 
-        // Kullanıcı biletleri sayfası
-        public IActionResult Tickets()
+        public async Task<IActionResult> Tickets()
         {
-            // Biletler sayfası için işlem yapılacak
-            return View();
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            // Kullanıcının biletlerini ve ilişkili etkinlikleri manuel bir join ile alıyoruz
+            var ticketsWithEvents = await (from t in db.Tickets
+                                           join et in db.EventsTickets on t.EventsTicketId equals et.EventsTicketId
+                                           join e in db.Events on et.EventId equals e.EventId
+                                           where t.UserId == user.Id
+                                           select new TicketEventViewModel
+                                           {
+                                               TicketId = t.TicketId,
+                                               TicketNumber = t.TicketNumber,
+                                               IsAvailable = t.IsAvailable,
+                                               EventId = e.EventId,
+                                               EventName = e.Title,
+                                               EventCategory = e.Category.Name,
+                                               EventArtist = e.Artist.Name,
+                                               EventDate = e.EventDate,
+                                               EventLocation = e.Location,
+                                               ImageUrl = e.ImageUrl,
+                                           }).ToListAsync();
+
+            return View(ticketsWithEvents);
         }
 
+
+
+
+
         // Kullanıcı favoriler sayfası
-       
+
         public async Task<IActionResult> Favorites()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -257,6 +285,7 @@ namespace EventsProject.Areas.Member.Controllers
 
             return RedirectToAction("Settings");
         }
+
 
 
 

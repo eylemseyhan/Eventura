@@ -1,38 +1,52 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class PaymentManager : IPaymentService
+    public class PaymentManager : IGenericService<Payment>, IPaymentService
     {
-        public void TAdd(Payment t)
+        private readonly IPaymentDal _paymentDal;
+
+        public PaymentManager(IPaymentDal paymentDal)
         {
-            throw new NotImplementedException();
+            _paymentDal = paymentDal;
         }
 
-        public void TDelete(Payment t)
+        public Task<bool> BuyTicketAsync(int eventId, int userId, int eventTicketId)
         {
-            throw new NotImplementedException();
+            return _paymentDal.BuyTicketAsync(eventId, userId, eventTicketId);
+        }
+
+        public decimal GetEventTicketPrice(int eventId)
+        {
+            // Dal katmanında fiyatı almayı çağırıyoruz
+            return _paymentDal.GetEventTicketPrice(eventId);
+        }
+
+        public void TAdd(Payment payment)
+        {
+            _paymentDal.Insert(payment);
+        }
+
+        public void TDelete(Payment payment)
+        {
+            _paymentDal.Delete(payment);
         }
 
         public Payment TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _paymentDal.GetByID(id);
         }
 
         public List<Payment> TGetList()
         {
-            throw new NotImplementedException();
+            return _paymentDal.GetList();
         }
 
-        public void TUpdate(Payment t)
+        public void TUpdate(Payment payment)
         {
-            throw new NotImplementedException();
+            _paymentDal.Update(payment);
         }
     }
 }

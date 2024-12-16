@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IPaymentDal : IGenericDal<Payment>
+    public interface ISavedCardDal : IGenericDal<SavedCard>
     {
-        decimal GetEventTicketPrice(int eventId);
-        Task<bool> BuyTicketAsync(int eventId, int userId, int eventTicketId);
+        SavedCard Get(Expression<Func<SavedCard, bool>> filter);
     }
 }

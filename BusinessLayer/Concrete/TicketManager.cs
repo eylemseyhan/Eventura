@@ -53,5 +53,25 @@ namespace BusinessLayer.Concrete
                 _ticketDal.Add(ticket);
             }
         }
+
+        public void TDeleteRange(List<Ticket> tickets)
+        {
+            if (tickets == null || !tickets.Any())
+            {
+                return; // No tickets to delete
+            }
+
+            try
+            {
+                // Use the repository's DeleteRange method
+                _ticketDal.DeleteRange(tickets);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you might want to use a logging framework)
+                Console.WriteLine($"Error deleting tickets: {ex.Message}");
+                throw; // Re-throw to allow calling method to handle
+            }
+        }
     }
 }

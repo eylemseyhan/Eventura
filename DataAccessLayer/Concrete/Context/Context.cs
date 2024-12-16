@@ -65,7 +65,21 @@ namespace DataAccessLayer.Concrete
                 .HasForeignKey(uf => uf.EventId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            
+
+            modelBuilder.Entity<EventEventsTickets>()
+      .HasKey(e => new { e.EventId, e.EventsTicketsEventsTicketId });
+
+            modelBuilder.Entity<Ticket>()
+      .HasOne(t => t.EventsTicket)    // Ticket'ın bir EventsTicket'i vardır
+      .WithMany(et => et.Tickets)    // EventsTicket birçok Ticket'a sahiptir
+      .HasForeignKey(t => t.EventsTicketId); // Foreign key ilişkisi
+
+            modelBuilder.Entity<Ticket>()
+                .HasOne(t => t.Event)          // Ticket bir Event'e bağlıdır
+                .WithMany(e => e.Tickets)     // Event birçok Ticket'a sahiptir
+                .HasForeignKey(t => t.EventId);  // Foreign key ilişkisi
+
+
 
 
         }

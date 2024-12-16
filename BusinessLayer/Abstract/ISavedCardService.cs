@@ -2,16 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IPaymentService : IGenericService<Payment>
+    public interface ISavedCardService : IGenericService<SavedCard>
     {
 
-        decimal GetEventTicketPrice(int eventId);
 
-        Task<bool> BuyTicketAsync(int eventId, int userId, int eventTicketId);
+        SavedCard Get(Expression<Func<SavedCard, bool>> filter);
     }
 }

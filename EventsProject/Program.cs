@@ -10,9 +10,21 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 
+System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("tr-TR");
+System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Globalization.CultureInfo("tr-TR");
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Dependency Injection (DI) için servisleri ekleme
+//kart ve payment
+builder.Services.AddScoped<IGenericService<SavedCard>, SavedCardManager>();
+builder.Services.AddScoped<ISavedCardService, SavedCardManager>();
+builder.Services.AddScoped<ISavedCardDal, EfSavedCardDal>();
+
+
+builder.Services.AddScoped<IGenericService<Payment>, PaymentManager>();
+builder.Services.AddScoped<IPaymentService, PaymentManager>();
+builder.Services.AddScoped<IPaymentDal, EfPaymentDal>();
 
 // Register services
 builder.Services.AddScoped<IEventsTicketsService, EventsTicketManager>(); // Ensure this is added
@@ -77,7 +89,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

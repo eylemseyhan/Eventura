@@ -25,12 +25,12 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                 
-                                    <img src="~/dorne-master/img/core-img/ticket-xxl.png" alt="Ticket Icon" width="36" height="36">
+                                <a class="nav-link" href="@Url.Action("Tickets", "Dashboard", new { area = "Member" })">
+                                    <img src="/dorne-master/img/core-img/ticket-xxl.png" width="36" height="36">
                                     <span class="nav-tooltip">Biletlerim</span>
                                 </a>
                             </li>
+
 
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Favorites", "Dashboard", new { area = "Member" })">
@@ -111,6 +111,7 @@
     width: 50%;
 }
 
+
 /* Hoşgeldin yazısı */
 .welcome-text {
     font-size: 28px;
@@ -133,7 +134,7 @@
     color: #fff;
     text-align: center;
     text-decoration: none;
-    margin: 0 15px; /* Linkler arasında boşluk */
+ 
     font-size: 20px; /* Link metin boyutunu artır */
     padding: 20px;
 }
@@ -198,8 +199,7 @@
 }
 
 .user-icon img {
-    width: 80%; /* İkonun genişliği, butonun genişliğine göre ayarlanacak */
-    height: 80%; /* İkonun yüksekliği, butonun yüksekliğine göre ayarlanacak */
+
     border-radius: 50%; /* İkonu yuvarlak yapmak için */
 }
 

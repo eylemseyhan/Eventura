@@ -296,26 +296,67 @@ namespace EventsProject.Areas.Admin.Controllers
                 return View(model);
             }
         }
-
-
-
-
-
-
-
-
-
-        // Bilet silme işlemi BURAYA BAK TEKRAR
-        [HttpPost]
+        [HttpGet]
         public IActionResult Delete(int id)
         {
-            var ticket = _eventsTicketService.TGetByID(id);
-            if (ticket != null)
+            // Retrieve the EventsTickets by ID
+            var eventsTicket = _eventsTicketService.TGetByID(id);
+            if (eventsTicket == null)
             {
-                _eventsTicketService.TDelete(ticket);
+                _logger.LogWarning($"Etkinlik bileti bulunamadı: {id}");
                 return RedirectToAction("Index");
             }
-            return NotFound(); // Bilet bulunmazsa hata sayfası göster
+
+            // Create a view model for confirmation
+            var model = new EventTicketEditDto
+            {
+                EventsTicketId = eventsTicket.EventsTicketId,
+                EventId = eventsTicket.EventId,
+                Name = eventsTicket.Name,
+                Price = eventsTicket.Price,
+                TicketCapacity = eventsTicket.TicketCapacity
+            };
+
+            return View(model);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            try
+            {
+                // eventsticketları al
+                var eventsTicket = _eventsTicketService.TGetByID(id);
+                if (eventsTicket == null)
+                {
+                    _logger.LogWarning($"Silinecek etkinlik bileti bulunamadı: {id}");
+                    return RedirectToAction("Index");
+                }
+
+                // isAvailable true olanlar alınıyor
+                var availableTickets = _ticketService.TGetList()
+                    .Where(t => t.EventsTicketId == id && t.IsAvailable)
+                    .ToList();
+
+                // available ticketları siliyor
+                if (availableTickets.Any())
+                {
+                    _ticketService.TDeleteRange(availableTickets);
+                }
+
+                // sonra eventsticket nesnesini siliyor
+                _eventsTicketService.TDelete(eventsTicket);
+
+                _logger.LogInformation($"Etkinlik bileti ve ilişkili kullanılabilir biletler silindi: {id}");
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Bilet silme işleminde hata oluştu: {id}");
+                ModelState.AddModelError("", "Bilet silme işlemi sırasında bir hata meydana geldi.");
+                return RedirectToAction("Index");
+            }
         }
     }
 }
