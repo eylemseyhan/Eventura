@@ -17,103 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-
-        .event-detail-container {
-            margin-top: 50px;
-            padding: 0 15px;
-        }
-
-        .event-detail-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .event-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .event-content {
-            width: 60%;
-        }
-
-        .event-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .event-overview p {
-            margin-bottom: 15px;
-        }
-
-        .event-location {
-            margin-top: 20px;
-        }
-
-        .event-map iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
-
-        .event-sidebar {
-            width: 30%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .listing-verify a,
-        .listing-verify button {
-            width: 100%;
-            padding: 12px;
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-            .listing-verify a:hover,
-            .listing-verify button:hover {
-                background-color: #0056b3;
-            }
-
-        .opening-hours-widget {
-            margin-top: 30px;
-            background-color: #007bff;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-            .opening-hours-widget h6 {
-                color: white;
-                font-weight: 600;
-            }
-
-        .opening-hours li p {
-            color: white;
-            margin: 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -133,18 +36,6 @@
                     <img src="@Model.ImageUrl" alt="Event Image" class="img-fluid">
                 </div>
             }
-             <!-- Google Map -->
-                <div class="event-map">
-                    <h3>Haritada Göster</h3>
-                    @if (!string.IsNullOrEmpty(Model.LocationUrl))
-                    {
-                        <iframe src="@Model.LocationUrl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    }
-                    else
-                    {
-                        <p>Harita bulunamadı.</p>
-                    }
-                </div>
 
             <!-- Event Details -->
             <div class="event-content">
@@ -160,7 +51,18 @@
                     <strong>Konum:</strong> @Model.Location
                 </div>
 
-               
+                <!-- Google Map -->
+                <div class="event-map">
+                    <h3>Haritada Göster</h3>
+                    @if (!string.IsNullOrEmpty(Model.LocationUrl))
+                    {
+                        <iframe src="@Model.LocationUrl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    }
+                    else
+                    {
+                        <p>Harita bulunamadı.</p>
+                    }
+                </div>
             </div>
 
             <!-- Sidebar and Buy Ticket -->
@@ -168,6 +70,7 @@
                 <div class="listing-sidebar">
 
                     <div class="listing-verify">
+                        <!-- Giriş Yap ve Bilet Al Butonu -->
                         <!-- Giriş Yap ve Bilet Al Butonu -->
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -179,6 +82,8 @@
                                 <!-- Fiyatı data-price olarak ekliyoruz -->
                                 <i class="fa fa-check pr-3"></i> Bilet Al (@ViewBag.TicketPrice.ToString("C"))
                             </button>
+
+
                         }
                         else
                         {
@@ -204,7 +109,7 @@
         </div>
     </section>
 
-  
+    <!-- Ödeme Modalı -->
     <!-- Ödeme Modalı -->
     <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -279,74 +184,111 @@
                         </a>
                     </div>
 
-                    <!-- Kayıtlı Kart Modalı -->
-                    <div class="modal fade" id="savedCardModal" tabindex="-1" aria-labelledby="savedCardModalLabel" aria-hidden="true">
+                    <!-- Kayıtlı Kartlar Modal -->
+                    <div class="modal" tabindex="-1" id="savedCardModal">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="savedCardModalLabel">Kayıtlı Kartlar</h5>
+                                    <h5 class="modal-title">Kayıtlı Kartlarınız</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div id="savedCardsList">
-                                        <!-- Kayıtlı kartlar burada gösterilecek -->
-                                    </div>
-                                    <div class="mb-3 text-center">
-                                        <a href="javascript:void(0);" class="text-primary" style="text-decoration: underline;" onclick="goBackToForm()">Ödeme Formuna Geri Dön</a>
+                                        <!-- Kartlar buraya dinamik olarak eklenecek -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-</body>
-
-</html>
 
 
 
                     <script>
-                        //function loadSavedCardModal() {
-                        // Kayıtlı kartları backend'den al
-                        fetch(/Payment/GetSavedCards)  // userId parametresi olmadan
-                            .then(response => response.json())
-                            .then(savedCards => {
-                                let savedCardsHtml = '<h5>Kayıtlı Kartlarınız</h5>';
-                                if (savedCards.length === 0) {
-                                    savedCardsHtml += '<p>Kayıtlı kart bulunmamaktadır.</p>';
-                                } else {
-                                    savedCards.forEach(card => {
-                                        savedCardsHtml += `
-                                                <div class="card mb-3">
-                                                    <div class="card-body">
-                                                        <div>Kart Numarası: ${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}</div>
-                                                        <div>Kart Sahibi: ${card.cardHolderName}</div>
-                                                        <div>Son Kullanma Tarihi: ${card.expiryDate}</div>
-                                                        <button class="btn btn-primary" onclick="selectSavedCard(${card.savedCardId}, '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">Bu Kartla Ödeme Yap</button>
-                                                    </div>
-                                                </div>
-                                            `;
-                                    });
-                                }
-                                document.getElementById('savedCardsList').innerHTML = savedCardsHtml;
-                                var modal = new bootstrap.Modal(document.getElementById('savedCardModal'));
-                                modal.show();
-                            })
-                            .catch(error => {
-                                console.error('Kayıtlı kartlar yüklenirken hata oluştu:', error);
-                            });
+                        function loadSavedCardModal() {
+                            fetch(/Payment/GetSavedCards)  // API'den kayıtlı kartları alıyoruz
+                                .then(response => response.json())
+                                .then(savedCards => {
+                                    let savedCardsHtml = '';
+                                    if (savedCards.length === 0) {
+                                        savedCardsHtml = '<p>Kayıtlı kart bulunmamaktadır.</p>';
+                                    } else {
+                                        savedCards.forEach(card => {
+                                            savedCardsHtml += `
+                                                                        <div class="card mb-3 card-preview">
+                                                                            <div class="card-body card-body-preview">
+                                                                                <!-- Kart Görseli -->
+                                                                                <div class="card-image">
+                                                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" class="card-logo" alt="Card Logo">
+                                                                                </div>
+                                                                                <div class="card-number">
+                                                                                    ${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}
+                                                                                </div>
+                                                                                <div class="card-holder">
+                                                                                    ${card.cardHolderName}
+                                                                                </div>
+                                                                                <div class="expires">
+                                                                                    Expiry: ${card.expiryDate}
+                                                                                </div>
+                                                                                <button class="btn btn-primary" onclick="selectSavedCard(${card.savedCardId}, '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">
+                                                                                    Bu Kartla Ödeme Yap
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    `;
+                                        });
+                                    }
+                                    document.getElementById('savedCardsList').innerHTML = savedCardsHtml;
+                                    var modal = new bootstrap.Modal(document.getElementById('savedCardModal'));
+                                    modal.show();
+                                })
+                                .catch(error => {
+                                    console.error('Kayıtlı kartlar yüklenirken hata oluştu:', error);
+                                });
                         }
 
 
-                        // Kayıtlı kartı seç ve ödeme formunu güncelle
+                        // Function to handle selecting a saved card
                         function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
-                            document.getElementById('cardNumberPreview').innerText = cardNumber;
+                            // 1. Save card ID for later use
+                            document.getElementById('savedCardId').value = savedCardId;
+
+                            // 2. Populate payment form with saved card details (disable these fields)
+                            const cardNumberInput = document.getElementById('cardNumber');
+                            const cardHolderNameInput = document.getElementById('cardHolderName');
+                            const expiryDateInput = document.getElementById('expiryDate');
+
+                            cardNumberInput.value = cardNumber.replace(/\d(?=\d{4})/g, "*");
+                            cardHolderNameInput.value = cardHolderName;
+                            expiryDateInput.value = expiryDate;
+
+                            cardNumberInput.disabled = true; // Disable card number editing
+                            cardHolderNameInput.disabled = true; // Disable card holder name editing
+                            expiryDateInput.disabled = true; // Disable expiry date editing
+
+                            // 3. Update card preview with saved card details
+                            updateCardPreview();
+
+                            // 4. Close saved cards modal and open payment modal
+                            const savedCardModal = bootstrap.Modal.getInstance(document.getElementById('savedCardModal'));
+                            savedCardModal.hide();
+
+                            const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+                            paymentModal.show();
+                        }
+
+                        // Function to update card preview based on user input or saved card selection
+                        function updateCardPreview() {
+                            const cardNumber = document.getElementById('cardNumber').value.replace(/\D/g, '');
+                            const cardHolderName = document.getElementById('cardHolderName').value;
+                            const expiryDate = document.getElementById('expiryDate').value;
+
+                            document.getElementById('cardNumberPreview').innerText = cardNumber.replace(/\d(?=\d{4})/g, "*");
                             document.getElementById('cardHolderNamePreview').innerText = cardHolderName;
                             document.getElementById('expiryDatePreview').innerText = expiryDate;
-
-                            var modal = new bootstrap.Modal(document.getElementById('paymentModal'));
-                            modal.show();
                         }
+
+                        // (Existing code for formatting card number and expiry date remains unchanged)
 
                         // Ödeme formuna geri dön
                         function goBackToForm() {
@@ -371,89 +313,117 @@
 
 
                     <!-- Bootstrap JS -->
-                    <script>
-                        // Kayıtlı kart ödeme kısmını modalın içerisine yükle
+
+</body>
+
+</html>
+
+<script>
+    // Function to load saved cards
+    function loadSavedCardModal() {
+        fetch(/Payment/GetSavedCards)  // userId parametresi olmadan
+            .then(response => response.json())
+            .then(savedCards => {
+                let savedCardsHtml = '<h5>Kayıtlı Kartlarınız</h5>';
+                if (savedCards.length === 0) {
+                    savedCardsHtml += '<p>Kayıtlı kart bulunmamaktadır.</p>';
+                } else {
+                    savedCards.forEach(card => {
+                        savedCardsHtml += `
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div>Kart Numarası: ${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}</div>
+                                        <div>Kart Sahibi: ${card.cardHolderName}</div>
+                                        <div>Son Kullanma Tarihi: ${card.expiryDate}</div>
+                                        <button class="btn btn-primary" onclick="selectSavedCard(${card.savedCardId}, '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">Bu Kartla Ödeme Yap</button>
+                                    </div>
+                                </div>
+                            `;
+                    });
+                }
+                document.getElementById('savedCardsList').innerHTML = savedCardsHtml;
+                var modal = new bootstrap.Modal(document.getElementById('savedCardModal'));
+                modal.show();
+            })
+            .catch(error => {
+                console.error('Kayıtlı kartlar yüklenirken hata oluştu:', error);
+            });
+    }
+
+    // Function to handle selecting a saved card
+    function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
+        // Populate the form fields with the selected card details
+        document.getElementById('cardNumber').value = cardNumber.replace(/\d(?=\d{4})/g, "*");
+        document.getElementById('cardHolderName').value = cardHolderName;
+        document.getElementById('expiryDate').value = expiryDate;
+
+        // Disable the inputs since the user is using a saved card
+        document.getElementById('cardNumber').disabled = true;
+        document.getElementById('cardHolderName').disabled = true;
+        document.getElementById('expiryDate').disabled = true;
+
+        // Update the card preview
+        updateCardPreview();
+
+        // Close the saved cards modal and open the payment modal
+        const savedCardModal = bootstrap.Modal.getInstance(document.getElementById('savedCardModal'));
+        savedCardModal.hide();
+
+        const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+        paymentModal.show();
+    }
+
+    // Function to update the card preview based on form inputs
+    function updateCardPreview() {
+        const cardNumber = document.getElementById('cardNumber').value.replace(/\D/g, '');
+        const cardHolderName = document.getElementById('cardHolderName').value;
+        const expiryDate = document.getElementById('expiryDate').value;
+
+        // Update preview elements
+        document.getElementById('cardNumberPreview').innerText = cardNumber.replace(/\d(?=\d{4})/g, "*");
+        document.getElementById('cardHolderNamePreview').innerText = cardHolderName;
+        document.getElementById('expiryDatePreview').innerText = expiryDate;
+    }
+
+    // Function to handle card formatting on input
+    function formatCardNumber(event) {
+        const input = event.target;
+        let formattedValue = input.value.replace(/\D/g, '').replace(/(.{4})(?=.)/g, '$1 ').trim();
+        input.value = formattedValue;
+    }
+
+    // Function to format expiry date on input
+    function formatExpiryDate(event) {
+        const input = event.target;
+        let formattedValue = input.value.replace(/\D/g, '').slice(0, 4);
+        if (formattedValue.length > 2) {
+            formattedValue = ${ formattedValue.slice(0, 2) } /${formattedValue.slice(2)};
+        }
+        input.value = formattedValue;
+    }
+
+    // Return to form with reset modal content
+    function goBackToForm() {
+        const modalBody = document.querySelector('#paymentModal .modal-body');
+        modalBody.innerHTML = `
+                <div id="paymentCardPreview">
+                    <div class="card-number" id="cardNumberPreview">**** **** **** ****</div>
+                    <div class="card-holder" id="cardHolderNamePreview">Kart Sahibinin Adı</div>
+                    <div class="expires">Expires: <span id="expiryDatePreview">MM/YY</span></div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" class="card-logo" alt="Card Logo">
+                </div>
+                <form method="post" action="@Url.Action("SaveCard", "Payment")">
+                    <button type="submit" class="btn btn-success w-100 mt-3">Ödemeyi Tamamla</button>
+                </form>
+            `;
+    }
+</script>
 
 
-                        // Kayıtlı kart seçildiğinde ödeme bilgilerini güncelle
-                        function selectSavedCard(cardNumber, cardHolderName, expiryDate) {
-                            document.getElementById('cardNumberPreview').innerText = cardNumber;
-                            document.getElementById('cardHolderNamePreview').innerText = cardHolderName;
-                            document.getElementById('expiryDatePreview').innerText = expiryDate;
-
-                            var modal = new bootstrap.Modal(document.getElementById('paymentModal'));
-                            modal.show();
-                        }
-
-                        // Ödeme formuna geri dön
-                        function goBackToForm() {
-                            var modalBody = document.querySelector('#paymentModal .modal-body');
-
-                            // Formu tekrar yükleyin
-                            modalBody.innerHTML = `
-                                        <!-- Kart Görünümü -->
-                                        <div id="paymentCardPreview">
-                                            <div class="card-number" id="cardNumberPreview">**** **** **** ****</div>
-                                            <div class="card-holder" id="cardHolderNamePreview">Kart Sahibinin Adı</div>
-                                            <div class="expires">Expires: <span id="expiryDatePreview">MM/YY</span></div>
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" class="card-logo" alt="Card Logo">
-                                        </div>
-
-                                        <!-- Kart Bilgileri Formu -->
-                                        <form method="post" action="@Url.Action("SaveCard", "Payment")">
-                                            <!-- Kart Bilgileri Burada... -->
-                                            <button type="submit" class="btn btn-success w-100 mt-3">Ödemeyi Tamamla</button>
-                                        </form>
-                                    `;
-                        }
-
-                        // Kart numarasını 4-4-4-4 formatında düzenleyen fonksiyon
-                        function formatCardNumber(event) {
-                            let input = event.target;
-                            let value = input.value.replace(/\D/g, ''); // Sayılardan başka her şeyi sil
-                            if (value.length > 16) {
-                                value = value.substring(0, 16); // 16 haneli karta izin ver
-                            }
-                            let formattedValue = '';
-                            for (let i = 0; i < value.length; i++) {
-                                if (i > 0 && i % 4 === 0) {
-                                    formattedValue += ' '; // 4 rakamda bir boşluk ekle
-                                }
-                                formattedValue += value[i];
-                            }
-                            input.value = formattedValue;
-                        }
-
-                        // Son kullanma tarihini MM/YY formatına getir
-                        function formatExpiryDate(event) {
-                            let input = event.target;
-                            let value = input.value.replace(/\D/g, ''); // Sadece sayılar
-                            if (value.length > 4) {
-                                value = value.substring(0, 4);
-                            }
-                            let formattedValue = '';
-                            if (value.length > 2) {
-                                formattedValue = value.slice(0, 2) + '/' + value.slice(2, 4);
-                            } else {
-                                formattedValue = value;
-                            }
-                            input.value = formattedValue;
-                        }
-
-                        // Kart bilgilerini önizlemede güncelle
-                        function updateCardPreview() {
-                            document.getElementById('cardNumberPreview').innerText = document.getElementById('cardNumber').value || '**** **** **** ****';
-                            document.getElementById('cardHolderNamePreview').innerText = document.getElementById('cardHolderName').value || 'Kart Sahibinin Adı';
-                            document.getElementById('expiryDatePreview').innerText = document.getElementById('expiryDate').value || 'MM/YY';
-                        }
-                    </script>
-
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 
     .modal-content {

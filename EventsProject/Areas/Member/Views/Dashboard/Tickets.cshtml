@@ -1,4 +1,6 @@
 ﻿@model List<EventsProject.Areas.Member.Models.TicketEventViewModel>
+
+
 @{
     ViewData["Title"] = "Tickets";
     Layout = "~/Areas/Member/Views/Shared/_MemberDashboardLayout.cshtml";
@@ -6,37 +8,81 @@
 
 <h1 class="modern-heading">Biletlerim</h1>
 
-@if (Model != null && Model.Any())
-{
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-12">
-                <div class="single-features-area mb-50" style="width:100%; height:100px; margin-top: 20px; display: flex; align-items: center; border: 1px solid #ddd; border-radius: 8px;">
-                    <a href="@Url.Action("Details", "Dashboard", new {area = "Member", id = item.EventId })" style="text-decoration: none; color: inherit; display: flex; width: 100%; padding: 10px;">
-                        <img src="@item.ImageUrl" style="width:120px; height:80px; object-fit: cover; margin-right: 20px;" alt="@item.EventName">
-                        <div class="event-details" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; overflow: hidden;">
-                            <div class="event-title">
-                                <h5>@item.EventName</h5>
-                                <p>@item.EventLocation</p>
-                            </div>
-                            <div class="event-meta">
-                                <p><strong>@item.EventCategory</strong> | @item.EventArtist</p>
-                                <p>@item.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
-                            </div>
-                        </div>
-                    </a>
+
+
+    
+
+    <!-- Loop through events -->
+    @if (Model != null && Model.Any())
+    {
+        <div class="event-list">
+            @foreach (var item in Model)
+            {
+                <div class="event-item">
+                    <div class="item-right">
+                        <h2 class="num">@item.EventDate.Day</h2>
+                        <p class="day">@item.EventDate.ToString("MMM")</p>
+                   
+                        
+                    </div>
+                <div class="dots-vertical">
+                    @for (int i = 0; i < 20; i++)
+                    {
+                        <span class="dot"></span>
+                    }
                 </div>
-            </div>
-        }
-    </div>
-}
-else
-{
-    <p>Biletleriniz henüz yok.</p>
-}
+
+                    <div class="item-left">
+                        <p class="event">@item.EventCategory</p>
+                        <h2 class="title">@item.EventName</h2>
+                        <div class="sce">
+                            <div class="icon">
+                                <i class="fa fa-table"></i>
+                            </div>
+                            <p>@item.EventDate.ToString("dddd dd MMMM yyyy")</p>
+                        </div>
+                   
+                        <div class="fix"></div>
+                        <div class="loc">
+                            <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome 5 ve sonrası -->
+
+                            </div>
+                            <p>@item.EventLocation</p>
+                        </div>
+                        <div class="fix"></div>
+                        
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>No events available.</p>
+    }
 
 <style>
+    .dots-vertical {
+        display: flex;
+        flex-direction: column; /* Dikey hizalama */
+        justify-content: center; /* Dikey eksende ortalama */
+        align-items: center; /* Yatay eksende ortalama */
+        
+        height: 100%; /* Yüksekliği ebeveyne göre ayarla */
+    }
+
+        .dots-vertical .dot {
+            width: 6px; /* Noktanın boyutu */
+            height: 6px;
+            margin: 2px 0; /* Dikey aralık */
+            background-color: #777; /* Nokta rengi */
+            border-radius: 50%; /* Yuvarlak yap */
+            transition: background-color 0.3s ease; /* Hover efekti */
+        }
+
+
+
     .modern-heading {
         margin-top: 200px; /* Daha aşağıda konumlandır */
         font-family: 'Roboto', sans-serif; /* Modern bir font ailesi kullan */
@@ -46,54 +92,135 @@ else
         text-align: center; /* Ortala */
         letter-spacing: 1px; /* Harf aralığı */
     }
-
-    .single-features-area {
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .event-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        overflow: hidden;
-        padding: 5px;
-    }
-    .event-meta {
-        font-size: 15px;
-
-    }
-
-    .event-title h5 {
-        font-size: 15px;
-        font-weight: 600;
-        color: #333;
+    * {
+        box-sizing: border-box;
         margin: 0;
+        padding: 0;
     }
 
-    .event-meta {
-        font-size: 12px;
-        color: #777;
+    body {
+        background: #f4f4f4;
+        font-family: 'Cabin', sans-serif;
     }
 
-    .single-features-area a {
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .upcomming {
+        font-size: 45px;
+        text-transform: uppercase;
+        border-left: 14px solid rgba(255, 235, 59, 0.78);
+        padding-left: 12px;
+        margin: 18px 8px;
+    }
+
+    .event-list {
         display: flex;
-        width: 100%;
-        padding: 10px;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 100px;
     }
 
-    .single-features-area img {
-        width: 120px;
-        height: 80px;
-        object-fit: cover;
-        margin-right: 20px;
+    .event-item {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 48%;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
     }
 
-    
-    
+    .item-right {
+        width: 25%;
+        position: relative;
+    }
+
+        .item-right .num {
+            font-size: 60px;
+            color: #333;
+            text-align: center;
+        }
+
+        .item-right .day {
+            text-align: center;
+            font-size: 25px;
+            color: #555;
+        }
+
+        .item-right .up-border, .item-right .down-border {
+            padding: 14px 15px;
+            background-color: #ddd;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .item-right .up-border {
+            top: -8px;
+            right: -35px;
+        }
+
+        .item-right .down-border {
+            bottom: -13px;
+            right: -35px;
+        }
+
+    .item-left {
+        width: 75%;
+    }
+
+        .item-left .title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .item-left .sce, .item-left .loc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .item-left .icon {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #777;
+        }
+
+        .item-left p {
+            color: #777;
+            margin: 0;
+        }
+
+        .item-left .tickets, .booked, .cancel {
+            background: #3D71E9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .item-left .tickets {
+            background: #777;
+        }
+
+        .item-left .booked {
+            background: #3D71E9;
+        }
+
+        .item-left .cancel {
+            background: #E91E63;
+        }
+
+    .fix {
+        clear: both;
+    }
+
 </style>
