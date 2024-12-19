@@ -4,29 +4,36 @@
 
 
 <header class="header_area" id="header">
-    <div class="container-fluid h-100 p-0 m-0" style="background-color: darkred;">
+    <div class="container-fluid h-100 p-0 m-0" >
         <div class="row h-100">
             <div class="col-12 h-100">
-                <nav class="h-100 navbar navbar-expand-lg" style="background-color: darkred;">
+                <nav class="h-100 navbar navbar-expand-lg">
                     <div class="navbar-left">
+                        <a href="/Home/Index">
+                            <i class="fas fa-backward" style="color:white; font-size: 36px;"></i>
+                        </a>
+
                         <a class="navbar-brand" href="index.html"><img src="#" alt=""></a>
                         <h2 class="welcome-text">Hoşgeldin, @User.Identity.Name</h2>
+                        
                     </div>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                     <!-- Nav -->
                     <div class="collapse navbar-collapse" id="dorneNav">
                         <ul class="navbar-nav mr-auto" id="dorneMenu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-user-edit"></i>
 
-                                    <span class="nav-tooltip">Profilim</span>
-                                </a>
+                            <li class="nav-item">
+
+                                    <a class="nav-link" href="@Url.Action("Index", "Dashboard", new { area = "Member" })">
+                                    <i class="fas fa-user-edit" style="color:white; font-size: 36px;"></i>
+                                    <span class="nav-tooltip">Profilim</span></a>
+                                
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Tickets", "Dashboard", new { area = "Member" })">
-                                    <img src="/dorne-master/img/core-img/ticket-xxl.png" width="36" height="36">
+                                    <img src="/dorne-master/img/core-img/ticket-xxl.png"  width="36" height="36">
                                     <span class="nav-tooltip">Biletlerim</span>
                                 </a>
                             </li>
@@ -34,15 +41,22 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Favorites", "Dashboard", new { area = "Member" })">
-                                    <i class="fa fa-heart fa-lg"></i>
+                                    <i class="fa fa-heart fa-lg" style="color:white; font-size: 36px;"></i>
                                     <span class="nav-tooltip">Favoriler</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("SavedCards", "Dashboard", new { area = "Member" })">
+                                    <i class="fa fa-credit-card fa-lg"></i> <!-- Kart ikonu -->
+                                    <span class="nav-tooltip">Kartlarım</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Settings", "Dashboard", new { area = "Member" })">
-                                    <i class="fa fa-cog fa-lg"></i>
+                                    <i class="fa fa-cog fa-lg" style="color:white; font-size: 36px;"></i>
                                     <span class="nav-tooltip">Ayarlar</span>
-                                </>
+                                </a>
                             </li>
                         </ul>
 
@@ -73,170 +87,190 @@
     </div>
 </header>
 <style>
-    /* Genel ayarlar */
+    /* Genel Ayarlar */
 .header_area {
     width: 100%;
+    height: 240px; /* Header yüksekliği */
+
+    background-color: darkred; 
+
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: 0;
-    height: 240px;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 10px;
+    padding: 0 30px;
 }
 
-/* Navbar stil */
-    .navbar {
-        width: 100%;
-        height: 80px; /* Navbar boyutunu büyüt */
-        background-color: darkred; /* Navbar arka plan rengi */
-        position: sticky;
-        top: 0;
-        z-index: 1000; /* Navbar'ın üstte kalmasını sağlamak için */
-        border-radius: 20px; /* Navbar köşelerini yuvarlat */
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-        padding: 0 20px; /* Navbar içindeki öğelere yatay boşluk */
+/* Sol Alan - Logo ve Hoşgeldin Yazısı */
+    .navbar-left {
+        display: flex; /* Flexbox kullanarak elemanları yatay hizala */
+        align-items: center; /* Dikeyde hizalama */
     }
 
-.sticky .header_area {
-    height: 200px;
-}
-
-    .navbar .navbar-left, .navbar .dorne-add-listings-btn {
-        border-radius: 20px; /* Sol ve sağ bölümün köşelerini yuvarlat */
+    .welcome-text {
+        font-size: 50px;
+        color: #fff;
+        margin-left: 15px;
+        margin-right: 10px; /* Arrow ile boşluk bırak */
     }
 
-/* Navbar sol kısmı */
-.navbar-left {
+/* Navbar Menü Öğeleri */
+.navbar-nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 50%;
+    margin: 0;
+        width: 100%; /* Genişlik tam sağa yaslanacak şekilde ayarlandı */
 }
 
-
-/* Hoşgeldin yazısı */
-.welcome-text {
-    font-size: 28px;
-    color: white;
-    margin-left: 20px;
-}
-
-/* Navbar sağ kısmı (kullanıcı ikonu ve menü) */
-.dorne-add-listings-btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 50%;
-}
-
-/* Navbar menüsündeki öğe linkleri */
 .nav-link {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    
     color: #fff;
-    text-align: center;
     text-decoration: none;
- 
-    font-size: 20px; /* Link metin boyutunu artır */
-    padding: 20px;
+    font-size: 22px;
+    margin: 0 20px; /* Menü öğeleri arasında boşluk */
+    transition: all 0.3s ease-in-out;
 }
 
-/* Navbar ikonları */
 .nav-link i {
-    font-size: 36px; /* İkonları büyüt */
+    font-size: 38px; /* İkon büyüklüğü */
+    margin-right: 8px; /* İkon ile metin arasındaki boşluk */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Tooltip (açıklama metni) */
+.nav-link:hover {
+    color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+.nav-link:hover i {
+    transform: scale(1.2);
+}
+
+.nav-item {
+        margin: 0 20px; /* Menü öğeleri arasında boşluk */
+
+
+    }
+
+/* Tooltip (Açıklama Metni) */
 .nav-tooltip {
     visibility: hidden;
     color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 4px;
+    background-color: #333;
+    padding: 5px 8px;
     position: absolute;
-    top: -30px;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s;
-    white-space: nowrap;
-    font-size: 12px;
+    z-index: 999;
 }
 
-/* Navbar öğeleri hover durumunda */
 .nav-link:hover .nav-tooltip {
     visibility: visible;
     opacity: 1;
 }
 
-/* Navbar öğeleri hover durumunda */
-.nav-link:hover {
-    font-size: 22px; /* Hover durumunda metin boyutunu büyüt */
-    color: #f1f1f1;
-}
-
-/* Kullanıcı ikonu */
+/* Kullanıcı İkonu ve Dropdown Menüsü */
 .user-icon {
-    margin-right: 50px;
-}
-
-.user-icon {
-    display: inline-flex; /* Flexbox ile içeriği ortalamak için */
-    justify-content: center; /* İçerikleri yatayda ortala */
-    align-items: center; /* İçerikleri dikeyde ortala */
-    width: 70px; /* Yuvarlak butonun yeni genişliği */
-    height: 70px; /* Yuvarlak butonun yeni yüksekliği */
-    background: transparent; /* Arka planı transparan yap */
-    border: none; /* Kenarlıkları kaldır */
-    outline: none; /* Outline'ı kaldır */
-    transition: transform 0.3s; /* Hover efektinde ölçek geçişi için */
-    cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
-    padding: 0; /* İçerik etrafındaki boşluğu kaldır */
-    margin: 0; /* Dışarıdaki boşluğu kaldır */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    color: white;
+    font-size: 36px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
 }
 
 .user-icon:hover {
-    transform: scale(1.2); /* Üzerine gelince büyüme efekti (ikonu %20 büyüt) */
+    transform: scale(1.2);
+    cursor: pointer;
 }
+    /* Dropdown Menüsü */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-.user-icon img {
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    border-radius: 50%; /* İkonu yuvarlak yapmak için */
-}
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
 
-.user-icon:focus {
-    outline: none; /* Outline'ı kaldır */
-    box-shadow: none; /* Varsayılan gölgeyi kaldır */
-}
+    /* Dropdown Menü gösterme */
+    .dorne-add-listings-btn:hover .dropdown-content {
+        display: block;
+    }
+    /* Kullanıcı simgesi üzerine gelindiğinde */
+    .user-icon:hover {
+        transform: scale(1.2); /* Üzerine gelince büyüme efekti */
+    }
 
-.user-icon:active {
-    outline: none; /* Aktif durumdaki outline'ı kaldır */
-}
-
-/* Dropdown Menüsü */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Dropdown Menü gösterme */
 .dorne-add-listings-btn:hover .dropdown-content {
     display: block;
 }
+
+
+
+    .nav-link {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .nav-link i {
+        font-size: 28px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+    }
+
+    .user-icon {
+        font-size: 28px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .dropdown-content {
+        right: 10px;
+        top: 60px;
+    }
+}
+
 
 
 
@@ -244,8 +278,27 @@
 </style>
 
 <script>
-    function toggleDropdown() {
-        var dropdown = document.getElementById("dropdownMenu");
-        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+   // Dropdown menüsünü açma ve kapama
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+
+    // Eğer menü kapalıysa, aç
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.classList.add("show");
+    } else {
+        dropdown.classList.remove("show");
     }
+}
+
+// Sayfa dışında bir yere tıklanırsa dropdown menüsünü kapat
+window.addEventListener('click', function(event) {
+    var dropdown = document.getElementById("dropdownMenu");
+    var userIcon = document.querySelector('.user-icon');
+    // Eğer tıklanan şey kullanıcı simgesi değilse, menüyü kapat
+    if (!userIcon.contains(event.target)) {
+        dropdown.classList.remove("show");
+    }
+});
+
+
 </script>

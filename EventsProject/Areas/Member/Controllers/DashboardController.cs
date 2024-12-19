@@ -193,43 +193,7 @@ namespace EventsProject.Areas.Member.Controllers
             return RedirectToAction("Settings");
         }
 
-        [HttpPost]
-        public async Task<IActionResult> UploadProfileImage(IFormFile ProfileImage)
-        {
-            var user = await _userManager.GetUserAsync(User); // Mevcut kullanıcıyı al
-            if (user == null)
-                return RedirectToAction("Login", "Account");
-
-            if (ProfileImage != null && ProfileImage.Length > 0)
-            {
-                // Yüklenen dosya adı için benzersiz bir isim oluştur
-                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ProfileImage.FileName);
-                var filePath = Path.Combine("wwwroot/images/profiles", uniqueFileName);
-
-                // Dosyayı belirtilen yola kaydet
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await ProfileImage.CopyToAsync(stream);
-                }
-
-                // Kullanıcının eski resmi varsa, sunucudan sil
-                if (!string.IsNullOrEmpty(user.Image))
-                {
-                    var oldImagePath = Path.Combine("wwwroot", user.Image);
-                    if (System.IO.File.Exists(oldImagePath))
-                    {
-                        System.IO.File.Delete(oldImagePath);
-                    }
-                }
-
-                // Yeni dosya yolunu Image özelliğine ata ve kullanıcıyı güncelle
-                user.Image = $"/images/profiles/{uniqueFileName}";
-                await _userManager.UpdateAsync(user);
-            }
-
-            return RedirectToAction("Settings");
-        }
-
+      
 
 
         [HttpPost]
@@ -285,6 +249,47 @@ namespace EventsProject.Areas.Member.Controllers
 
             return RedirectToAction("Settings");
         }
+
+        // Get method to display saved cards
+        public async Task<IActionResult> SavedCards()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            var savedCards = db.SavedCards.Where(sc => sc.UserId == user.Id).ToList();
+            return View(savedCards);
+        }
+
+        // Post method to add a new saved card
+        [HttpPost]
+        public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, DateTime expiryDate, string cvv)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            var savedCard = new SavedCard
+            {
+                CardHolderName = cardHolderName,
+                CardNumber = cardNumber.Replace(" ", ""), // Remove spaces from card number
+                ExpiryDate = expiryDate,
+                CVV = cvv,
+                UserId = user.Id
+            };
+
+            db.SavedCards.Add(savedCard);
+            await db.SaveChangesAsync();
+
+            TempData["CardAdded"] = "Kartınız başarıyla kaydedildi!";
+            return RedirectToAction("SavedCards");
+        }
+
+
 
 
 
