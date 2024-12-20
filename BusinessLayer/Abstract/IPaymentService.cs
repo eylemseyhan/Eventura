@@ -12,7 +12,7 @@ namespace BusinessLayer.Abstract
 
         decimal GetEventTicketPrice(int eventId);
 
-        Task<bool> BuyTicketAsync(int eventId, int userId, int eventTicketId);
-        Task<bool> BuyTicketAsync(int eventId, int userId, int? eventsTicketId);
+      
+        Task<bool> BuyTicketAsync(int eventId, int userId, int eventsTicketId);
     }
 }

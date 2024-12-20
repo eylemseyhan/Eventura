@@ -23,6 +23,7 @@ namespace EventsProject.Areas.Member.Controllers
         {
             _userManager = userManager;
             _eventService = eventService;
+
         }
 
         // Dashboard ana sayfası
@@ -263,32 +264,7 @@ namespace EventsProject.Areas.Member.Controllers
             return View(savedCards);
         }
 
-        // Post method to add a new saved card
-        [HttpPost]
-        public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, DateTime expiryDate, string cvv)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return RedirectToAction("SignIn", "Login", new { area = "Member" });
-            }
-
-            var savedCard = new SavedCard
-            {
-                CardHolderName = cardHolderName,
-                CardNumber = cardNumber.Replace(" ", ""), // Remove spaces from card number
-                ExpiryDate = expiryDate,
-                CVV = cvv,
-                UserId = user.Id
-            };
-
-            db.SavedCards.Add(savedCard);
-            await db.SaveChangesAsync();
-
-            TempData["CardAdded"] = "Kartınız başarıyla kaydedildi!";
-            return RedirectToAction("SavedCards");
-        }
-
+     
 
 
 

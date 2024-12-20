@@ -18,6 +18,7 @@ namespace BusinessLayer.Concrete
             return _paymentDal.BuyTicketAsync(eventId, userId, eventTicketId);
         }
 
+
         public decimal GetEventTicketPrice(int eventId)
         {
             // Dal katmanında fiyatı almayı çağırıyoruz

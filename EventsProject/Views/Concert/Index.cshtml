@@ -52,6 +52,16 @@
                 </div>
             }
         </div>
+
+        <!-- Favorilere Eklendi Modal -->
+        <div id="favoritesAddedModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000;">
+            <div style="background-color: white; padding: 30px; border-radius: 10px; text-align: center; width: 350px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);">
+                <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 50px; color: green; margin-bottom: 15px;"></i>
+                <h5 style="margin-bottom: 10px;">Etkinlik favorilere eklendi!</h5>
+                <p style="color: #555;">Favorilerinize giderek eklediğiniz etkinlikleri görebilirsiniz.</p>
+                <button onclick="closeFavoritesModal()" style="background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; border: none; margin-top: 20px; cursor: pointer;">Tamam</button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -68,39 +78,41 @@
     function addToFavorites(eventId) {
         var userId = document.getElementById("userData").getAttribute("data-user-id");
 
-        // Eğer kullanıcı giriş yapmamışsa userId null olabilir
         if (!userId) {
             alert("Lütfen giriş yapın.");
             return;
         }
 
-        // userId'yi string'ten int'e çevirme
-        userId = parseInt(userId, 10); // 10 tabanında dönüştürür
+        userId = parseInt(userId, 10);
 
         if (isNaN(userId)) {
             alert("Geçerli bir kullanıcı kimliği yok.");
             return;
         }
 
-        console.log("UserId (int olarak):", userId);
-        console.log("Favorilere ekleniyor, EventId:", eventId);
-        alert("Etkinlik favorilere eklendi!");
-
-        // Burada userId'yi backend'e int olarak gönderebilirsiniz.
         $.ajax({
-            url: '/Concert/AddToFavorites', // Backend URL
+            url: '/Concert/AddToFavorites',
             type: 'POST',
             data: {
                 eventId: eventId,
-                userId: userId // Burada userId int olarak backend'e gönderiliyor
+                userId: userId
             },
             success: function (response) {
                 console.log('Favorilere eklendi!');
+                showFavoritesModal(); // Başarılı olduğunda modal açılır
             },
             error: function () {
                 alert('Bir hata oluştu.');
             }
         });
+    }
+
+    function showFavoritesModal() {
+        document.getElementById("favoritesAddedModal").style.display = "flex";
+    }
+
+    function closeFavoritesModal() {
+        document.getElementById("favoritesAddedModal").style.display = "none";
     }
 
     function showLoginPopup() {

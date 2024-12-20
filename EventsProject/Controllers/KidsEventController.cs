@@ -23,7 +23,6 @@ namespace EventsProject.Controllers
             }
             return View(eventDetail); // Bu view bir Event nesnesi bekliyor
         }
-
         [HttpPost]
         public IActionResult AddToFavorites(int? eventId)
         {

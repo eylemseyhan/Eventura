@@ -22,10 +22,22 @@ namespace DataAccessLayer.EntityFramework
                     {
                         try
                         {
-                            // Uygun bir bilet bulmaya çalışıyoruz
+                            // Önce EventsTickets tablosundan ilgili kaydı bulalım
+                            var eventTicket = await context.EventsTickets
+                                .FirstOrDefaultAsync(et => et.EventId == eventId && et.EventsTicketId == eventTicketId);
+
+                            if (eventTicket == null)
+                            {
+                                throw new Exception("Event ticket bulunamadı.");
+                            }
+
+                            // Uygun bir bilet bulmaya çalışıyoruz - eventTicketId'ye göre filtreleme eklendi
                             var ticket = await context.Tickets
-                                .Where(t => t.EventId == eventId && t.UserId == null && t.IsAvailable)
-                                .OrderBy(t => t.TicketId) // En uygun bileti almak için ID'ye göre sıralayabilirsiniz
+                                .Where(t => t.EventId == eventId &&
+                                          t.EventsTicketId == eventTicketId &&
+                                          t.UserId == null &&
+                                          t.IsAvailable)
+                                .OrderBy(t => t.TicketId)
                                 .FirstOrDefaultAsync();
 
                             if (ticket == null)
@@ -33,22 +45,19 @@ namespace DataAccessLayer.EntityFramework
                                 throw new Exception("Uygun bilet bulunamadı.");
                             }
 
-                            var eventTicket = await context.EventsTickets
-                                .FirstOrDefaultAsync(et => et.EventsTicketId == eventTicketId);
+                            // SoldCount'u artır
+                            eventTicket.SoldCount++;
+                            context.EventsTickets.Update(eventTicket);
 
-                            if (eventTicket != null)
-                            {
-                                eventTicket.SoldCount++;
-                                context.EventsTickets.Update(eventTicket); // Değişikliği açıkça bildir
-                            }
-
-                            // Biletin durumunu güncelliyoruz
+                            // Biletin durumunu güncelle
                             ticket.UserId = userId;
                             ticket.IsAvailable = false;
+
+                            context.Tickets.Update(ticket);
+
+                            // Değişiklikleri kaydet
                             await context.SaveChangesAsync();
-
                             await transaction.CommitAsync();
-
                             return true;
                         }
                         catch (Exception ex)
