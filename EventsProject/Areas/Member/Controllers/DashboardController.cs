@@ -252,7 +252,7 @@ namespace EventsProject.Areas.Member.Controllers
             return RedirectToAction("Settings");
         }
 
-        // Get method to display saved cards
+        
         public async Task<IActionResult> SavedCards()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -264,41 +264,50 @@ namespace EventsProject.Areas.Member.Controllers
             var savedCards = db.SavedCards.Where(sc => sc.UserId == user.Id).ToList();
             return View(savedCards);
         }
-     
         [HttpPost]
         public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, string expiryDate, string cvv)
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+                return Json(new { success = false, redirectTo = Url.Action("SignIn", "Login", new { area = "Member" }) });
             }
 
-            // ExpiryDate string'ini DateTime'a dönüştürme
             DateTime expiryDateTime;
-            if (!DateTime.TryParseExact(expiryDate, "MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out expiryDateTime))
+            // Tarihi "MM/yy" formatında parse et
+            if (DateTime.TryParseExact(expiryDate, "MM/yy", CultureInfo.InvariantCulture, DateTimeStyles.None, out expiryDateTime))
             {
-                // Eğer tarih geçersizse, uygun bir hata mesajı ver
-                ModelState.AddModelError("ExpiryDate", "Geçerli bir son kullanma tarihi girin.");
-                return View();  // Geriye dönüp formu yeniden gösterebilirsiniz
+                // "MM/YY" formatında yıl ve ay alındı, ancak gün ve saat bilgisi yok.
+                // Bu nedenle, tarih nesnesine 1. günü ve saat 00:00 ekliyoruz
+                expiryDateTime = new DateTime(expiryDateTime.Year, expiryDateTime.Month, 1, 0, 0, 0);
+
+                // Zaman dilimini UTC olarak ayarlıyoruz
+                if (expiryDateTime.Kind == DateTimeKind.Unspecified)
+                {
+                    expiryDateTime = DateTime.SpecifyKind(expiryDateTime, DateTimeKind.Utc);
+                }
+
+                // SavedCard oluşturuluyor
+                var savedCard = new SavedCard
+                {
+                    CardHolderName = cardHolderName,
+                    CardNumber = cardNumber.Replace(" ", ""), // Boşlukları temizle
+                    ExpiryDate = expiryDateTime, // UTC zamanı kaydediyoruz
+                    CVV = cvv,
+                    UserId = user.Id
+                };
+
+                db.SavedCards.Add(savedCard);
+                await db.SaveChangesAsync();
+            }
+            else
+            {
+                return Json(new { success = false, message = "Geçerli bir son kullanma tarihi girin." });
             }
 
-            var savedCard = new SavedCard
-            {
-                CardHolderName = cardHolderName,
-                CardNumber = cardNumber.Replace(" ", ""), // Remove spaces from card number
-                ExpiryDate = expiryDateTime,
-                CVV = cvv,
-                UserId = user.Id
-            };
-
-            db.SavedCards.Add(savedCard);
-            await db.SaveChangesAsync();
-
-            TempData["CardAdded"] = "Kartınız başarıyla kaydedildi!";  // Success Message
-            return RedirectToAction("SavedCards");  // Kullanıcıyı SavedCards sayfasına yönlendir
+            // Yönlendirme işlemi burada yapılır
+            return RedirectToAction("SavedCards", "Dashboard", new { area = "Member" });
         }
-
 
 
 
