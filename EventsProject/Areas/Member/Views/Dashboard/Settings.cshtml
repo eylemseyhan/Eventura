@@ -59,9 +59,9 @@
     <div class="card mb-4">
         <div class="card-header">Bildirim Ayarları</div>
         <div class="card-body">
-            <form method="post" action="@Url.Action("UpdateNotifications", "Dashboard", new { area = "Member" })">
+            <form id="notificationForm">
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="emailNotifications" name="EmailNotifications" checked>
+                    <input type="checkbox" class="form-check-input" id="emailNotifications" name="EmailNotifications">
                     <label for="emailNotifications" class="form-check-label">E-posta bildirimleri</label>
                 </div>
                 <div class="form-check">
@@ -72,8 +72,21 @@
                     <input type="checkbox" class="form-check-input" id="pushNotifications" name="PushNotifications">
                     <label for="pushNotifications" class="form-check-label">Mobil uygulama bildirimleri</label>
                 </div>
-                <!-- HTML !-->
-                <button type="submit" class="button-87" role="button">Bildirimleri Güncelle</button>
+                <button type="button" class="button-87" id="updateButton" role="button">Bildirimleri Güncelle</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bildirim Ayarları Güncellendi Modal -->
+    <div id="notificationsUpdatedModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000;">
+        <div style="background-color: white; padding: 30px; border-radius: 10px; text-align: center; width: 350px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);">
+            <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 50px; color: green; margin-bottom: 15px;"></i>
+            <h5 style="margin-bottom: 10px;">Bildirim Ayarları Güncellendi!</h5>
+            <p style="color: #555;">Bildirim ayarlarınız başarıyla güncellendi.</p>
+            <button onclick="closeNotificationsModal()" style="background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; border: none; margin-top: 20px; cursor: pointer;">Tamam</button>
+        </div>
+    </div>
+
 
                 
                 
@@ -243,3 +256,51 @@
 
 
 </style>
+
+<script>
+    // Sayfa yüklendiğinde, localStorage'dan ayarları alıp, checkbox'ları güncelle
+    window.onload = function () {
+        const emailNotifications = localStorage.getItem("emailNotifications") === "true";
+        const smsNotifications = localStorage.getItem("smsNotifications") === "true";
+        const pushNotifications = localStorage.getItem("pushNotifications") === "true";
+
+        document.getElementById("emailNotifications").checked = emailNotifications;
+        document.getElementById("smsNotifications").checked = smsNotifications;
+        document.getElementById("pushNotifications").checked = pushNotifications;
+
+        // "Bildirimleri Güncelle" butonuna tıklanınca çalışacak olay
+        document.getElementById("updateButton").addEventListener("click", function () {
+            // Kullanıcının seçtiği bildirim ayarlarını al
+            const emailNotifications = document.getElementById("emailNotifications").checked;
+            const smsNotifications = document.getElementById("smsNotifications").checked;
+            const pushNotifications = document.getElementById("pushNotifications").checked;
+
+            // Ayarları localStorage'a kaydet
+            localStorage.setItem("emailNotifications", emailNotifications);
+            localStorage.setItem("smsNotifications", smsNotifications);
+            localStorage.setItem("pushNotifications", pushNotifications);
+
+            // Bildirim Ayarları Modal'ını açma
+            showNotificationsModal();
+        });
+    };
+
+    // Bildirim Ayarları Modal'ını açma
+    function showNotificationsModal() {
+        document.getElementById("notificationsUpdatedModal").style.display = "flex"; // Modal'ı aç
+    }
+
+    // Bildirim Ayarları Modal'ını kapatma
+    function closeNotificationsModal() {
+        document.getElementById("notificationsUpdatedModal").style.display = "none"; // Modal'ı kapat
+    }
+
+</script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
