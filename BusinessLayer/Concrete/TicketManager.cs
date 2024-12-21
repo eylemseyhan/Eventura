@@ -73,5 +73,11 @@ namespace BusinessLayer.Concrete
                 throw; // Re-throw to allow calling method to handle
             }
         }
+
+        public IEnumerable<Ticket> GetTicketsByEventsTicketId(int eventsTicketId)
+        {
+            // ToList() çağrısını burada yapmayıp, doğrudan IEnumerable döndürüyoruz
+            return _ticketDal.GetTicketsByEventsTicketId(eventsTicketId);
+        }
     }
 }

@@ -212,6 +212,8 @@ namespace EventsProject.Areas.Admin.Controllers
             return View(model);
         }
 
+
+
         [HttpPost]
         public IActionResult Edit(EventTicketEditDto model)
         {
@@ -296,6 +298,60 @@ namespace EventsProject.Areas.Admin.Controllers
                 return View(model);
             }
         }
+
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            try
+            {
+                // EventsTicket'ı al
+                var eventsTicket = _eventsTicketService.TGetByID(id);
+                if (eventsTicket == null)
+                {
+                    _logger.LogWarning($"EventsTicket not found with ID: {id}");
+                    return NotFound();
+                }
+
+                // İlgili event'i al
+                var eventDetails = _eventService.TGetByID(eventsTicket.EventId);
+                if (eventDetails == null)
+                {
+                    _logger.LogWarning($"Event not found for EventsTicket ID: {id}");
+                    return NotFound();
+                }
+
+                // Biletleri al
+                var tickets = _ticketService.GetTicketsByEventsTicketId(id);
+                if (tickets == null)
+                {
+                    tickets = new List<Ticket>();
+                }
+
+                // ViewModel oluştur
+                var viewModel = new TicketDetailsViewModel
+                {
+                    EventsTicket = eventsTicket,
+                    EventTitle = eventDetails.Title,
+                    Tickets = tickets.Select(t => new TicketDetailDto
+                    {
+                        TicketId = t.TicketId,
+                        TicketNumber = t.TicketNumber,
+                        IsAvailable = t.IsAvailable,
+                        UserName = t.User?.UserName ?? "Not Assigned",
+                        PurchaseDate = t.Payment?.PaymentDate,
+                        Price = eventsTicket.Price
+                    }).ToList()
+                };
+
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error occurred while getting ticket details for ID: {id}");
+                TempData["Error"] = "An error occurred while retrieving ticket details.";
+                return RedirectToAction("Index");
+            }
+        }
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -326,7 +382,7 @@ namespace EventsProject.Areas.Admin.Controllers
         {
             try
             {
-                // eventsticketları al
+                // Event ticket al
                 var eventsTicket = _eventsTicketService.TGetByID(id);
                 if (eventsTicket == null)
                 {
@@ -334,18 +390,18 @@ namespace EventsProject.Areas.Admin.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // isAvailable true olanlar alınıyor
+                // IsAvailable olan biletleri al
                 var availableTickets = _ticketService.TGetList()
                     .Where(t => t.EventsTicketId == id && t.IsAvailable)
                     .ToList();
 
-                // available ticketları siliyor
+                // Available ticket'ları sil
                 if (availableTickets.Any())
                 {
                     _ticketService.TDeleteRange(availableTickets);
                 }
 
-                // sonra eventsticket nesnesini siliyor
+                // Sonra event ticket'ı sil
                 _eventsTicketService.TDelete(eventsTicket);
 
                 _logger.LogInformation($"Etkinlik bileti ve ilişkili kullanılabilir biletler silindi: {id}");

@@ -8,5 +8,6 @@ namespace BusinessLayer.Abstract
         // Add method to add multiple tickets at once
         void TAddRange(IEnumerable<Ticket> tickets);
         void TDeleteRange(List<Ticket> tickets);
+        IEnumerable<Ticket> GetTicketsByEventsTicketId(int eventsTicketId);
     }
 }
