@@ -15,6 +15,16 @@ System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Glob
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+// Session configuration
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session süresi
+    options.Cookie.HttpOnly = true; // Güvenlik için HttpOnly
+    options.Cookie.IsEssential = true; // Session'ı temel ihtiyaç olarak ayarla
+});
+
+
 // Dependency Injection (DI) için servisleri ekleme
 //kart ve payment
 builder.Services.AddScoped<IGenericService<SavedCard>, SavedCardManager>();
@@ -25,6 +35,7 @@ builder.Services.AddScoped<ISavedCardDal, EfSavedCardDal>();
 builder.Services.AddScoped<IGenericService<Payment>, PaymentManager>();
 builder.Services.AddScoped<IPaymentService, PaymentManager>();
 builder.Services.AddScoped<IPaymentDal, EfPaymentDal>();
+
 
 // Register services
 builder.Services.AddScoped<IEventsTicketsService, EventsTicketManager>(); // Ensure this is added

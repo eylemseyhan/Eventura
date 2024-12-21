@@ -25,7 +25,8 @@ namespace BusinessLayer.Abstract
 
         List<Event> TGetList();
         List<Event> GetAllEvents();
-        
+        Dictionary<string, int> GetEventCountsByMonth();
+
 
     }
 }

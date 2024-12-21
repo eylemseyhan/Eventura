@@ -78,5 +78,19 @@ namespace BusinessLayer.Concrete
         public List<Event> GetEventsByCity(int cityId) => _eventDal.GetEventsByCity(cityId);
         public List<Event> GetEventsByCategory(int categoryId) => _eventDal.GetEventsByCategory(categoryId);
         public List<Event> GetEventsByCityAndCategory(int cityId, int categoryId) => _eventDal.GetEventsByCityAndCategory(cityId, categoryId);
+
+        public Dictionary<int, int> GetEventCountsByMonth()
+        {
+            using var context = new Context();
+            return context.Events
+                .GroupBy(e => e.EventDate.Month)
+                .Select(g => new { Month = g.Key, Count = g.Count() })
+                .ToDictionary(x => x.Month, x => x.Count);
+        }
+
+        Dictionary<string, int> IEventService.GetEventCountsByMonth()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

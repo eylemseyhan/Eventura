@@ -21,11 +21,8 @@ namespace EventsProject.Controllers
             _savedCardService = savedCardService;
             _paymentService = paymentService;
         }
-
         [HttpPost]
-        public async Task<IActionResult> SaveCard(int eventId, string cardHolderName,
-        string cardNumber, string expiryDate, string cvv, bool saveCard,
-        decimal price, int? selectedCardId, int eventTicketId)
+        public async Task<IActionResult> SaveCard(int eventId, string cardHolderName,string cardNumber, string expiryDate, string cvv, bool saveCard,decimal price, int? selectedCardId, int eventTicketId)
         {
             try
             {
@@ -37,7 +34,7 @@ namespace EventsProject.Controllers
 
                 int? savedCardId = null;
 
-                // Kayıtlı kart seçilmişse
+                // Kayıtlı kart seçilmişse, saveCard checkbox'ının durumuna bakılmaksızın kartı kullan
                 if (selectedCardId.HasValue)
                 {
                     var existingCard = await _context.SavedCards
@@ -48,11 +45,10 @@ namespace EventsProject.Controllers
                         return BadRequest("Seçilen kayıtlı kart bulunamadı.");
                     }
 
-                    savedCardId = selectedCardId; // Burada direkt selectedCardId'yi atıyoruz
+                    savedCardId = selectedCardId; // Direkt olarak seçilen kartın ID'sini ata
                 }
-                else
+                else // Yeni kart ile ödeme yapılıyorsa
                 {
-                    // Yeni kart işlemleri...
                     string cleanCardNumber = cardNumber?.Replace(" ", "");
 
                     if (string.IsNullOrEmpty(cleanCardNumber) || !cleanCardNumber.All(char.IsDigit) ||
@@ -72,6 +68,7 @@ namespace EventsProject.Controllers
                         return BadRequest("Geçersiz son kullanma tarihi formatı");
                     }
 
+                    // Sadece yeni kart eklenirken ve saveCard true ise kaydet
                     if (saveCard)
                     {
                         var savedCard = new SavedCard
@@ -82,10 +79,9 @@ namespace EventsProject.Controllers
                             ExpiryDate = expiryDateParsed.ToUniversalTime(),
                             CVV = cvv
                         };
-                        savedCardId = savedCard.SavedCardId;
-                        _savedCardService.TAdd(savedCard);
+                        _context.SavedCards.Add(savedCard);
                         await _context.SaveChangesAsync();
-
+                        savedCardId = savedCard.SavedCardId;
                     }
                 }
 
@@ -97,7 +93,6 @@ namespace EventsProject.Controllers
                     return BadRequest("Bilet satın alma işlemi başarısız oldu.");
                 }
 
-                // Satın alınan bileti bul
                 var purchasedTicket = await _context.Tickets
                     .FirstOrDefaultAsync(t => t.EventId == eventId &&
                                             t.EventsTicketId == eventTicketId &&
@@ -109,12 +104,13 @@ namespace EventsProject.Controllers
                     return BadRequest("Satın alınan bilet bulunamadı.");
                 }
 
-                // Ödeme kaydı - savedCardId'yi direkt olarak kullanıyoruz
+                // Payment oluşturma
                 var payment = new Payment
                 {
                     TicketId = purchasedTicket.TicketId,
                     UserId = userId,
-                    SavedCardId = savedCardId, // selectedCardId ya da yeni kaydedilen kartın ID'si
+                    SavedCardId = selectedCardId.HasValue ? selectedCardId : // Kayıtlı kartlardan seçim yapıldıysa
+                                  (saveCard ? savedCardId : null),  // Değilse ve checkbox işaretlendiyse yeni kartın ID'si, aksi halde null
                     PaymentStatus = "Başarılı",
                     Amount = price,
                     PaymentDate = DateTime.UtcNow
@@ -125,6 +121,7 @@ namespace EventsProject.Controllers
 
                 return Ok("Bilet başarıyla satın alındı.");
             }
+
             catch (Exception ex)
             {
                 return BadRequest($"Bilet satın alınırken bir hata oluştu: {ex.Message}");
@@ -134,9 +131,9 @@ namespace EventsProject.Controllers
         public IActionResult GetSavedCards()
         {
             // Kullanıcı ID'sini Claims'den alıyoruz (Kimlik doğrulama ile bağlantılı)
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier); // Bu, kullanıcının ID'sini alır (örneğin, "123")
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            if (userIdString == null)
+            if (string.IsNullOrEmpty(userIdString))
             {
                 return Unauthorized(); // Kullanıcı doğrulaması yapılmamışsa yetkisiz dönebiliriz.
             }
@@ -147,15 +144,14 @@ namespace EventsProject.Controllers
                 .Select(c => new
                 {
                     c.SavedCardId,
-                    c.CardNumber,
+                    CardNumber = "** ** ** " + c.CardNumber.Substring(c.CardNumber.Length - 4), // Kart numarasını maskelemek için
                     c.CardHolderName,
-                    c.ExpiryDate
+                    ExpiryDate = c.ExpiryDate.ToString("MM/yy") // Son kullanma tarihini uygun formatta döndürmek için
                 })
                 .ToList();
 
-            return Json(savedCards); // JSON olarak dönüyoruz
+            return Ok(savedCards); // Kayıtlı kartların listesini döndür
         }
-
         [HttpPost]
         public IActionResult ProcessPayment(int savedCardId)
         {

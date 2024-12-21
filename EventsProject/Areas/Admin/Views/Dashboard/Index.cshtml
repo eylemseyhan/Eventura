@@ -1,14 +1,88 @@
 ﻿@using EntityLayer.Concrete
+@using Newtonsoft.Json;
 
 
 @{
+    var monthNames = ViewBag.MonthNames;
+    var eventCounts = ViewBag.EventCounts;
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var monthNames = @Html.Raw(JsonConvert.SerializeObject(ViewBag.MonthNames));
+    var eventCounts = @Html.Raw(JsonConvert.SerializeObject(ViewBag.EventCounts));
+
+    window.onload = function () {
+        var ctx = document.getElementById('eventCountChart').getContext('2d');
+
+        var eventCountChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: monthNames, // Ay isimleri
+                datasets: [{
+                    label: 'Etkinlik Sayısı',
+                    data: eventCounts, // Etkinlik sayıları
+                    backgroundColor: '#abafc6', // Barların rengi
+                    borderColor: '#5397d6', // Border rengi
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)',
+                            borderColor: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: '#666',
+                            stepSize: 1,
+                            callback: function (value) {
+                                return value.toFixed(0);
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Aylar',
+                            color: '#abafc6', // X ekseni yazı rengi
+                        },
+                        ticks: {
+                            color: '#abafc6' // X eksenindeki rakamların rengi
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                plugins: {
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function (context) {
+                                return context.raw + " etkinlik";
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    };
+</script>
+
+
 <!-- Font Awesome CDN -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <style>
+    /* Main Container Styling */
+
     .icon-black {
         color: black !important; /* İkonun rengini siyah yapar */
         background-color: transparent !important; /* Arka planı şeffaf yapar */
@@ -141,31 +215,23 @@
             <div class="col-md-8">
                 <div class="card card-round">
                     <div class="card-header">
-                        <div class="card-head-row">
-                            <div class="card-title">User Statistics</div>
-                            <div class="card-tools">
-                                <a href="#"
-                                   class="btn btn-label-success btn-round btn-sm me-2">
-                                    <span class="btn-label">
-                                        <i class="fa fa-pencil"></i>
-                                    </span>
-                                    Export
-                                </a>
-                                <a href="#" class="btn btn-label-info btn-round btn-sm">
-                                    <span class="btn-label">
-                                        <i class="fa fa-print"></i>
-                                    </span>
-                                    Print
-                                </a>
+                        
+                            <div class="card-head-row">
+                                <div class="card-title">Aylara Göre Etkinlik Sayısı</div>
                             </div>
-                        </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="min-height: 375px">
+                                <canvas id="eventCountChart"></canvas>
+                                </div>
+                            </div>
+                        
                     </div>
-                    <div class="card-body">
+                   @*  <div class="card-body">
                         <div class="chart-container" style="min-height: 375px">
                             <canvas id="statisticsChart"></canvas>
                         </div>
                         <div id="myChartLegend"></div>
-                    </div>
+                    </div> *@
                 </div>
             </div>
             <div class="col-md-4">
@@ -341,35 +407,4 @@
     </div>
 </div>
 
-<script>
-    // Chart.js ile grafik oluşturma
-    var ctx = document.getElementById('dailySalesChart').getContext('2d');
-    var dailySalesChart = new Chart(ctx, {
-        type: 'bar', // Grafik türü (örneğin, line, bar, pie)
-        data: {
-            labels: ['Total Sales'], // Satış etiketleri (Yalnızca toplam satış)
-            datasets: [{
-                label: 'Total Sales',
-                data: [@ViewBag.TotalSales], // Toplam satış verisi
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
-            interaction: {
-                mode: 'none' // Hover etkileşimini devre dışı bırakır
-            },
-            plugins: {
-                tooltip: {
-                    enabled: false // Tooltip'leri devre dışı bırakır
-                }
-            }
-        }
-    });
-</script>
+

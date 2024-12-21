@@ -7,6 +7,7 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using BusinessLayer.Abstract;
 using EventsProject.Controllers;
+using System.Globalization;
 namespace EventsProject.Areas.Member.Controllers
 {
     [Area("Member")]
@@ -263,8 +264,44 @@ namespace EventsProject.Areas.Member.Controllers
             var savedCards = db.SavedCards.Where(sc => sc.UserId == user.Id).ToList();
             return View(savedCards);
         }
-
      
+        [HttpPost]
+        public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, string expiryDate, string cvv)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            // ExpiryDate string'ini DateTime'a dönüştürme
+            DateTime expiryDateTime;
+            if (!DateTime.TryParseExact(expiryDate, "MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out expiryDateTime))
+            {
+                // Eğer tarih geçersizse, uygun bir hata mesajı ver
+                ModelState.AddModelError("ExpiryDate", "Geçerli bir son kullanma tarihi girin.");
+                return View();  // Geriye dönüp formu yeniden gösterebilirsiniz
+            }
+
+            var savedCard = new SavedCard
+            {
+                CardHolderName = cardHolderName,
+                CardNumber = cardNumber.Replace(" ", ""), // Remove spaces from card number
+                ExpiryDate = expiryDateTime,
+                CVV = cvv,
+                UserId = user.Id
+            };
+
+            db.SavedCards.Add(savedCard);
+            await db.SaveChangesAsync();
+
+            TempData["CardAdded"] = "Kartınız başarıyla kaydedildi!";  // Success Message
+            return RedirectToAction("SavedCards");  // Kullanıcıyı SavedCards sayfasına yönlendir
+        }
+
+
+
+
 
 
 

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using EntityLayer.Concrete;
 using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
+using BusinessLayer.Abstract;
 
 namespace EventsProject.Areas.Admin.Controllers
 {
@@ -12,6 +13,7 @@ namespace EventsProject.Areas.Admin.Controllers
     public class DashboardController : Controller
     {
         private readonly Context _context;
+        private readonly IEventService _eventService;
 
         public DashboardController(Context context)
         {
@@ -64,8 +66,30 @@ namespace EventsProject.Areas.Admin.Controllers
 
             // Veriyi ViewBag ile view'a gönderiyoruz
             ViewBag.Payments = payments;
+            var eventCountsByMonth = _context.Events
+                .AsEnumerable()  // Veriyi bellek üzerinde işlemek için AsEnumerable kullanın
+                .GroupBy(e => e.EventDate.Month)
+                .Select(g => new
+                {
+                    MonthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(g.Key),
+                    Count = g.Count()
+                })
+                .OrderBy(x => DateTime.ParseExact(x.MonthName, "MMMM", System.Globalization.CultureInfo.CurrentCulture).Month)
+                .ToList();
+
+            // Ay isimleri ve sayıları ayrı listeler olarak sakla
+            ViewBag.MonthNames = eventCountsByMonth.Select(x => x.MonthName).ToList();
+            ViewBag.EventCounts = eventCountsByMonth.Select(x => x.Count).ToList();
+
+            // Debugging için eventCountsByMonth içeriğini yazdırın
+            //foreach (var item in eventCountsByMonth)
+            //{
+            //    Console.WriteLine($"Month: {item.MonthName}, Count: {item.Count}");
+            //}
 
             return View();
         }
+
+        
     }
 }
