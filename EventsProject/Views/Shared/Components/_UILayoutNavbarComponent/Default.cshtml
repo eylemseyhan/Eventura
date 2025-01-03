@@ -48,10 +48,9 @@
                                 <a class="nav-link" href="/Contact/Index">İletişim</a>
                             </li>
                         </ul>
-                        <!-- Search btn -->
-                        <div class="dorne-search-btn">
-                            <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Ara </a>
-                        </div>
+                       
+
+
                         <div class="dorne-add-listings-btn">
                             <a href="javascript:void(0);" class="user-icon" onclick="toggleDropdown()">
                                 <i class="fa fa-user-circle" style="color: white; font-size: 32px;"></i> <!-- Beyaz Font Awesome ikonu -->
@@ -146,6 +145,38 @@
 
 
 <script>
-   
+    function searchEvents() {
+        var query = document.getElementById('eventSearch').value;
+
+        // 3 harften az ise öneri gösterme
+        if (query.length < 3) {
+            document.getElementById('eventSuggestions').innerHTML = '';
+            return;
+        }
+
+        $.ajax({
+            url: '/Search/SearchEvents',  // Core'da url direkt olarak Action ile belirtilir
+            type: 'GET',
+            data: { query: query },
+            success: function (data) {
+                var suggestionsHtml = '';
+                if (data.length > 0) {
+                    data.forEach(function (item) {
+                        suggestionsHtml += '<div class="suggestion-item" onclick="selectEvent(\'' + item.EventId + '\')">' + item.Title + ' (' + item.Category + ')</div>';
+                    });
+                    document.getElementById('eventSuggestions').innerHTML = suggestionsHtml;
+                } else {
+                    document.getElementById('eventSuggestions').innerHTML = '<div>No events found</div>';
+                }
+            },
+            error: function () {
+                console.log('Error occurred while fetching events.');
+            }
+        });
+    }
+
+    function selectEvent(eventId) {
+        window.location.href = '/Search/Results?query=' + eventId;
+    }
 
 </script>

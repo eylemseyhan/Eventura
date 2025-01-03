@@ -1,7 +1,7 @@
 ﻿@model EventsProject.Areas.Admin.Models.TicketDetailsViewModel
 
 @{
-    ViewData["Title"] = "Ticket Details";
+    ViewData["Title"] = "Bilet Detayları";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -9,23 +9,23 @@
     <div class="card">
         <div class="card-header">
             <h5 class="card-title">
-                Ticket Details for Event: @Model.EventTitle
+                Etkinlik için Bilet Detayları: @Model.EventTitle
             </h5>
             <div class="ticket-summary">
-                <p>Total Capacity: @Model.EventsTicket.TicketCapacity</p>
-                <p>Sold Count: @Model.EventsTicket.SoldCount</p>
-                <p>Price: @Model.EventsTicket.Price.ToString("C")</p>
+                <p>Toplam Kapasite: @Model.EventsTicket.TicketCapacity</p>
+                <p>Satılan Adet: @Model.EventsTicket.SoldCount</p>
+                <p>Fiyat: @Model.EventsTicket.Price.ToString("C")</p>
             </div>
         </div>
         <div class="card-body">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Ticket Number</th>
-                        <th>Status</th>
-                        <th>Purchased By</th>
-                        <th>Purchase Date</th>
-                        <th>Price</th>
+                        <th>Bilet Numarası</th>
+                        <th>Durum</th>
+                        <th>Satın Alan</th>
+                        <th>Satın Alma Tarihi</th>
+                        <th>Fiyat</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,11 +36,11 @@
                             <td>
                                 @if (ticket.IsAvailable)
                                 {
-                                    <span class="badge bg-success">Available</span>
+                                    <span class="badge bg-success">Mevcut</span>
                                 }
                                 else
                                 {
-                                    <span class="badge bg-secondary">Sold</span>
+                                    <span class="badge bg-secondary">Satıldı</span>
                                 }
                             </td>
                             <td>@ticket.UserName</td>
@@ -57,7 +57,7 @@
         </div>
         <div class="card-footer">
             <a href="@Url.Action("Index", "Ticket", new { area = "Admin" })" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i> Back to List
+                <i class="fas fa-arrow-left"></i> Listeye Geri Dön
             </a>
         </div>
     </div>

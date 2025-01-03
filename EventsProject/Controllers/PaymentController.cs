@@ -22,7 +22,9 @@ namespace EventsProject.Controllers
             _paymentService = paymentService;
         }
         [HttpPost]
-        public async Task<IActionResult> SaveCard(int eventId, string cardHolderName,string cardNumber, string expiryDate, string cvv, bool saveCard,decimal price, int? selectedCardId, int eventTicketId)
+        public async Task<IActionResult> SaveCard(int eventId, string cardHolderName,
+ string cardNumber, string expiryDate, string cvv, bool saveCard,
+ decimal price, int? selectedCardId, int eventTicketId)
         {
             try
             {
@@ -118,10 +120,11 @@ namespace EventsProject.Controllers
 
                 _paymentService.TAdd(payment);
                 await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Bilet alma işleminiz başarıyla tamamlandı!";
+               
+                return RedirectToAction("Tickets", "Dashboard", new { area = "Member" });
 
-                return Ok("Bilet başarıyla satın alındı.");
             }
-
             catch (Exception ex)
             {
                 return BadRequest($"Bilet satın alınırken bir hata oluştu: {ex.Message}");

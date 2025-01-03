@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.EventsTickets>
 
 @{
-    ViewData["Title"] = "Event Tickets";
+    ViewData["Title"] = "Etkinlik Biletleri";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -78,7 +78,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">Event Tickets Management</h5>
+            <h5 class="card-title">Etkinlik Biletleri Yönetimi</h5>
             <a href="@Url.Action("Create", "Ticket", new { area = "Admin" })" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Yeni Bilet Ekle
             </a>
@@ -87,13 +87,13 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Ticket ID</th>
-                        <th>Event Title</th>
-                        <th>Ticket Name</th>
-                        <th>Ticket Capacity</th>
-                        <th>Sold Count</th>
-                        <th>Price</th>
-                        <th>Actions</th>
+                        <th>Bilet ID</th>
+                        <th>Etkinlik Başlığı</th>
+                        
+                        <th>Bilet Kapasitesi</th>
+                        <th>Satılan Adet</th>
+                        <th>Fiyat</th>
+                        <th>İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -103,23 +103,21 @@
                         {
                             <tr>
                                 <td>@ticket.EventsTicketId</td>
-                                <td>@(string.IsNullOrEmpty(ticket.EventTitle) ? "N/A" : ticket.EventTitle)</td>
-                                <td>@ticket.Name</td>
+                                <td>@(string.IsNullOrEmpty(ticket.EventTitle) ? "Yok" : ticket.EventTitle)</td>
+                                
                                 <td>@ticket.TicketCapacity</td>
                                 <td>@ticket.SoldCount</td>
                                 <td>@ticket.Price.ToString("C")</td>
                                 <td class="action-icons">
-                                    <a href="@Url.Action("Details", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })" title="Details">
+                                    <a href="@Url.Action("Details", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })" title="Detaylar">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="@Url.Action("Edit", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })" title="Edit">
+                                    <a href="@Url.Action("Edit", "Ticket", new { id = ticket.EventsTicketId, area = "Admin" })" title="Düzenle">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="setDeleteId(@ticket.EventsTicketId)" title="Delete">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="setDeleteId(@ticket.EventsTicketId)" title="Sil">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-
-
                                 </td>
                             </tr>
                         }
@@ -127,7 +125,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="7" class="text-center">No event tickets found.</td>
+                            <td colspan="7" class="text-center">Hiç etkinlik bileti bulunamadı.</td>
                         </tr>
                     }
                 </tbody>
@@ -135,6 +133,7 @@
         </div>
     </div>
 </div>
+
 <!-- Onay Modalı -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
