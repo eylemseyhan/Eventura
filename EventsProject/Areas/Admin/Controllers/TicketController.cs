@@ -6,7 +6,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using QRCoder;
+using System.IO;
+using EventsProject.Areas.Member.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using TicketDetailDto = EventsProject.Areas.Admin.Models.TicketDetailDto;
 
 namespace EventsProject.Areas.Admin.Controllers
 {
@@ -414,5 +418,66 @@ namespace EventsProject.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public IActionResult TicketInfo(int ticketId)
+        {
+            try
+            {
+                // Ticket'ı al
+                var ticket = _ticketService.TGetByID(ticketId);
+                if (ticket == null)
+                {
+                    _logger.LogWarning($"Ticket not found with ID: {ticketId}");
+                    return NotFound();
+                }
+
+                // Etkinliği al
+                var eventDetails = _eventService.TGetByID(ticket.EventId);
+                if (eventDetails == null)
+                {
+                    _logger.LogWarning($"Event not found for Ticket ID: {ticketId}");
+                    return NotFound();
+                }
+
+                // Kullanıcı adı
+                var userName = ticket.User?.UserName ?? "Not Assigned";
+
+                // Görüntülenecek model
+                var viewModel = new TicketInfoViewModel
+                {
+                    EventName = eventDetails.Title,
+                    EventDate = eventDetails.EventDate,
+                    UserName = userName,
+                    TicketNumber = ticket.TicketNumber
+                };
+
+                return View(viewModel);  // TicketInfo.cshtml sayfasına yönlendiriyoruz
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error occurred while getting ticket info for ID: {ticketId}");
+                TempData["Error"] = "An error occurred while retrieving ticket information.";
+                return RedirectToAction("Index");
+            }
+        }
+
+
+        public IActionResult GenerateQRCode(int ticketId)
+        {
+            var qrCodeData = $"TicketID: {ticketId}"; // QR kod içeriği
+            using (var qrGenerator = new QRCodeGenerator())
+            {
+                var qrCode = qrGenerator.CreateQrCode(qrCodeData, QRCodeGenerator.ECCLevel.Q);
+                using (var qrCodeBitmap = new BitmapByteQRCode(qrCode))
+                {
+                    var qrCodeBytes = qrCodeBitmap.GetGraphic(20);
+                    return File(qrCodeBytes, "image/png");
+                }
+            }
+        }
     }
+
+
+   
+
 }

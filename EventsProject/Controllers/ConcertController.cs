@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -8,6 +9,13 @@ namespace EventsProject.Controllers
     public class ConcertController : Controller
     {
 
+        private readonly IPaymentService paymentService;
+
+        public ConcertController(IPaymentService paymentService)
+        {
+            this.paymentService = paymentService;
+        }
+
         Context db = new Context();
         public IActionResult Index()
         {
@@ -16,14 +24,20 @@ namespace EventsProject.Controllers
             return View(values);
         }
 
+        // Detayları Görüntüleme
         public IActionResult Details(int id)
         {
             var eventDetail = db.Events.FirstOrDefault(x => x.EventId == id);
             if (eventDetail == null)
             {
-                return NotFound(); // Etkinlik bulunamazsa 404 döndür
+                return NotFound("Etkinlik bulunamadı.");
             }
-            return View(eventDetail); // Bu view bir Event nesnesi bekliyor
+
+            // Bilet fiyatını almak için GetEventTicketPrice metodunu çağırıyoruz
+            decimal ticketPrice = paymentService.GetEventTicketPrice(id);
+            ViewBag.TicketPrice = ticketPrice;
+
+            return View(eventDetail);
         }
 
         [HttpPost]

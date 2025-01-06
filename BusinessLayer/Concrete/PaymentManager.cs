@@ -21,7 +21,7 @@ namespace BusinessLayer.Concrete
 
         public decimal GetEventTicketPrice(int eventId)
         {
-            // Dal katmanında fiyatı almayı çağırıyoruz
+            
             return _paymentDal.GetEventTicketPrice(eventId);
         }
 

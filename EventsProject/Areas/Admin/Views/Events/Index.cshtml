@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <div class="card-title">Etkinlik Listesi</div>
-                    <a href="@Url.Action("Create", "Events", new { area = "Admin" })" class="btn btn-warning">
+                    <a href="@Url.Action("Create", "Events", new { area = "Admin" })" class="btn btn-primary">
                         <i class="fas fa-plus"></i> Ekle
                     </a>
                 </div>
@@ -20,11 +20,9 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-
-                                <th scope="col">Category Id</th>
-                                <th scope="col">Artist Id</th>
+                                <th scope="col">Kategori</th>
+                                <th scope="col">Artist</th>
                                 <th scope="col">Başlık</th>
-                                <th scope="col">Açıklama</th>
                                 <th scope="col">Etkinlik Tarihi</th>
                                 <th scope="col">Konum</th>
                                 <th scope="col">Resim</th>
@@ -34,12 +32,10 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
-
-                                    <td>@item.CategoryId</td>
-                                    <td>@item.ArtistId</td>
+                                <tr data-id="@item.EventId" class="event-row">
+                                    <td>@item.Category.Name</td>
+                                    <td>@item.Artist.Name</td>
                                     <td>@item.Title</td>
-                                    <td>@item.Description</td>
                                     <td>@item.EventDate.ToString("dd MMM yyyy")</td>
                                     <td>@item.Location</td>
                                     <td>
@@ -54,19 +50,21 @@
                                     </td>
                                     <td>
                                         <!-- Detay -->
-                                        <a href="@Url.Action("Details", "Events", new { area = "Admin", id = item.EventId })" title="Detay" style="margin-right: 5px;">
-                                            <i class="fas fa-eye" style="font-size: 1.2rem; color: #007bff;"></i>
-                                        </a>
                                         <!-- Güncelle -->
                                         <a href="@Url.Action("Edit", "Events", new { area = "Admin", id = item.EventId })" title="Güncelle" style="margin-right: 5px;">
                                             <i class="fas fa-edit" style="font-size: 1.2rem; color: #28a745;"></i>
-                                        </a>
-                                        <!-- Sil -->
-                                        <a href="@Url.Action("Delete", "Events", new { area = "Admin", id = item.EventId })" title="Sil" onclick="return confirm('Bu etkinliği silmek istediğinize emin misiniz?');">
-                                            <i class="fas fa-trash" style="font-size: 1.2rem; color: #dc3545;"></i>
-                                        </a>
-                                    </td>
+                                            <form action="@Url.Action("Delete", "Events", new { area = "Admin" })" method="post" style="display:inline;" onsubmit="return confirm('Bu etkinliği silmek istediğinize emin misiniz?');">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@item.EventId" />
+                                                <button type="submit" style="background:none; border:none; padding:0; cursor:pointer;">
+                                                    <i class="fas fa-trash" style="font-size: 1.2rem; color: #dc3545;"></i>
+                                                </button>
 
+                                            </form>
+
+
+
+                                    </td>
                                 </tr>
                             }
                         </tbody>
@@ -76,3 +74,14 @@
         </div>
     </div>
 </div>
+<script>
+    const baseUrl = '@Url.Action("Details", "Events", new { area = "Admin" })' + '/';
+    document.querySelectorAll('.event-row').forEach(row => {
+        row.addEventListener('dblclick', function () {
+            var eventId = this.getAttribute('data-id');
+            window.location.href = baseUrl + eventId;
+        });
+    });
+
+
+</script>

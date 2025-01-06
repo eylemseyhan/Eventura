@@ -14,7 +14,7 @@ namespace DataAccessLayer.EntityFramework
     {
         public AppUser GetByID(int id)
         {
-            using (var context = new Context()) // DbContext'inizin adı
+            using (var context = new Context()) 
             {
                 return context.Users.FirstOrDefault(u => u.Id == id);
             }

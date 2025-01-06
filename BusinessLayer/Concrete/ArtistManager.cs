@@ -31,13 +31,13 @@ namespace BusinessLayer.Concrete
         public void TAdd(Artist artist)
         {
 
-            // Burada validasyon ve diğer işlemler yapılabilir.
+           
             _artistDal.Insert(artist);
         }
 
         public void TDelete(Artist artist)
         {
-            // Sanatçıyı silme işlemi
+            
             _artistDal.Delete(artist);
         }
         public Artist TGetByID(int id)
@@ -60,7 +60,7 @@ namespace BusinessLayer.Concrete
 
         public void TUpdate(Artist artist)
         {
-            // Sanatçıyı güncelleme işlemi    
+            
             _artistDal.Update(artist);
         }
     }

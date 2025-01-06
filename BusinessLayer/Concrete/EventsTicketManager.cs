@@ -24,28 +24,28 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(EventsTickets t)
         {
-            _eventsTicketDal.Insert(t); // Insert işlemi
+            _eventsTicketDal.Insert(t); 
         }
 
         public void TDelete(EventsTickets t)
         {
-            _eventsTicketDal.Delete(t); // Delete işlemi
+            _eventsTicketDal.Delete(t);
         }
 
         public EventsTickets TGetByID(int id)
         {
-            return _eventsTicketDal.GetByID(id); // ID'ye göre bilet getirme
+            return _eventsTicketDal.GetByID(id); 
         }
 
-        // IEventsTicketsService arayüzündeki TGetList metodunun implementasyonu
+        
         public List<EventsTickets> TGetList()
         {
-            return _eventsTicketDal.GetList();  // DAL'daki GetList metodunu çağırıyoruz
+            return _eventsTicketDal.GetList();  
         }
 
         public void TUpdate(EventsTickets t)
         {
-            _eventsTicketDal.Update(t); // Güncelleme işlemi
+            _eventsTicketDal.Update(t); 
         }
 
         public List<Ticket> GetTicketsByEventsTicketId(int eventsTicketId)
@@ -53,7 +53,7 @@ namespace BusinessLayer.Concrete
             
             return _eventsTicketDal.GetTicketsByEventsTicketId(eventsTicketId);
         }
-        // EventId'ye göre EventsTickets döndürür
+        
         public List<EventsTickets> GetEventsTicketsByEventId(int eventId)
         {
             return _eventsTicketDal.GetEventsTicketsByEventId(eventId);

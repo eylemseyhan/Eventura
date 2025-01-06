@@ -22,7 +22,7 @@ namespace BusinessLayer.Concrete
 
         public void TUpdate(Category category)
         {
-            _categoryDal.Update(category); // Kategoriyi güncelleme
+            _categoryDal.Update(category); 
         }
 
         public void TDelete(Category category)
@@ -46,18 +46,18 @@ namespace BusinessLayer.Concrete
 
         public List<Category> TGetList()
         {
-            return _categoryDal.GetList();  // Kategorilerin tüm listesini al
+            return _categoryDal.GetList();  
         }
 
-        // GetCategories metodu TGetList metodu üzerinden kategori listesini döndürüyor
+       
         public List<Category> GetCategories()
         {
-            return TGetList();  // Burada zaten var olan TGetList metodunu kullanıyoruz
+            return TGetList();
         }
 
         public List<string> GetCategoryNames()
         {
-            // Kategorilerin sadece isimlerini al
+          
             return _categoryDal.GetList().Select(c => c.Name).ToList();
         }
 

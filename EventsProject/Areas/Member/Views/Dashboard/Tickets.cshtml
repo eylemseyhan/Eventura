@@ -1,6 +1,5 @@
 ﻿@model List<EventsProject.Areas.Member.Models.TicketEventViewModel>
 
-
 @{
     ViewData["Title"] = "Tickets";
     Layout = "~/Areas/Member/Views/Shared/_MemberDashboardLayout.cshtml";
@@ -8,20 +7,16 @@
 
 <h1 class="modern-heading">Biletlerim</h1>
 
-
-    <!-- Loop through events -->
-    @if (Model != null && Model.Any())
-    {
-        <div class="event-list">
-            @foreach (var item in Model)
-            {
-                <div class="event-item">
-                    <div class="item-right">
-                        <h2 class="num">@item.EventDate.Day</h2>
-                        <p class="day">@item.EventDate.ToString("MMM")</p>
-                   
-                        
-                    </div>
+@if (Model != null && Model.Any())
+{
+    <div class="event-list">
+        @foreach (var item in Model)
+        {
+            <div class="event-item" data-event-name="@item.EventName" data-event-date="@item.EventDate" data-qr-url="https://api.qrserver.com/v1/create-qr-code/?data=@item.TicketId&size=150x150">
+                <div class="item-right">
+                    <h2 class="num">@item.EventDate.Day</h2>
+                    <p class="day">@item.EventDate.ToString("MMM")</p>
+                </div>
                 <div class="dots-vertical">
                     @for (int i = 0; i < 20; i++)
                     {
@@ -29,106 +24,94 @@
                     }
                 </div>
 
-                    <div class="item-left">
-                        <p class="event">@item.EventCategory</p>
-                        <h2 class="title">@item.EventName</h2>
-                        <div class="sce">
-                            <div class="icon">
-                                <i class="fa fa-table"></i>
-                            </div>
-                            <p>@item.EventDate.ToString("dddd dd MMMM yyyy")</p>
+                <div class="item-left">
+                    <p class="event">@item.EventCategory</p>
+                    <h2 class="title">@item.EventName</h2>
+                    <div class="sce">
+                        <div class="icon">
+                            <i class="fa fa-table"></i>
                         </div>
-                   
-                        <div class="fix"></div>
-                        <div class="loc">
-                            <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome 5 ve sonrası -->
-
-                            </div>
-                            <p>@item.EventLocation</p>
-                        </div>
-                        <div class="fix"></div>
-                        
+                        <p>@item.EventDate.ToString("dddd dd MMMM yyyy")</p>
                     </div>
+                    <div class="fix"></div>
+                    <div class="loc">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>@item.EventLocation</p>
+                    </div>
+                    <div class="fix"></div>
+
+                    <!-- Modal Trigger Button -->
+                    <button type="button" class="btn btn-info">View Ticket Details</button>
                 </div>
-            }
+            </div>
+        }
+    </div>
+
+
+}
+else
+{
+    <p>No events available.</p>
+}
+
+<script>
+    document.querySelectorAll('.event-item .btn-info').forEach(button => {
+        button.addEventListener('click', function () {
+            const parent = this.closest('.event-item');
+            const eventTitle = parent.getAttribute('data-event-name');
+            const eventDate = parent.getAttribute('data-event-date');
+            const qrUrl = parent.getAttribute('data-qr-url');
+
+            document.getElementById('eventTitle').textContent = eventTitle;
+          
+            document.getElementById('qrCodeImage').src = qrUrl;
+
+            // Modalı göster
+            document.getElementById('ticketModal').style.display = 'block';
+        });
+    });
+
+    // Modalı kapatma işlemi
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        document.getElementById('ticketModal').style.display = 'none';
+    });
+
+    // Modal dışında bir yere tıklanırsa modalı kapat
+    window.addEventListener('click', function (event) {
+        if (event.target == document.getElementById('ticketModal')) {
+            document.getElementById('ticketModal').style.display = 'none';
+        }
+    });
+</script>
+
+
+<!-- Modal -->
+<div id="ticketModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="eventTitle"></h2>
+        <p id="eventDate"></p>
+        <div id="qrCodeContainer">
+            <img id="qrCodeImage" src="" alt="QR Code">
         </div>
-    }
-    else
-    {
-        <p>No events available.</p>
-    }
-
-
+    </div>
+</div>
 
 <!-- Bootstrap JS ve jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Modal -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="successModalLabel">Başarılı</h5>
-                <!-- Çarpı işareti -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                @if (TempData["SuccessMessage"] != null)
-                {
-                    <p>@TempData["SuccessMessage"]</p>
-                }
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Kapat</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Eğer TempData'dan mesaj varsa, modal'ı göster
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <text>
-            $(document).ready(function () {
-                $('#successModal').modal('show');
-            });
-        </text>
-    }
-</script>
 
 
 
 <style>
-
-    .btn-close {
-        background-color: transparent; /* Arka planı şeffaf */
-        border: none; /* Kenarlık yok */
-    }
-
-    .modal-content {
-        border-color: #28a745 !important; /* Modal kenarları için yeşil */
-    }
-    .btn-close {
-        background-color: #28a745 !important; /* Yeşil renginde buton */
-    }
-
-    .btn-secondary {
-        background-color: #28a745 !important; /* Yeşil renk */
-        border-color: #28a745 !important;
-    }
-
-    .modal-content {
-        border-color: #28a745 !important; /* Modal kenarları için yeşil */
-    }
     .dots-vertical {
         display: flex;
         flex-direction: column; /* Dikey hizalama */
         justify-content: center; /* Dikey eksende ortalama */
         align-items: center; /* Yatay eksende ortalama */
-        
         height: 100%; /* Yüksekliği ebeveyne göre ayarla */
     }
 
@@ -141,7 +124,43 @@
             transition: background-color 0.3s ease; /* Hover efekti */
         }
 
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 15% auto;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    #qrCodeContainer {
+        margin-top: 20px;
+    }
 
     .modern-heading {
         margin-top: 200px; /* Daha aşağıda konumlandır */
@@ -151,31 +170,6 @@
         color: #333; /* Yazı rengi */
         text-align: center; /* Ortala */
         letter-spacing: 1px; /* Harf aralığı */
-    }
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background: #f4f4f4;
-        font-family: 'Cabin', sans-serif;
-    }
-
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .upcomming {
-        font-size: 45px;
-        text-transform: uppercase;
-        border-left: 14px solid rgba(255, 235, 59, 0.78);
-        padding-left: 12px;
-        margin: 18px 8px;
     }
 
     .event-list {
@@ -211,23 +205,6 @@
             text-align: center;
             font-size: 25px;
             color: #555;
-        }
-
-        .item-right .up-border, .item-right .down-border {
-            padding: 14px 15px;
-            background-color: #ddd;
-            border-radius: 50%;
-            position: absolute;
-        }
-
-        .item-right .up-border {
-            top: -8px;
-            right: -35px;
-        }
-
-        .item-right .down-border {
-            bottom: -13px;
-            right: -35px;
         }
 
     .item-left {
@@ -282,6 +259,4 @@
     .fix {
         clear: both;
     }
-
 </style>
-

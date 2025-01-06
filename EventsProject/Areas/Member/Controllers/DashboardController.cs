@@ -7,6 +7,7 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using BusinessLayer.Abstract;
 using EventsProject.Controllers;
+using QRCoder;
 using System.Globalization;
 namespace EventsProject.Areas.Member.Controllers
 {
@@ -14,8 +15,9 @@ namespace EventsProject.Areas.Member.Controllers
     [Authorize] // Sadece giriş yapmış kullanıcılar erişebilir
     public class DashboardController : Controller
     {
+        // private readonly EmailQrService _emailQrService;
         private readonly UserManager<AppUser> _userManager;
-        
+
         private readonly IEventService _eventService;
 
         Context db = new Context();
@@ -24,7 +26,7 @@ namespace EventsProject.Areas.Member.Controllers
         {
             _userManager = userManager;
             _eventService = eventService;
-
+            //_emailQrService = emailQrService;
         }
 
         // Dashboard ana sayfası
@@ -42,7 +44,7 @@ namespace EventsProject.Areas.Member.Controllers
                 Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
-                Image = user.Image ?? "/images/profiles/icons8-user-50.png" // Varsayılan profil resmi
+                Image = user.Image ?? "/images/default-profile.png" // Varsayılan profil resmi
             };
 
             return View(model);
@@ -66,6 +68,9 @@ namespace EventsProject.Areas.Member.Controllers
             return View(eventDetails); // Etkinlik detayları için view'a gönderiyoruz
         }
 
+        
+
+        // Kullanıcı biletleri sayfası
         public async Task<IActionResult> Tickets()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -97,12 +102,8 @@ namespace EventsProject.Areas.Member.Controllers
             return View(ticketsWithEvents);
         }
 
-
-
-
-
         // Kullanıcı favoriler sayfası
-
+        // Kullanıcı favoriler sayfası
         public async Task<IActionResult> Favorites()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -195,7 +196,103 @@ namespace EventsProject.Areas.Member.Controllers
             return RedirectToAction("Settings");
         }
 
-      
+        // Get method to display saved cards
+        public async Task<IActionResult> SavedCards()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            var savedCards = db.SavedCards.Where(sc => sc.UserId == user.Id).ToList();
+            return View(savedCards);
+        }
+
+        // Post method to add a new saved card
+        [HttpPost]
+        public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, string expiryDate, string cvv)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { area = "Member" });
+            }
+
+            // ExpiryDate'ı MM/YY formatında alıyoruz, bunu DateTime'a çeviriyoruz.
+            DateTime parsedExpiryDate;
+            if (!DateTime.TryParseExact(expiryDate, "MM/yy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedExpiryDate))
+            {
+                TempData["Error"] = "Geçerli bir son kullanım tarihi giriniz.";
+                return RedirectToAction("SavedCards");
+            }
+
+            // Tarihi UTC'ye dönüştürüyoruz (PostgreSQL'in UTC tarihini kabul ettiğinden emin oluyoruz)
+            if (parsedExpiryDate.Kind != DateTimeKind.Utc)
+            {
+                parsedExpiryDate = DateTime.SpecifyKind(parsedExpiryDate, DateTimeKind.Utc);
+            }
+
+            var savedCard = new SavedCard
+            {
+                CardHolderName = cardHolderName,
+                CardNumber = cardNumber.Replace(" ", ""), // Remove spaces from card number
+                ExpiryDate = parsedExpiryDate,  // UTC tarih olarak kaydediliyor
+                CVV = cvv,
+                UserId = user.Id
+            };
+
+            db.SavedCards.Add(savedCard);
+            await db.SaveChangesAsync();
+
+            TempData["CardAdded"] = "Kartınız başarıyla kaydedildi!";
+            return RedirectToAction("SavedCards");
+
+
+        }
+
+
+
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> UploadProfileImage(IFormFile ProfileImage)
+        {
+            var user = await _userManager.GetUserAsync(User); // Mevcut kullanıcıyı al
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            if (ProfileImage != null && ProfileImage.Length > 0)
+            {
+                // Yüklenen dosya adı için benzersiz bir isim oluştur
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ProfileImage.FileName);
+                var filePath = Path.Combine("wwwroot/images/profiles", uniqueFileName);
+
+                // Dosyayı belirtilen yola kaydet
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ProfileImage.CopyToAsync(stream);
+                }
+
+                // Kullanıcının eski resmi varsa, sunucudan sil
+                if (!string.IsNullOrEmpty(user.Image))
+                {
+                    var oldImagePath = Path.Combine("wwwroot", user.Image);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                // Yeni dosya yolunu Image özelliğine ata ve kullanıcıyı güncelle
+                user.Image = $"/images/profiles/{uniqueFileName}";
+                await _userManager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("Settings");
+        }
+
 
 
         [HttpPost]
@@ -251,74 +348,5 @@ namespace EventsProject.Areas.Member.Controllers
 
             return RedirectToAction("Settings");
         }
-
-        
-        public async Task<IActionResult> SavedCards()
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return RedirectToAction("SignIn", "Login", new { area = "Member" });
-            }
-
-            var savedCards = db.SavedCards.Where(sc => sc.UserId == user.Id).ToList();
-            return View(savedCards);
-        }
-        [HttpPost]
-        public async Task<IActionResult> AddSavedCard(string cardHolderName, string cardNumber, string expiryDate, string cvv)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return Json(new { success = false, redirectTo = Url.Action("SignIn", "Login", new { area = "Member" }) });
-            }
-
-            DateTime expiryDateTime;
-            // Tarihi "MM/yy" formatında parse et
-            if (DateTime.TryParseExact(expiryDate, "MM/yy", CultureInfo.InvariantCulture, DateTimeStyles.None, out expiryDateTime))
-            {
-                // "MM/YY" formatında yıl ve ay alındı, ancak gün ve saat bilgisi yok.
-                // Bu nedenle, tarih nesnesine 1. günü ve saat 00:00 ekliyoruz
-                expiryDateTime = new DateTime(expiryDateTime.Year, expiryDateTime.Month, 1, 0, 0, 0);
-
-                // Zaman dilimini UTC olarak ayarlıyoruz
-                if (expiryDateTime.Kind == DateTimeKind.Unspecified)
-                {
-                    expiryDateTime = DateTime.SpecifyKind(expiryDateTime, DateTimeKind.Utc);
-                }
-
-                // SavedCard oluşturuluyor
-                var savedCard = new SavedCard
-                {
-                    CardHolderName = cardHolderName,
-                    CardNumber = cardNumber.Replace(" ", ""), // Boşlukları temizle
-                    ExpiryDate = expiryDateTime, // UTC zamanı kaydediyoruz
-                    CVV = cvv,
-                    UserId = user.Id
-                };
-
-                db.SavedCards.Add(savedCard);
-                await db.SaveChangesAsync();
-            }
-            else
-            {
-                return Json(new { success = false, message = "Geçerli bir son kullanma tarihi girin." });
-            }
-
-            // Yönlendirme işlemi burada yapılır
-            return RedirectToAction("SavedCards", "Dashboard", new { area = "Member" });
-        }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

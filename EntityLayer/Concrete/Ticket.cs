@@ -31,6 +31,8 @@ namespace EntityLayer.Concrete
         public virtual Event Event { get; set; }
 
         public virtual Payment Payment { get; set; }
+
+
  
 
         public virtual AppUser User { get; set; }

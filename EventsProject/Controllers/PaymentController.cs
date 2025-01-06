@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using QRCoder;
 using System.Security.Claims;
 
 namespace EventsProject.Controllers
@@ -169,5 +170,28 @@ namespace EventsProject.Controllers
 
             return Json(new { success = false, message = "Kart bulunamadı." });
         }
+
+        [HttpGet]
+        public IActionResult GenerateQR(int ticketId)
+        {
+            // Here we simulate the QR code generation logic
+            string qrData = $"Ticket-{ticketId}-QR";
+
+            using (var qrGenerator = new QRCodeGenerator())
+            {
+                var qrCodeData = qrGenerator.CreateQrCode(qrData, QRCodeGenerator.ECCLevel.Q);
+                // var qrCode = new QRCode(qrCodeData);
+                //  var qrCodeImage = qrCode.GetGraphic(20); // Adjust size if necessary
+
+                using (var ms = new System.IO.MemoryStream())
+                {
+                    // qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    byte[] byteImage = ms.ToArray();
+                    return File(byteImage, "image/png");
+                }
+            }
+        }
+
+
     }
 }

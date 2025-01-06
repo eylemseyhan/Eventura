@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
 {
-    public class CityManager : ICityService, IGenericService<City>  // IGenericService<City> eklendi
+    public class CityManager : ICityService, IGenericService<City>  
     {
         private readonly ICityDal _cityDal;
 
@@ -25,38 +25,38 @@ namespace BusinessLayer.Concrete
 
         public List<string> GetCityNames()
         {
-            // Kategorilerin sadece isimlerini al
+           
             return _cityDal.GetList().Select(c => c.CityName).ToList();
         }
 
-        // TAdd metodunu implement et
+       
         public void TAdd(City city)
         {
-            _cityDal.Insert(city);  // Veritabanına şehir ekle
+            _cityDal.Insert(city);  
         }
 
-        // TDelete metodunu implement et
+       
         public void TDelete(City city)
         {
-            _cityDal.Delete(city);  // Şehri sil
+            _cityDal.Delete(city); 
         }
 
-        // TUpdate metodunu implement et
+       
         public void TUpdate(City city)
         {
-            _cityDal.Update(city);  // Şehir bilgilerini güncelle
+            _cityDal.Update(city); 
         }
 
-        // TGetList metodunu implement et
+      
         public List<City> TGetList()
         {
-            return _cityDal.GetList();  // Şehirlerin listesini al
+            return _cityDal.GetList(); 
         }
 
-        // TGetByID metodunu implement et
+       
         public City TGetByID(int id)
         {
-            return _cityDal.GetByID(id);  // Şehir id'ye göre bir şehir getir
+            return _cityDal.GetByID(id);  
         }
     }
 }

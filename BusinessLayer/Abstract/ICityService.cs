@@ -10,7 +10,7 @@ namespace BusinessLayer.Abstract
 {
     public interface ICityService : IGenericService<City>
     {
-        List<City> GetCities();  // Şehirleri almak için metod
+        List<City> GetCities(); 
         List<string> GetCityNames();
     }
 }

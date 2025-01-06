@@ -6,6 +6,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface ICityDal : IGenericDal<City>
     {
-        List<City> GetAllCities();  // Şehirleri almak için metod
+        List<City> GetAllCities();  
     }
 }

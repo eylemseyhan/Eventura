@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -7,6 +8,13 @@ namespace EventsProject.Controllers
 {
     public class TheaterController : Controller
     {
+
+        private readonly IPaymentService paymentService;
+
+        public TheaterController(IPaymentService paymentService)
+        {
+            this.paymentService = paymentService;
+        }
         Context db = new Context();  // DbContext'i başlatıyoruz
 
         public IActionResult Index()

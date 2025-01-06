@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -7,6 +8,13 @@ namespace EventsProject.Controllers
 {
     public class KidsEventController : Controller
     {
+
+        private readonly IPaymentService paymentService;
+
+        public KidsEventController(IPaymentService paymentService)
+        {
+            this.paymentService = paymentService;
+        }
         Context db = new Context();
         public IActionResult Index()
         {

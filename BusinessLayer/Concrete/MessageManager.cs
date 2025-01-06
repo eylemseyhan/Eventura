@@ -24,25 +24,25 @@ namespace BusinessLayer.Concrete
 
         public Message TGetByID(int id)
         {
-            // ID'ye göre mesaj getirme işlemi
+            
             return _MessageDal.GetByID(id);
         }
 
         public List<Message> TGetList()
         {
-            // Mesaj listeleme işlemi
+            
             return _MessageDal.GetList();
         }
 
         public void TUpdate(Message Message)
         {
-            // Burada validasyon ve diğer işlemler yapılabilir.
+            
             _MessageDal.Update(Message);
         }
 
         public void TDelete(Message Message)
         {
-            // Burada validasyon ve diğer işlemler yapılabilir.
+            
             _MessageDal.Delete(Message);
         }
     }

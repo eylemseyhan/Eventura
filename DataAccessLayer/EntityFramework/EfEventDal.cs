@@ -10,23 +10,22 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfEventDal : GenericRepository<Event>, IEventDal
     {
-        // Şehre göre etkinlikleri getirme
+        
         public List<Event> GetEventsByCity(int cityId)
         {
             using var context = new Context();
-            // Sadece cityId kullanarak sorgulama yapıyoruz
+      
             return context.Events.Where(e => e.CityId == cityId).ToList();
         }
 
-        // Kategoriye göre etkinlikleri getirme
+  
         public List<Event> GetEventsByCategory(int categoryId)
         {
             using var context = new Context();
-            // Sadece categoryId kullanarak sorgulama yapıyoruz
+         
             return context.Events.Where(e => e.CategoryId == categoryId).ToList();
         }
 
-        // Hem şehre hem de kategoriye göre etkinlikleri getirme
         public List<Event> GetEventsByCityAndCategory(int cityId, int categoryId)
         {
             using var context = new Context();

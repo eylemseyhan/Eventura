@@ -6,10 +6,10 @@ namespace BusinessLayer.Abstract
     public interface IEventsTicketsService : IGenericService<EventsTickets>
     {
         
-        List<EventsTickets> TGetList(); // Sadece metod imzası
-        void TAdd(EventsTickets t); // Yeni ticket ekler
+        List<EventsTickets> TGetList(); 
+        void TAdd(EventsTickets t); 
         List<Ticket> GetTicketsByEventsTicketId(int eventsTicketId);
-        List<EventsTickets> GetEventsTicketsByEventId(int eventId); // EventId'ye göre EventsTickets döndürür
+        List<EventsTickets> GetEventsTicketsByEventId(int eventId); 
 
 
 

@@ -9,6 +9,7 @@ namespace EventsProject.Controllers
     public class Stand_UpController : Controller
     {
 
+
         private readonly IPaymentService paymentService;
 
         public Stand_UpController(IPaymentService paymentService)
