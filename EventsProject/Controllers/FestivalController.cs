@@ -23,16 +23,21 @@ namespace EventsProject.Controllers
             var theaters = db.Events.Where(e => e.CategoryId == 5).ToList();
             return View(theaters);
         }
+        // Detayları Görüntüleme
         public IActionResult Details(int id)
         {
             var eventDetail = db.Events.FirstOrDefault(x => x.EventId == id);
             if (eventDetail == null)
             {
-                return NotFound(); // Etkinlik bulunamazsa 404 döndür
+                return NotFound("Etkinlik bulunamadı.");
             }
-            return View(eventDetail); // Bu view bir Event nesnesi bekliyor
-        }
 
+            // Bilet fiyatını almak için GetEventTicketPrice metodunu çağırıyoruz
+            decimal ticketPrice = paymentService.GetEventTicketPrice(id);
+            ViewBag.TicketPrice = ticketPrice;
+
+            return View(eventDetail);
+        }
 
         [HttpPost]
         public IActionResult AddToFavorites(int? eventId)

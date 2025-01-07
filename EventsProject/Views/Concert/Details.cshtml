@@ -29,86 +29,98 @@
         <div class="dorne-load"></div>
     </div>
 
-    <section class="event-detail-container">
-        <div class="event-detail-wrapper">
-
-            <!-- Event Image -->
-            @if (!string.IsNullOrEmpty(Model.ImageUrl))
-            {
-                <div class="event-image">
-                    <img src="@Model.ImageUrl" alt="Event Image" class="img-fluid">
-                </div>
-            }
-
-            <!-- Event Details -->
-            <div class="event-content">
-                <h2 class="event-title">@Model.Title</h2>
-                <div class="event-overview">
-                    <p class="event-description">@Model.Description</p>
-                    <p class="event-details">@Model.Details</p>
-                    <p class="event-date">@Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</p>
-                </div>
-
-                <!-- Event Location -->
-                <div class="event-location">
-                    <strong>Konum:</strong> @Model.Location
-                </div>
-
-                <!-- Google Map -->
-                <div class="event-map">
-                    <h3>Haritada Göster</h3>
-                    @if (!string.IsNullOrEmpty(Model.LocationUrl))
-                    {
-                        <iframe src="@Model.LocationUrl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    }
-                    else
-                    {
-                        <p>Harita bulunamadı.</p>
-                    }
-                </div>
-            </div>
-
-            <!-- Sidebar and Buy Ticket -->
-            <div class="event-sidebar">
-                <div class="listing-sidebar">
-
-                    <div class="listing-verify">
-                        <!-- Giriş Yap ve Bilet Al Butonu -->
-                        <!-- Giriş Yap ve Bilet Al Butonu -->
-                        @if (User.Identity.IsAuthenticated)
+    <section class="event-detail-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sol Kolon: Resim -->
+                <div class="col-lg-5 mb-4">
+                    <div class="event-image-container">
+                        @if (!string.IsNullOrEmpty(Model.ImageUrl))
                         {
-                            <button class="btn dorne-btn w-100 opening-hours-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#paymentModal"
-                                    data-eventid="@Model.EventId"
-                                    data-price="@ViewBag.TicketPrice">
-                                <!-- Fiyatı data-price olarak ekliyoruz -->
-                                <i class="fa fa-check pr-3"></i> Bilet Al (@ViewBag.TicketPrice.ToString("C"))
-                            </button>
+                            <img src="@Model.ImageUrl" alt="Event Image" class="img-fluid rounded shadow">
+                        }
+                        <!-- Sidebar and Buy Ticket -->
+                        <div class="event-sidebar">
+                            <div class="listing-sidebar">
+
+                                <div class="listing-verify">
+                                    <!-- Giriş Yap ve Bilet Al Butonu -->
+                                    <!-- Giriş Yap ve Bilet Al Butonu -->
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <button class="btn dorne-btn w-100 opening-hours-btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#paymentModal"
+                                                data-eventid="@Model.EventId"
+                                                data-price="@ViewBag.TicketPrice">
+                                            <!-- Fiyatı data-price olarak ekliyoruz -->
+                                            <i class="fa fa-check pr-3"></i> Bilet Al (@ViewBag.TicketPrice.ToString("C"))
+                                        </button>
 
 
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("SignIn", "Login", new { area = "Member" })" class="btn dorne-btn w-100">
+                                            <i class="fa fa-sign-in pr-3"></i> Giriş Yap ve Bilet Al
+                                        </a>
+                                    }
+
+                                </div>
+
+                                <!-- Opening Hours Widget -->
+                                <div class="opening-hours-widget mt-3">
+                                    <h6 style="color:white">Açılış Saati</h6>
+                                    <ul class="opening-hours text-center">
+                                        <li>
+                                            <p style="color:white">@Model.EventDate.ToString("HH:mm")</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Sağ Kolon: İçerik -->
+                <div class="col-lg-7">
+                    <div class="event-content">
+                        <h2 class="event-title mb-4">@Model.Title</h2>
+
+                        <div class="event-overview mb-4">
+                            <div class="event-description mb-3">@Model.Description</div>
+                            <div class="event-details mb-3">@Model.Details</div>
+                            <div class="event-date">
+                                @Model.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))
+                            </div>
+                        </div>
+
+                        <div class="event-location mb-4">
+                            <strong>Konum:</strong> @Model.Location
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harita - Tam Genişlik -->
+                <div class="col-12 mt-4">
+                    <div class="map-container">
+                        <h3 class="mb-3">Haritada Göster</h3>
+                        @if (!string.IsNullOrEmpty(Model.LocationUrl))
+                        {
+                            <div class="ratio ratio-16x9">
+                                <iframe src="@Model.LocationUrl" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
                         }
                         else
                         {
-                            <a href="@Url.Action("SignIn", "Login", new { area = "Member" })" class="btn dorne-btn w-100">
-                                <i class="fa fa-sign-in pr-3"></i> Giriş Yap ve Bilet Al
-                            </a>
+                            <p>Harita bulunamadı.</p>
                         }
-
                     </div>
-
-                    <!-- Opening Hours Widget -->
-                    <div class="opening-hours-widget mt-3">
-                        <h6 style="color:white">Açılış Saati</h6>
-                        <ul class="opening-hours text-center">
-                            <li>
-                                <p style="color:white">@Model.EventDate.ToString("HH:mm")</p>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
-            </div>
+
+           
         </div>
     </section>
 

@@ -34,7 +34,7 @@
     <link href="~/darkpan-1.0.0/css/style.css" rel="stylesheet">
 </head>
 
-<body style="background-color: darkgrey;">
+<body style="background-color:  #333333;">
     <div class="container-fluid position-relative d-flex p-0">
        
        
@@ -54,13 +54,13 @@
                                 @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                             </div>
                             <div class="form-floating mb-3">
-                                <label>Kullanıcı Adı</label>
-                                <input type="text" name="Username" class="form-control" required />
+                                <input type="text" name="Username" class="form-control" id="username" placeholder="Kullanıcı Adı" required />
+                                <label for="username">Kullanıcı Adı</label>
                                 <span class="text-danger"></span>
                             </div>
                             <div class="form-floating mb-4">
-                                <label>Şifre</label>
-                                <input type="password" name="Password" class="form-control" required />
+                                <input type="password" name="Password" class="form-control" id="password" placeholder="Şifre" required />
+                                <label for="password">Şifre</label>
                                 <span class="text-danger"></span>
                             </div>
 

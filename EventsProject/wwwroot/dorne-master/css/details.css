@@ -63,13 +63,81 @@
 
 
     /* General Styles */
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Event Image Container */
+.event-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .event-image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
+
+/* Event Content */
+.event-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem;
+    color: rgba(139, 0, 0, 0.99);
+    font-weight: 600;
+}
+
+.event-description,
+.event-details {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.event-date {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(139, 0, 0, 0.99);
+}
+
+.event-location {
+    font-size: 1.1rem;
+}
+
+/* Map Container */
+.map-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+    .map-container h3 {
+        color: rgba(139, 0, 0, 0.99);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #333;
+}
 
     .event-detail-container {
         display: flex;
