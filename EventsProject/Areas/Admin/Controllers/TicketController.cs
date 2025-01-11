@@ -22,7 +22,8 @@ namespace EventsProject.Areas.Admin.Controllers
         private readonly IEventService _eventService;
         private readonly ILogger<TicketController> _logger;
 
-        public TicketController(IEventsTicketsService eventsTicketService, IEventService eventService, ILogger<TicketController> logger, ITicketService ticketService)
+        public TicketController(IEventsTicketsService eventsTicketService, IEventService eventService,
+            ILogger<TicketController> logger, ITicketService ticketService)
         {
             _eventsTicketService = eventsTicketService;
             _ticketService = ticketService;
@@ -40,15 +41,15 @@ namespace EventsProject.Areas.Admin.Controllers
                 var eventTitle = _eventService.TGetByID(ticket.EventId)?.Title;
                 ticket.EventTitle = eventTitle; // Görselde kullanmak için ekliyoruz
             }
-            
+
 
 
             return View(tickets);
         }
 
 
-       
-     
+
+
 
 
         [HttpGet]
@@ -69,6 +70,7 @@ namespace EventsProject.Areas.Admin.Controllers
 
             return View(model);
         }
+
         [HttpPost]
         public IActionResult Create(EventTicketCreateDto model)
         {
@@ -90,6 +92,7 @@ namespace EventsProject.Areas.Admin.Controllers
                 {
                     _logger.LogWarning(error);
                 }
+
                 return View(model); // Hatalar varsa formu geri gönder
             }
 
@@ -112,12 +115,12 @@ namespace EventsProject.Areas.Admin.Controllers
                     SoldCount = 0,
                 };
 
-                _eventsTicketService.TAdd(eventsTicket);  // EventsTicket ekle
+                _eventsTicketService.TAdd(eventsTicket); // EventsTicket ekle
 
                 var newEventsTicketId = eventsTicket.EventsTicketId;
 
                 // EventId'nin EventsTicket ile ilişkili olduğunu varsayıyoruz
-                var eventId = eventsTicket.EventId;  // eventsTicket ile ilişkilendirilmiş EventId'yi alıyoruz
+                var eventId = eventsTicket.EventId; // eventsTicket ile ilişkilendirilmiş EventId'yi alıyoruz
 
                 // Biletleri ekle
                 for (int i = 0; i < model.TicketCapacity; i++)
@@ -126,7 +129,7 @@ namespace EventsProject.Areas.Admin.Controllers
                     var ticketModel = new TicketCreateDto
                     {
                         EventsTicketId = newEventsTicketId, // EventTicketId'si burada kullanılıyor
-                        EventId = eventId,  // EventId burada atanmalı
+                        EventId = eventId, // EventId burada atanmalı
                         IsAvailable = true,
                         UserId = model.UserId // UserId null olabilir, o yüzden nullable bırakıyoruz
                     };
@@ -216,8 +219,6 @@ namespace EventsProject.Areas.Admin.Controllers
             return View(model);
         }
 
-
-
         [HttpPost]
         public IActionResult Edit(EventTicketEditDto model)
         {
@@ -241,6 +242,7 @@ namespace EventsProject.Areas.Admin.Controllers
                 {
                     _logger.LogWarning(error);
                 }
+
                 return View(model); // Hatalar varsa formu geri gönder
             }
 
@@ -272,8 +274,8 @@ namespace EventsProject.Areas.Admin.Controllers
 
                     for (int i = 0; i < capacityDifference; i++)
                     {
-                        
-                       
+
+
 
                         var ticket = new Ticket
                         {
@@ -356,69 +358,46 @@ namespace EventsProject.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
         }
-        [HttpGet]
+
+        [HttpPost]
         public IActionResult Delete(int id)
-        {
-            // Retrieve the EventsTickets by ID
-            var eventsTicket = _eventsTicketService.TGetByID(id);
-            if (eventsTicket == null)
-            {
-                _logger.LogWarning($"Etkinlik bileti bulunamadı: {id}");
-                return RedirectToAction("Index");
-            }
-
-            // Create a view model for confirmation
-            var model = new EventTicketEditDto
-            {
-                EventsTicketId = eventsTicket.EventsTicketId,
-                EventId = eventsTicket.EventId,
-                Name = eventsTicket.Name,
-                Price = eventsTicket.Price,
-                TicketCapacity = eventsTicket.TicketCapacity
-            };
-
-            return View(model);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
         {
             try
             {
-                // Event ticket al
+                // Get the events ticket
                 var eventsTicket = _eventsTicketService.TGetByID(id);
                 if (eventsTicket == null)
                 {
-                    _logger.LogWarning($"Silinecek etkinlik bileti bulunamadı: {id}");
-                    return RedirectToAction("Index");
+                    _logger.LogWarning($"EventsTicket not found with ID: {id}");
+                    return NotFound();
                 }
 
-                // IsAvailable olan biletleri al
-                var availableTickets = _ticketService.TGetList()
-                    .Where(t => t.EventsTicketId == id && t.IsAvailable)
-                    .ToList();
+                // Get all related tickets
+                var relatedTickets = _ticketService.GetTicketsByEventsTicketId(id);
 
-                // Available ticket'ları sil
-                if (availableTickets.Any())
+                // Delete all related tickets first
+                if (relatedTickets != null && relatedTickets.Any())
                 {
-                    _ticketService.TDeleteRange(availableTickets);
+                    foreach (var ticket in relatedTickets)
+                    {
+                        _ticketService.TDelete(ticket);
+                    }
                 }
 
-                // Sonra event ticket'ı sil
+                // Now delete the events ticket
                 _eventsTicketService.TDelete(eventsTicket);
 
-                _logger.LogInformation($"Etkinlik bileti ve ilişkili kullanılabilir biletler silindi: {id}");
+                TempData["Success"] = "Etkinlik bileti ve ilişkili tüm biletler başarıyla silindi.";
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Bilet silme işleminde hata oluştu: {id}");
-                ModelState.AddModelError("", "Bilet silme işlemi sırasında bir hata meydana geldi.");
+                _logger.LogError(ex, $"Error occurred while deleting EventsTicket with ID: {id}");
+                TempData["Error"] = "Bilet silme işlemi sırasında bir hata oluştu.";
                 return RedirectToAction("Index");
             }
         }
-
+        // QR Koddan gelen veriyi işleyen metod
         public IActionResult TicketInfo(int ticketId)
         {
             try
@@ -475,9 +454,6 @@ namespace EventsProject.Areas.Admin.Controllers
                 }
             }
         }
+
     }
-
-
-   
-
 }

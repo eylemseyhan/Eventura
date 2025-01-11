@@ -15,7 +15,7 @@ namespace EventsProject.ViewComponents
         {
             // Son 8 etkinliği tarihe göre sıralayarak al
             var upcomingEvents = db.Events
-                .OrderByDescending(e => e.EventDate) // En yeni tarih sıralaması
+                .OrderBy(e => e.EventDate) // En yeni tarih sıralaması
                 .Take(8) // Son 8 etkinlik
                 .OrderBy(e => e.EventDate) // Yeniden tarihe göre sıralama (küçükten büyüğe)
                 .ToList();

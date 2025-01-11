@@ -1,4 +1,4 @@
-﻿@using EntityLayer.Concrete;  
+﻿@using EntityLayer.Concrete;  <!-- ViewModel'in bulunduğu namespace'i buraya eklemelisiniz -->
 @model List<EventWithPriceViewModel>
 
 <section class="dorne-features-destinations-area">
@@ -26,9 +26,6 @@
                                 <div class="feature-title">
                                     <h5>@eventItem.EventName</h5>
                                     <p>@eventItem.CategoryName</p>
-                                </div>
-                                <div class="feature-favourite">
-                                    <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>

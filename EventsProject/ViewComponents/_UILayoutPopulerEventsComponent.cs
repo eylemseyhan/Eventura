@@ -14,7 +14,8 @@ public class _UILayoutPopulerEventsComponent : ViewComponent
 
     public IViewComponentResult Invoke()
     {
-        var populerEvents = _context.UserFavorites
+        // Önce en çok favorilenen 5 etkinliği bul
+        var popularEventIds = _context.UserFavorites
             .GroupBy(uf => uf.EventId)
             .Select(group => new
             {
@@ -23,31 +24,32 @@ public class _UILayoutPopulerEventsComponent : ViewComponent
             })
             .OrderByDescending(x => x.FavoriteCount)
             .Take(5)
+            .Select(x => x.EventId)
             .ToList();
 
-        var eventIds = populerEvents.Select(x => x.EventId).ToList();
-
-        var events = _context.Events
-            .Where(e => eventIds.Contains(e.EventId))
-            .ToList();
-
-      
-
+        // Şimdi bu etkinliklerin detaylarını ve fiyatlarını al
         var eventsWithPrices = _context.Events
-                                    .Select(e => new EventWithPriceViewModel
-                                    {
-                                        EventId = e.EventId,
-                                        EventName = e.Title,
-                                        EventImageUrl = e.ImageUrl,
-                                        CategoryName = e.Category.Name,
-                                        Price = _context.EventsTickets
-                                                         .Where(et => et.EventId == e.EventId)
-                                                         .Select(et => et.Price)
-                                                         .FirstOrDefault() // İlk kaydı alır
-                                    }).Take(5)
-                                    .ToList();
+            .Where(e => popularEventIds.Contains(e.EventId))
+            .Select(e => new EventWithPriceViewModel
+            {
+                EventId = e.EventId,
+                EventName = e.Title,
+                EventImageUrl = e.ImageUrl,
+                CategoryName = e.Category.Name,
+                Price = _context.EventsTickets
+                    .Where(et => et.EventId == e.EventId)
+                    .Select(et => et.Price)
+                    .FirstOrDefault()
+            })
+            .ToList();
 
-        return View(eventsWithPrices);
+        // popularEventIds sırasına göre sonuçları sırala
+        var orderedEvents = popularEventIds
+            .Select(id => eventsWithPrices.FirstOrDefault(e => e.EventId == id))
+            .Where(e => e != null)
+            .ToList();
+
+        return View(orderedEvents);
     }
 
 }
