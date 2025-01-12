@@ -1,58 +1,138 @@
-﻿
+﻿// Kart formatları ve validasyonları için yardımcı fonksiyonlar
+const formatters = {
+    cardNumber: (value) => {
+        const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+        const matches = v.match(/\d{4,16}/g);
+        const match = matches && matches[0] || '';
+        const parts = [];
+
+        for (let i = 0, len = match.length; i < len; i += 4) {
+            parts.push(match.substring(i, i + 4));
+        }
+
+        if (parts.length) {
+            return parts.join(' ');
+        } else {
+            return value;
+        }
+    },
+
+    expiryDate: (value) => {
+        const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+        if (v.length >= 2) {
+            return v.slice(0, 2) + '/' + v.slice(2, 4);
+        }
+        return v;
+    }
+};
+
+// Kart önizleme güncelleme
+function updateCardPreview() {
+    const cardNumber = document.getElementById('cardNumber')?.value || '';
+    const cardHolderName = document.getElementById('cardHolderName')?.value || '';
+    const expiryDate = document.getElementById('expiryDate')?.value || '';
+
+    if (document.getElementById('cardNumberPreview')) {
+        document.getElementById('cardNumberPreview').textContent =
+            cardNumber ? cardNumber.replace(/\d(?=\d{4})/g, "*") : "**** **** **** ****";
+    }
+
+    if (document.getElementById('cardHolderNamePreview')) {
+        document.getElementById('cardHolderNamePreview').textContent =
+            cardHolderName || "Kart Sahibinin Adı";
+    }
+
+    if (document.getElementById('expiryDatePreview')) {
+        document.getElementById('expiryDatePreview').textContent =
+            expiryDate || "MM/YY";
+    }
+}
+
+// Kart numarası formatı
+function formatCardNumber(event) {
+    const input = event.target;
+    input.value = formatters.cardNumber(input.value);
+    updateCardPreview();
+}
+
+// Son kullanma tarihi formatı
+function formatExpiryDate(event) {
+    const input = event.target;
+    let value = input.value.replace(/\D/g, '').slice(0, 4);
+
+    if (value.length >= 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+
+    input.value = value;
+    updateCardPreview();
+}
+
+// Kayıtlı kartlar modalını yükle
 function loadSavedCardModal() {
     fetch("/Payment/GetSavedCards")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(savedCards => {
             let savedCardsHtml = '<h5>Kayıtlı Kartlarınız</h5>';
-            if (savedCards.length === 0) {
+
+            if (!savedCards || savedCards.length === 0) {
                 savedCardsHtml += '<p>Kayıtlı kart bulunmamaktadır.</p>';
             } else {
                 savedCards.forEach(card => {
-                    // Tarih formatını düzenle
-                    let formattedExpiryDate;
-                    if (card.expiryDate.includes('-')) {
-                        const [year, month] = card.expiryDate.split('-');
-                        formattedExpiryDate = ${ month } /${year.slice(-2)};
-                    } else {
-                        formattedExpiryDate = card.expiryDate;
-                    }
+                    const formattedExpiryDate = formatExpiryDateString(card.expiryDate);
+                    const maskedCardNumber = card.cardNumber.replace(/\d(?=\d{4})/g, "*");
 
                     savedCardsHtml += `
                         <div class="card mb-3">
                             <div class="card-body">
-                                <div>Kart Numarası: ${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}</div>
+                                <div>Kart Numarası: ${maskedCardNumber}</div>
                                 <div>Kart Sahibi: ${card.cardHolderName}</div>
                                 <div>Son Kullanma Tarihi: ${formattedExpiryDate}</div>
-                                <button class="btn btn-primary" onclick="selectSavedCard(${card.savedCardId}, '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">Bu Kartla Ödeme Yap</button>
+                                <button class="btn btn-primary mt-2" 
+                                    onclick="selectSavedCard('${card.savedCardId}', '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">
+                                    Bu Kartla Ödeme Yap
+                                </button>
                             </div>
                         </div>
                     `;
                 });
             }
-            document.getElementById('savedCardsList').innerHTML = savedCardsHtml;
 
-            // Create and show the modal
+            const savedCardsList = document.getElementById('savedCardsList');
+            if (savedCardsList) {
+                savedCardsList.innerHTML = savedCardsHtml;
+            }
+
+            // Bootstrap 5 modal işlemleri
             const savedCardModal = new bootstrap.Modal(document.getElementById('savedCardModal'));
             savedCardModal.show();
-
-            // Add event listener to close button
-            const closeButton = document.querySelector('#savedCardModal .btn-close');
-            if (closeButton) {
-                closeButton.addEventListener('click', () => {
-                    savedCardModal.hide();
-                });
-            }
         })
         .catch(error => {
-            console.error('Kayıtlı kartlar yüklenirken hata oluştu:', error);
+            console.error('Kayıtlı kartlar yüklenirken hata:', error);
+            alert('Kayıtlı kartlar yüklenirken bir hata oluştu. Lütfen tekrar deneyin.');
         });
 }
 
-function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
-    // Form alanlarını temizle ve doldur
-    const form = document.querySelector('form');
+// Tarih formatı için yardımcı fonksiyon
+function formatExpiryDateString(dateString) {
+    if (dateString.includes('-')) {
+        const [year, month] = dateString.split('-');
+        return `${month}/${year.slice(-2)}`;
+    }
+    return dateString;
+}
 
-    // Yeni bir hidden input ekle (eğer yoksa)
+// Kayıtlı kart seçimi
+function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
+    const form = document.querySelector('form');
+    if (!form) return;
+
+    // Hidden input güncelleme/ekleme
     let hiddenInput = document.getElementById('selectedCardId');
     if (!hiddenInput) {
         hiddenInput = document.createElement('input');
@@ -63,21 +143,32 @@ function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
     }
     hiddenInput.value = savedCardId;
 
-    // Diğer form alanlarını doldur
-    document.getElementById('cardNumber').value = cardNumber;
-    document.getElementById('cardHolderName').value = cardHolderName;
-    document.getElementById('expiryDate').value = expiryDate;
+    // Form alanlarını doldur
+    const formattedExpiryDate = formatExpiryDateString(expiryDate);
+    const formattedCardNumber = formatters.cardNumber(cardNumber);
 
-    // Form alanlarını devre dışı bırak
-    document.getElementById('cardNumber').disabled = true;
-    document.getElementById('cardHolderName').disabled = true;
-    document.getElementById('expiryDate').disabled = true;
+    const fields = {
+        'cardNumber': formattedCardNumber,
+        'cardHolderName': cardHolderName,
+        'expiryDate': formattedExpiryDate
+    };
+
+    Object.entries(fields).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.value = value;
+            element.disabled = true;
+        }
+    });
 
     // Kartı kaydet checkbox'ını gizle
     const saveCardDiv = document.querySelector('.form-check');
     if (saveCardDiv) {
         saveCardDiv.style.display = 'none';
     }
+
+    // Önizlemeyi güncelle
+    updateCardPreview();
 
     // Modal'ı kapat
     const savedCardModal = bootstrap.Modal.getInstance(document.getElementById('savedCardModal'));
@@ -86,62 +177,18 @@ function selectSavedCard(savedCardId, cardNumber, cardHolderName, expiryDate) {
     }
 }
 
-    // Function to update the card preview based on form inputs
-    function updateCardPreview() {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\D/g, '');
-    const cardHolderName = document.getElementById('cardHolderName').value;
-    const expiryDate = document.getElementById('expiryDate').value;
+// Sayfa yüklendiğinde input event listener'ları ekle
+document.addEventListener('DOMContentLoaded', function () {
+    const inputs = {
+        'cardNumber': formatCardNumber,
+        'expiryDate': formatExpiryDate,
+        'cardHolderName': () => updateCardPreview()
+    };
 
-    // Update preview elements
-    document.getElementById('cardNumberPreview').innerText = cardNumber.replace(/\d(?=\d{4})/g, "*");
-    document.getElementById('cardHolderNamePreview').innerText = cardHolderName;
-    document.getElementById('expiryDatePreview').innerText = expiryDate;
-    }
-
-    function formatCardNumber(event) {
-        const input = event.target;
-    let formattedValue = input.value.replace(/\D/g, '').replace(/(.{4})(?=.)/g, '$1 ').trim();
-    input.value = formattedValue;
-    }
-    function renderSavedCards(cards) {
-        const savedCardsContainer = document.getElementById("savedCardsContainer");
-    savedCardsContainer.innerHTML = ""; // Listeyi temizle
-
-        cards.forEach(card => {
-            const formattedExpiryDate = formatExpiryDate(card.expiryDate); // Tarihi formatla
-    const cardElement = `
-    <div class="saved-card">
-        <p>Kart Numarası: ${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}</p>
-        <p>Kart Sahibi: ${card.cardHolderName}</p>
-        <p>Son Kullanma Tarihi: ${formattedExpiryDate}</p>
-    </div>
-    `;
-    savedCardsContainer.innerHTML += cardElement;
-        });
-    }
-
-    function formatExpiryDate(event) {
-        const input = event.target;
-    let formattedValue = input.value.replace(/\D/g, '').slice(0, 4);
-        if (formattedValue.length > 2) {
-        formattedValue = formattedValue.slice(0, 2) + '/' + formattedValue.slice(2);
+    Object.entries(inputs).forEach(([id, handler]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('input', handler);
         }
-    input.value = formattedValue;
-    }
-
-
-    // Return to form with reset modal content
-    function goBackToForm() {
-        const modalBody = document.querySelector('#paymentModal .modal-body');
-    modalBody.innerHTML = `
-    <div id="paymentCardPreview">
-        <div class="card-number" id="cardNumberPreview">**** **** **** ****</div>
-        <div class="card-holder" id="cardHolderNamePreview">Kart Sahibinin Adı</div>
-        <div class="expires">Expires: <span id="expiryDatePreview">MM/YY</span></div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" class="card-logo" alt="Card Logo">
-    </div>
-    <form method="post" action="@Url.Action(" SaveCard", "Payment")">
-    <button type="submit" class="btn btn-success w-100 mt-3">Ödemeyi Tamamla</button>
-</form>
-`;
-    }
+    });
+}); 

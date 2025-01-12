@@ -20,3 +20,58 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Header Area Styles */
+.header_area {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #dc3545 !important; /* Kýrmýzý arka plan */
+}
+
+    /* Navbar içindeki tüm elementler için beyaz renk */
+    .header_area .navbar {
+        background-color: #dc3545 !important;
+    }
+
+    /* Navbar collapse için arka plan rengi */
+    .header_area .navbar-collapse {
+        background-color: #dc3545 !important;
+    }
+
+    /* Navbar brand (logo) için stil */
+    .header_area .navbar-brand {
+        color: #fff !important;
+    }
+
+    /* Nav linkler için stil */
+    .header_area .nav-link {
+        color: #fff !important;
+    }
+
+    /* Hamburger menü ikonu için stil */
+    .header_area .navbar-toggler {
+        color: #fff !important;
+    }
+
+    /* Dropdown menü için stil */
+    .header_area .dropdown-content {
+        background-color: #fff;
+    }
+
+    /* Scroll durumunda bile arka planýn kýrmýzý kalmasý için */
+    .header_area.sticky {
+        background-color: #dc3545 !important;
+    }
+
+    /* Tema'nýn kendi sticky class'ýný override etmek için */
+    .header_area.navbar-sticky {
+        background-color: #dc3545 !important;
+    }
+
+    /* Herhangi bir JavaScript ile eklenen class'ý override etmek için */
+    .header_area[class*="fixed"],
+    .header_area[class*="sticky"],
+    .header_area[class*="scrolled"] {
+        background-color: #dc3545 !important;
+    } 

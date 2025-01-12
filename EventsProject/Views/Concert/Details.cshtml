@@ -120,8 +120,8 @@
                     </div>
                 </div>
 
-           
-        </div>
+
+            </div>
     </section>
 
     <!-- Ödeme Modalı -->
@@ -199,23 +199,180 @@
                         </a>
                     </div>
 
-                    <!-- Kayıtlı Kartlar Modal -->
-                    <div class="modal" tabindex="-1" id="savedCardModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Kayıtlı Kartlarınız</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="savedCardsList">
-                                        <!-- Kartlar buraya dinamik olarak eklenecek -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   <!-- Kayıtlı Kartlar Modal -->
+<div class="modal fade" id="savedCardModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 bg-gradient">
+                <h5 class="modal-title text-white">
+                    <i class="fas fa-credit-card me-2"></i>
+                    Kayıtlı Kartlarınız
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div id="savedCardsList" class="saved-cards-container">
+                    <!-- Kartlar buraya dinamik olarak eklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<style>
+/* Modal Styles */
+#savedCardModal .modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+#savedCardModal .modal-header {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    padding: 20px 30px;
+}
+
+#savedCardModal .modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Saved Cards Container */
+.saved-cards-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+.saved-cards-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.saved-cards-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.saved-cards-container::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 10px;
+}
+
+/* Card Item Styles */
+.card.mb-3 {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card.mb-3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body div {
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+/* Card Selection Button */
+.btn-primary {
+    background: #dc3545;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Empty State */
+.no-cards-message {
+    text-align: center;
+    padding: 30px 20px;
+    color: #6c757d;
+}
+
+.no-cards-message i {
+    font-size: 3rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+/* Animation */
+.modal.fade .modal-dialog {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+}
+
+
+}
+</style>
+
+<script>
+// Kart listesi boş olduğunda gösterilecek mesaj
+function showEmptyState() {
+    return `
+        <div class="no-cards-message">
+            <i class="fas fa-credit-card d-block"></i>
+            <p>Henüz kayıtlı kartınız bulunmamaktadır.</p>
+        </div>
+    `;
+}
+
+// Kart listesi render fonksiyonunu güncelle
+function renderSavedCards(cards) {
+    const container = document.getElementById('savedCardsList');
+    
+    if (!cards || cards.length === 0) {
+        container.innerHTML = showEmptyState();
+        return;
+    }
+    
+    const cardsHtml = cards.map(card => `
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-credit-card me-2 text-primary"></i>
+                    <strong>${card.cardNumber.replace(/\d(?=\d{4})/g, "*")}</strong>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <small class="text-muted">Kart Sahibi</small>
+                        <div>${card.cardHolderName}</div>
+                    </div>
+                    <div>
+                        <small class="text-muted">Son Kullanma</small>
+                        <div>${formatExpiryDateString(card.expiryDate)}</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" 
+                        onclick="selectSavedCard('${card.savedCardId}', '${card.cardNumber}', '${card.cardHolderName}', '${card.expiryDate}')">
+                    <i class="fas fa-check me-2"></i>Bu Kartı Kullan
+                </button>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = cardsHtml;
+}
+</script>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

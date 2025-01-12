@@ -1,4 +1,4 @@
-function loadSavedCardModal() {
+mesela önfunction loadSavedCardModal() {
     fetch('/Payment/GetSavedCards') // API'den kayıtlı kartları alıyoruz
         .then(response => response.json())
         .then(savedCards => {

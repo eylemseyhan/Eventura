@@ -1,0 +1,105 @@
+/* Kart Önizleme Stilleri */
+.credit-card-preview {
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+.card-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.card-preview-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(45deg, #1a73e8, #289cf5);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.chip-image {
+    height: 40px;
+}
+
+.card-number {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-holder, .card-expires {
+    text-transform: uppercase;
+}
+
+.card-holder label, .card-expires label {
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+
+/* Form Stilleri */
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+}
+
+.form-control {
+    border-left: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.input-group:focus-within .input-group-text {
+    border-color: #86b7fe;
+}
+
+/* Animasyonlar */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: none;
+}
+
+/* Güvenli Ödeme İkonu */
+.secure-payment-icon {
+    opacity: 0.7;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 576px) {
+    .credit-card-preview {
+        height: 180px;
+    }
+
+    .card-number {
+        font-size: 1.2em;
+    }
+} 

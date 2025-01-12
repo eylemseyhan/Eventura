@@ -8,6 +8,7 @@ using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("tr-TR");
@@ -23,7 +24,9 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Güvenlik için HttpOnly
     options.Cookie.IsEssential = true; // Session'ı temel ihtiyaç olarak ayarla
 });
-
+builder.Services.AddResponseCompression();
+builder.Services.Configure<GzipCompressionProviderOptions>(options =>
+                            options.Level = System.IO.Compression.CompressionLevel.Optimal);
 
 // Dependency Injection (DI) için servisleri ekleme
 //kart ve payment
@@ -107,7 +110,7 @@ app.UseRouting();
 
 app.UseAuthentication(); // Kullanıcı kimlik doğrulama
 app.UseAuthorization(); // Yetkilendirme
-
+app.UseResponseCompression();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
