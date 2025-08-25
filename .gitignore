@@ -1,10 +1,17 @@
-# Ignore bin and obj directories
+# Build klasörleri
 bin/
 obj/
 
-# Visual Studio temporary files
+# VS ayarları
 .vs/
-*.csproj.user
-*.suo
 *.user
-.idea/
+*.suo
+
+# Paket / cache
+*.nuget/
+*.cache
+
+# Derlenmiş dosyalar
+*.dll
+*.exe
+
